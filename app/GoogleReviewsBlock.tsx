@@ -1,7 +1,74 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function GoogleReviewsBlock() {
+
+    const reviews = [
+        {
+            "id": "rev_01",
+            "name": "Rizwan Afr",
+            "rating": 5,
+            "date": "3 days ago",
+            "avatar": "/images/reviews/rizwan.png",
+            "comment": `We had our AC Duct checked and cleaned by Envirolclean and he’s been far better since. Omg we had no idea about the state of our AC.They came in, very professional, covered everything, cut hatches in the ceiling where needed and made very good after.Took away all their mess and gave everything a thorough clean.I’ve included some before and after pics.Great price, would thoroughly recommend these red team guys 100% 👏🏻👏🏻👏🏻`
+        },
+        {
+            "id": "rev_02",
+            "name": "Ajay Arora",
+            "rating": 5,
+            "date": "a month ago",
+            "avatar": "/images/reviews/ajay.png",
+            "comment": `Very happy with the services of Patrick and his team members Ricardo, Arjee and Jonathan.
+            Very professional and perfect in their work.
+            Also kept our house neat and clean after the service.
+            Thanks a lot 👍🤗
+            `
+        },
+        {
+            "id": "rev_03",
+            "name": "Mary Ann Afable",
+            "rating": 5,
+            "date": "a month ago",
+            "avatar": "/images/reviews/mary.png",
+            "comment": `The team was great service and excellent highly recommend the company’s staff ,Jonathan, Ricardo and Arjhel`
+        },
+        {
+            "id": "rev_04",
+            "name": "oana picincu",
+            "rating": 5,
+            "date": "2 month ago",
+            "avatar": "/images/reviews/osna.png",
+            "comment": `We needed their services after moving in a new place, recent development, so everything was full of dust. We regularly use their service now, twice a year. Since we have a baby and we want the airficts to be extra clean. Great team of professionals! They cleaned the aircon ducts really well in just few hours. They show before and after pictures ñ.`
+        },
+        {
+            "id": "rev_05",
+            "name": "Adam Banks",
+            "rating": 5,
+            "date": "2 months ago",
+            "avatar": "",
+            "comment": `The team (Rick, Kiowa and Joe) did a fantastic job with a full service of our home AC. Turned up exactly on time and worked very cleanly with no fuss. Great job all round.`
+        },
+        {
+            "id": "rev_06",
+            "name": "Doreen Khayongo",
+            "rating": 5,
+            "date": "2 months ago",
+            "avatar": "/images/reviews/doreen.png",
+            "comment": `Romulo Jonathan Patrick
+            They clean good
+            They are the best
+            Thank you for your service`
+        },
+        {
+            "id": "rev_07",
+            "name": "Danie Botha",
+            "rating": 5,
+            "date": "2 months ago",
+            "avatar": "/images/reviews/danie.png",
+            "comment": `Patrick, Johnathan, Romulo came to te apartment and did a great shop. The vents were cleaned professionally and they made sure all areas are covered and protected. They finished the work in a timely manner and made sure everything was in order before they left. I can recommend this company for sure! Thank you Enviro Clean ⭐️`
+        }
+    ]
     return (
         <section className="w-full bg-linear-to-r from-secondary to-white py-12 px-4 md:px-8 font-sans">
             <div className="max-w-7xl mx-auto">
@@ -12,20 +79,98 @@ export function GoogleReviewsBlock() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-7 items-center">
-                    <div className="col-span-2 flex items-start gap-3">
-                        <Image
-                            src={""}
-                            alt="reviews"
-                            height={50}
-                            width={50}
-                            className="rounded-full bg-gray-500"
-                        />
+                <div className="grid md:grid-cols-7 gap-10 items-center">
+                    <div className="md:col-span-2 flex items-start gap-3">
+                        <div className="relative w-[50px] h-[50px] bg-white rounded-full">
+                            <Image
+                                src={"/images/reviews/2021-03-03.jpg"}
+                                alt=""
+                                fill
+                                className="object-cover rounded-full"
+                            />
+                        </div>
                         <div>
                             <div>Enviro Clean UAE</div>
-                            <div className="text-yellow-500 flex font-bold text-2xl">4.8 <Star /><Star /><Star /><Star /><Star /></div>
+                            <div className="text-yellow-500 flex font-bold text-2xl">
+                                <svg
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="#FFBF00"
+                                    stroke="#FFBF00"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                                <svg
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="#FFBF00"
+                                    stroke="#FFBF00"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                                <svg
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="#FFBF00"
+                                    stroke="#FFBF00"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                                <svg
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="#FFBF00"
+                                    stroke="#FFBF00"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                                <svg
+                                    width="20px"
+                                    height="20px"
+                                    viewBox="0 0 24 24"
+                                    fill="#FFBF00"
+                                    stroke="#FFBF00"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    strokeWidth="1.5"
+                                >
+                                    <path
+                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </div>
                             <div>Based on 131 reviews</div>
-                            <div className="flex">powered by
+                            <div className="flex">
+                                <div>powered by</div>
                                 <div className="relative w-[50px] h-[30px] bg-white rounded-full">
                                     <Image
                                         src={'/images/Google-Logo-2015.png'}
@@ -33,9 +178,11 @@ export function GoogleReviewsBlock() {
                                         fill
                                         className="p-1"
                                     />
-                                </div></div>
-                            <div className="bg-blue-600 rounded-3xl text-white px-3 py-2 flex items-center justify-between">review us on
-                                <div className="relative w-[30px] h-[30px] bg-white rounded-full">
+                                </div>
+                            </div>
+                            <div className="bg-blue-500 rounded-3xl text-white px-3 py-2 flex items-center justify-between">
+                                <div>review us on</div>
+                                <div className="relative w-[20px] h-[20px] bg-white rounded-full">
                                     <Image
                                         src={'/images/google-logo.webp'}
                                         alt=""
@@ -46,42 +193,73 @@ export function GoogleReviewsBlock() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-5">
-                        <div className="grid grid-cols-3">
-                            <div className="bg-white p-5 space-y-3">
-                                <div className="flex justify-between gap-4">
-                                    <div className="flex gap-3">
-                                        <Image
-                                            src={""}
-                                            alt="reviews"
-                                            height={50}
-                                            width={50}
-                                            className="rounded-full bg-gray-500"
-                                        />
-                                        <div>
-                                            <div className="font-semibold">Ollie Spence</div>
-                                            <div className="text-neutral-600">4 years ago</div>
+                    <div className="md:col-span-5">
+                        <div className="md:flex gap-4 overflow-x-scroll">
+                            {reviews.map((items, key) => (
+                                <div key={key} className="bg-white p-5 space-y-3 w-[300px] flex-shrink-0">
+                                    <div className="flex justify-between gap-4">
+                                        <div className="flex gap-3">
+                                            {items.avatar == "" ?
+                                                <div className="rounded-full flex items-center justify-center uppercase font-semibold text-2xl text-white bg-neutral-600 w-[50px] h-[50px]">
+                                                    {items.name[0]}
+                                                </div> :
+                                                <Image
+                                                    src={items.avatar}
+                                                    alt="reviews"
+                                                    height={50}
+                                                    width={50}
+                                                    className="rounded-full bg-gray-500"
+                                                />
+                                            }
+
+                                            <div>
+                                                <div className="font-semibold">{items.name}</div>
+                                                <div className="text-neutral-600">{items.date}</div>
+                                            </div>
+                                        </div>
+
+                                        <div className="relative w-[20px] h-[20px]">
+                                            <Image
+                                                src={'/images/google-logo.webp'}
+                                                alt=""
+                                                fill
+                                                className=""
+                                            />
                                         </div>
                                     </div>
-
-                                    <div className="relative w-[20px] h-[20px]">
-                                        <Image
-                                            src={'/images/google-logo.webp'}
-                                            alt=""
-                                            fill
-                                            className=""
-                                        />
+                                    <div className="flex">
+                                        {Array(Number(items.rating || 0)).fill(0).map((_, index) => (
+                                            <div key={index} className="flex font-bold text-2xl">
+                                                <svg
+                                                    width="20px"
+                                                    height="20px"
+                                                    viewBox="0 0 24 24"
+                                                    fill="#FFBF00"
+                                                    stroke="#FFBF00"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    strokeWidth="1.5"
+                                                >
+                                                    <path
+                                                        d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z"
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        ))}
                                     </div>
+
+                                    <p className="h-[100px] overflow-y-scroll">{items.comment}</p>
                                 </div>
-                                <div className="text-yellow-500 flex font-bold text-2xl">
-                                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000" strokeWidth="1.5"><path d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z" fill="#ffff00" stroke="#000000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
-                                </div>
-                                <p className="h-[100px] overflow-y-scroll">Rick and Johnny from Enviro Clean were excellent, they were fast and efficient and helpfully also showed before and after pictures. Highly recommended and I would definitely use them again! Thanks</p>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>
+
+                <div className="flex items-center justify-center">
+                    <Link href={'https://www.google.com/search?hl=en-AE&gl=in&q=Enviro+Clean+UAE+-+Empire+Height+A,+9th+floor,+business+bay+Bldg+0913+-+Dubai+-+United+Arab+Emirates&ludocid=191102796961465531&lsig=AB86z5V1_YL7Rbxs3nMtTYm3Rm0C#lrd=0x3e5f691d1aa5dc8b:0x2a6eefb3878c4bb,1,,,,'} className="mx-auto block mt-10 bg-[#56a67b] text-white font-semibold rounded-lg px-6 py-2">Read More Reviews</Link>
+                </div>
             </div>
-        </section >
+        </section>
     );
 }
