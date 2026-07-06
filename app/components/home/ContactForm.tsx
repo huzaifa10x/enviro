@@ -40,7 +40,7 @@ export default function ContactForm() {
                             </select>
                         </div>
 
-                        <textarea placeholder="Message" rows="4" className="p-4 rounded-lg border border-gray-200 w-full outline-none focus:border-green-500"></textarea>
+                        <textarea placeholder="Message" rows={4} className="p-4 rounded-lg border border-gray-200 w-full outline-none focus:border-green-500"></textarea>
 
                         <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-black transition w-fit flex items-center gap-2">
                             Submit <span>↗</span>
