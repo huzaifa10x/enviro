@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, phone, location, service, message } = body;
 
-    // Validation
+    // Basic Validation
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Name, Email, and Message are required fields." },
@@ -13,31 +13,27 @@ export async function POST(request: Request) {
       );
     }
 
-    // Staging API ke format ke mutabik subject create kar rahe hain
-    const subject = `Inquiry for ${service || "General"} service in ${location || "Not Specified"} (Phone: ${phone || "N/A"})`;
-
-    // Mapping fields to staging API payload structure
-    const payload = {
-      "your-name": name,
-      "your-email": email,
-      "your-subject": subject,
-      "your-message": message,
-    };
-
-    // External Staging API Call
-    const response = await fetch("https://envirocleanuae.com/apistaging/api/contact/", {
+    // Direct Forwarding to the Correct API Endpoint
+    const response = await fetch("https://envirocleanuae.com/apistaging/wp-json/cim/v1/inquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        location,
+        service,
+        message
+      }),
     });
 
-    if (!response.ok) {
-      throw new Error(`Staging API responded with status: ${response.status}`);
-    }
-
     const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data?.message || `API responded with status: ${response.status}`);
+    }
 
     return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (error: any) {

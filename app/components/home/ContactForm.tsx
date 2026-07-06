@@ -34,10 +34,15 @@ export default function ContactForm() {
             const result = await res.json();
 
             if (res.ok) {
-                setStatus({ type: 'success', msg: result?.data?.message || "Thank you for your message. It has been sent." });
+                // WordPress JSON APIs aksar direct messaging ya custom success statuses deti hain
+                setStatus({ 
+                    type: 'success', 
+                    msg: result?.data?.message || "Thank you! Your inquiry has been submitted successfully." 
+                });
+                // Form resetting
                 setFormData({ name: "", email: "", phone: "", location: "", service: "", message: "" });
             } else {
-                setStatus({ type: 'error', msg: result.error || "Failed to send message. Please try again." });
+                setStatus({ type: 'error', msg: result.error || "Failed to submit inquiry. Please try again." });
             }
         } catch (error) {
             setStatus({ type: 'error', msg: "Network error. Please check your internet connection." });
@@ -73,7 +78,7 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 placeholder="Full Name"
                                 required
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] focus:border-green-500"
+                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] placeholder-gray-600 text-gray-800 focus:border-green-500"
                             />
                             <input
                                 type="email"
@@ -82,7 +87,7 @@ export default function ContactForm() {
                                 onChange={handleChange}
                                 placeholder="Email Address"
                                 required
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] focus:border-green-500"
+                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] placeholder-gray-600 text-gray-800 focus:border-green-500"
                             />
                         </div>
 
@@ -92,7 +97,7 @@ export default function ContactForm() {
                             value={formData.phone}
                             onChange={handleChange}
                             placeholder="Phone Number"
-                            className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] focus:border-green-500"
+                            className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] placeholder-gray-600 text-gray-800 focus:border-green-500"
                         />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -100,7 +105,7 @@ export default function ContactForm() {
                                 name="location"
                                 value={formData.location}
                                 onChange={handleChange}
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-500 focus:border-green-500"
+                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
                             >
                                 <option value="">Select Location</option>
                                 <option value="Dubai">Dubai</option>
@@ -110,7 +115,7 @@ export default function ContactForm() {
                                 name="service"
                                 value={formData.service}
                                 onChange={handleChange}
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-500 focus:border-green-500"
+                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
                             >
                                 <option value="">Service You Require</option>
                                 <option value="AC Cleaning">AC Cleaning</option>
@@ -127,12 +132,12 @@ export default function ContactForm() {
                             placeholder="Message"
                             rows={4}
                             required
-                            className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] focus:border-green-500"
+                            className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] placeholder-gray-600 text-gray-800 focus:border-green-500"
                         ></textarea>
 
                         {/* Success / Error Status Alerts */}
                         {status.type && (
-                            <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                            <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-green-100 text-green-900' : 'bg-red-100 text-red-900'}`}>
                                 {status.msg}
                             </div>
                         )}
