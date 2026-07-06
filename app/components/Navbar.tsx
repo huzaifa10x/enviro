@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation' // Is hook ko add kiya active link check karne ke liye
 
 export default function Navbar() {
+    const pathname = usePathname() // Current path read karne ke liye
     const [isServicesOpen, setIsServicesOpen] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
@@ -31,10 +33,10 @@ export default function Navbar() {
     }, [isMobileMenuOpen])
 
     const servicesItems = [
-        { id: 1, title: 'AC Cleaning', icon: '/service-icons/enviro-01-scaled.webp', url: '/accleaning-servicing/', active: true },
-        { id: 2, title: 'Coil Cleaning', icon: '/service-icons/enviro-02-scaled.webp', url: '/coil-cleaning/', active: false },
-        { id: 3, title: 'Duct Cleaning', icon: '/service-icons/enviro-03-scaled.webp', url: '/duct-cleaning-service-dubai/', active: false },
-        { id: 4, title: 'AC Sanitisation', icon: '/service-icons/enviro-04-scaled.webp', url: '/ac-sanitisation/', active: false },
+        { id: 1, title: 'AC Cleaning', icon: '/service-icons/enviro-01-scaled.webp', url: '/accleaning-servicing/' },
+        { id: 2, title: 'Coil Cleaning', icon: '/service-icons/enviro-02-scaled.webp', url: '/coil-cleaning/' },
+        { id: 3, title: 'Duct Cleaning', icon: '/service-icons/enviro-03-scaled.webp', url: '/duct-cleaning-service-dubai/' },
+        { id: 4, title: 'AC Sanitisation', icon: '/service-icons/enviro-04-scaled.webp', url: '/ac-sanitisation/' },
     ]
 
     const navLinks = [
@@ -45,12 +47,6 @@ export default function Navbar() {
     ]
 
     return (
-        // FIX 1: Jab mobile menu open ho tab nav ko "fixed" kar dete hain taake
-        // ye hamesha viewport ke top par hi rahe, page scroll position se na hile.
-        // Warna agar user page scroll kar chuka ho, "absolute" nav apni purani
-        // scroll position par reh jata tha jabke overlay (fixed) viewport ke
-        // top se start hota tha -- isi wajah se logo/X list ke beech overlap
-        // ho rahe the.
         <nav className={`${isMobileMenuOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full px-6 md:px-10 py-6 md:py-8 z-50`}>
             <div className='max-w-7xl mx-auto flex items-center justify-between relative'>
                 {/* Logo */}
@@ -71,7 +67,13 @@ export default function Navbar() {
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                        <div className="flex items-center gap-1 hover:text-green-300 transition-colors">
+                        {/* 
+                          Agar user kisi bhi service page par ho, 
+                          toh 'Services' main heading ko bhi active green color de sakte hain 
+                        */}
+                        <div className={`flex items-center gap-1 hover:text-green-300 transition-colors ${
+                            servicesItems.some(item => pathname === item.url) ? 'text-[#12b359]' : ''
+                        }`}>
                             <span>Services</span>
                             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                         </div>
@@ -80,36 +82,52 @@ export default function Navbar() {
                         {isServicesOpen && (
                             <div className="absolute top-full -left-6 w-[650px] bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border-t-4 border-[#12b359] z-50">
                                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
-                                    {servicesItems.map((item) => (
-                                        <Link
-                                            key={item.id}
-                                            href={item.url}
-                                            className="flex items-center gap-4 group transition-all duration-200"
-                                        >
-                                            <div className="w-16 h-16 relative rounded-full border-zinc-900 flex items-center justify-center bg-white shrink-0">
-                                                <Image
-                                                    src={item.icon}
-                                                    alt={item.title}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            </div>
-                                            <span className={`text-xl font-urbanist font-bold tracking-wide transition-colors group-hover:text-[#12b359] ${item.active ? 'text-[#12b359]' : 'text-zinc-900'}`}>
-                                                {item.title}
-                                            </span>
-                                        </Link>
-                                    ))}
+                                    {servicesItems.map((item) => {
+                                        // Dynamic Active Check (Current URL matches item URL)
+                                        const isActive = pathname === item.url;
+                                        
+                                        return (
+                                            <Link
+                                                key={item.id}
+                                                href={item.url}
+                                                className="flex items-center gap-4 group transition-all duration-200"
+                                            >
+                                                <div className={`w-16 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${
+                                                    isActive ? 'ring-2 ring-[#12b359]' : ''
+                                                }`}>
+                                                    <Image
+                                                        src={item.icon}
+                                                        alt={item.title}
+                                                        fill
+                                                        className="object-cover"
+                                                    />
+                                                </div>
+                                                <span className={`text-xl font-urbanist font-bold tracking-wide transition-colors group-hover:text-[#12b359] ${
+                                                    isActive ? 'text-[#12b359]' : 'text-zinc-900'
+                                                }`}>
+                                                    {item.title}
+                                                </span>
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}
                     </div>
 
                     {/* Standard Pages Links */}
-                    {navLinks.map(item => (
-                        <Link key={item.id} href={item.url} className="hover:text-green-300 transition-colors">
-                            {item.title}
-                        </Link>
-                    ))}
+                    {navLinks.map(item => {
+                        const isActive = pathname === item.url;
+                        return (
+                            <Link 
+                                key={item.id} 
+                                href={item.url} 
+                                className={`transition-colors ${isActive ? 'text-[#12b359]' : 'hover:text-green-300'}`}
+                            >
+                                {item.title}
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Call to Action Button */}
@@ -128,9 +146,6 @@ export default function Navbar() {
 
             {/* --- MOBILE OVERLAY PANEL --- */}
             {isMobileMenuOpen && (
-                // FIX 2: bg-zinc-950/95 ko bump kiya taake background hero content
-                // bilkul bhi bleed-through na ho (pehle 95% opacity se halka sa
-                // "AC Cleaning Dubai..." text peeche dikh raha tha).
                 <div className="lg:hidden fixed inset-0 bg-zinc-950 pt-28 px-8 flex flex-col justify-between pb-10 z-40 overflow-y-auto">
                     <div className="flex flex-col gap-6 font-urbanist font-semibold text-2xl text-white">
 
@@ -138,7 +153,9 @@ export default function Navbar() {
                         <div>
                             <button
                                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                                className="flex items-center justify-between w-full py-2 text-left"
+                                className={`flex items-center justify-between w-full py-2 text-left ${
+                                    servicesItems.some(item => pathname === item.url) ? 'text-[#12b359]' : ''
+                                }`}
                             >
                                 <span>Services</span>
                                 <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -146,36 +163,43 @@ export default function Navbar() {
 
                             {isMobileServicesOpen && (
                                 <div className="mt-4 pl-4 grid grid-cols-1 gap-4 border-l border-zinc-700">
-                                    {servicesItems.map((item) => (
-                                        <Link
-                                            key={item.id}
-                                            href={item.url}
-                                            onClick={() => setIsMobileMenuOpen(false)}
-                                            className="flex items-center gap-3 py-1"
-                                        >
-                                            <div className="w-10 h-10 relative rounded-full overflow-hidden shrink-0 bg-white">
-                                                <Image src={item.icon} alt={item.title} fill className="object-cover" />
-                                            </div>
-                                            <span className={`text-lg font-bold ${item.active ? 'text-[#12b359]' : 'text-zinc-300'}`}>
-                                                {item.title}
-                                            </span>
-                                        </Link>
-                                    ))}
+                                    {servicesItems.map((item) => {
+                                        const isActive = pathname === item.url;
+                                        
+                                        return (
+                                            <Link
+                                                key={item.id}
+                                                href={item.url}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="flex items-center gap-3 py-1"
+                                            >
+                                                <div className="w-10 h-10 relative rounded-full overflow-hidden shrink-0 bg-white">
+                                                    <Image src={item.icon} alt={item.title} fill className="object-cover" />
+                                                </div>
+                                                <span className={`text-lg font-bold ${isActive ? 'text-[#12b359]' : 'text-zinc-300'}`}>
+                                                    {item.title}
+                                                </span>
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
                             )}
                         </div>
 
                         {/* Mobile Standard Links */}
-                        {navLinks.map(item => (
-                            <Link
-                                key={item.id}
-                                href={item.url}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="py-2 hover:text-[#12b359] transition-colors"
-                            >
-                                {item.title}
-                            </Link>
-                        ))}
+                        {navLinks.map(item => {
+                            const isActive = pathname === item.url;
+                            return (
+                                <Link
+                                    key={item.id}
+                                    href={item.url}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`py-2 transition-colors ${isActive ? 'text-[#12b359]' : 'hover:text-[#12b359]'}`}
+                                >
+                                    {item.title}
+                                </Link>
+                            );
+                        })}
                     </div>
 
                     {/* Mobile CTA Button */}

@@ -26,7 +26,9 @@ export default function ContactCta({
                     <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-white tracking-wide text-center text-left">
                         {title}
                     </h2>
-                    <div className='leading-5 text-sm mt-4 text-white' dangerouslySetInnerHTML={{ __html: desc }} />
+                    {desc &&
+                        <div className='leading-5 text-sm mt-4 text-white' dangerouslySetInnerHTML={{ __html: desc }} />
+                    }
                 </div>
                 <div className="flex flex-col gap-3 min-w-[180px] w-full md:w-auto">
                     <a
