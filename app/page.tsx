@@ -10,6 +10,7 @@ import PartnerSlider from "./components/home/PartnerSlider";
 import RecentWork from "./components/home/RecentWork";
 import Process from "./components/Process";
 import GoogleReviewsBlock from "./GoogleReviewsBlock";
+import { Metadata } from "next";
 const slides = [
   {
     id: 1, title: "AC Cleaning Dubai",
@@ -45,6 +46,54 @@ const slides = [
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
 ];
+export const metadata: Metadata = {
+  // Primary Meta Tags
+  title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+  description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!',
+  alternates: {
+    canonical: 'https://envirocleanuae.com/', // Aapka main production domain url
+  },
+
+  // Robots Rules (Aapke screen me missing dikha raha tha, yahan index/follow explicit lagaya hai)
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  // Open Graph / Facebook Meta Data
+  openGraph: {
+    title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+    description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!',
+    url: 'https://envirocleanuae.com/',
+    siteName: 'EnviroClean UAE',
+    images: [
+      {
+        url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+        width: 1200,
+        height: 630,
+        alt: 'EnviroClean AC Cleaning Services Dubai',
+      },
+    ],
+    locale: 'en_AE',
+    type: 'website',
+  },
+
+  // Twitter Cards Meta Data
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+    description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+    images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+  },
+}
 export default function Home() {
   return (
     <>
