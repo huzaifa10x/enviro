@@ -1,11 +1,11 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 
 const ContentFlexSection = ({
-    subHeading,
-    heading,
-    content,
-    imageSrc,
+    subHeading = "",
+    heading = "",
+    content = "",
+    imageSrc = "",
     imageAlt = "hvac-service-image",
     imagePosition = "right"
 }): any => {
