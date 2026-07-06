@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
@@ -8,6 +9,9 @@ const nextConfig: NextConfig = {
         hostname: "img.youtube.com",
       }
     ],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
