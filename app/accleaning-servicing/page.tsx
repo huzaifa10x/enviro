@@ -9,6 +9,7 @@ import PackageIncludes from "../components/PackageIncludes";
 import BenefitsSection from "../components/BenefitsSection";
 import DisinfectionSection from "../components/DisinfectionSection";
 import RecentWork from "../components/home/RecentWork";
+import GoogleReviewsBlock from "../GoogleReviewsBlock";
 const slides = [
     {
         id: 1,
@@ -89,6 +90,8 @@ export default function AccleaningServicing() {
                 button2Text={'Whatsapp Now'}
                 button2Link={'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'}
             />
+            <GoogleReviewsBlock />
+            <ContactForm />
         </>
     );
 }

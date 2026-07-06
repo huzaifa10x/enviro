@@ -22,8 +22,8 @@ export default function ContactCta({
                 />
             </div>
             <div className="relative z-10 max-w-7xl w-full mx-auto px-8 py-8 md:py-0 flex flex-col md:flex-row items-center justify-between gap-6 pl-12">
-                <div>
-                    <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-white tracking-wide text-center md:text-left">
+                <div className='max-w-3xl'>
+                    <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-white tracking-wide text-center text-left">
                         {title}
                     </h2>
                     <p className='leading-5 text-sm text-white'>{desc}</p>

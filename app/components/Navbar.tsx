@@ -1,12 +1,34 @@
 'use client'
 
-import React, { useState } from 'react'
-import { Menu, ChevronDown } from 'lucide-react'
+import React, { useState, useEffect } from 'react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Navbar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+
+    // Background scroll ko lock karne ke liye useEffect
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+
+        return () => {
+            document.body.style.overflow = 'unset'
+        }
+    }, [isMobileMenuOpen])
+
+    // Menu band hone par uska accordion state bhi reset kar dete hain
+    useEffect(() => {
+        if (!isMobileMenuOpen) {
+            setIsMobileServicesOpen(false)
+        }
+    }, [isMobileMenuOpen])
 
     const servicesItems = [
         { id: 1, title: 'AC Cleaning', icon: '/service-icons/enviro-01-scaled.webp', url: '/accleaning-servicing/', active: true },
@@ -23,22 +45,27 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className="absolute w-full px-10 py-8 z-50">
+        // FIX 1: Jab mobile menu open ho tab nav ko "fixed" kar dete hain taake
+        // ye hamesha viewport ke top par hi rahe, page scroll position se na hile.
+        // Warna agar user page scroll kar chuka ho, "absolute" nav apni purani
+        // scroll position par reh jata tha jabke overlay (fixed) viewport ke
+        // top se start hota tha -- isi wajah se logo/X list ke beech overlap
+        // ho rahe the.
+        <nav className={`${isMobileMenuOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full px-6 md:px-10 py-6 md:py-8 z-50`}>
             <div className='max-w-7xl mx-auto flex items-center justify-between relative'>
                 {/* Logo */}
-                <Link href='/'>
+                <Link href='/' className="z-50">
                     <Image
                         src={'/images/logo.webp'}
-                        width={150}
-                        height={300}
+                        width={130}
+                        height={260}
                         alt='logo'
+                        className="w-[120px] md:w-[150px] h-auto"
                     />
                 </Link>
 
-                {/* Nav Links Wrapper */}
+                {/* --- DESKTOP NAV LINKS --- */}
                 <div className="lg:flex hidden gap-8 font-urbanist font-medium text-white items-center">
-
-                    {/* Services Trigger Group */}
                     <div
                         className="relative py-2 cursor-pointer"
                         onMouseEnter={() => setIsServicesOpen(true)}
@@ -49,7 +76,7 @@ export default function Navbar() {
                             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                         </div>
 
-                        {/* Mega Dropdown Panel (image_cfe65d.jpg Styling matching) */}
+                        {/* Mega Dropdown Panel */}
                         {isServicesOpen && (
                             <div className="absolute top-full -left-6 w-[650px] bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border-t-4 border-[#12b359] z-50">
                                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
@@ -59,7 +86,6 @@ export default function Navbar() {
                                             href={item.url}
                                             className="flex items-center gap-4 group transition-all duration-200"
                                         >
-                                            {/* Icon Circle */}
                                             <div className="w-16 h-16 relative rounded-full border-zinc-900 flex items-center justify-center bg-white shrink-0">
                                                 <Image
                                                     src={item.icon}
@@ -68,7 +94,6 @@ export default function Navbar() {
                                                     className="object-cover"
                                                 />
                                             </div>
-                                            {/* Item Label */}
                                             <span className={`text-xl font-urbanist font-bold tracking-wide transition-colors group-hover:text-[#12b359] ${item.active ? 'text-[#12b359]' : 'text-zinc-900'}`}>
                                                 {item.title}
                                             </span>
@@ -81,11 +106,7 @@ export default function Navbar() {
 
                     {/* Standard Pages Links */}
                     {navLinks.map(item => (
-                        <Link
-                            key={item.id}
-                            href={item.url}
-                            className="hover:text-green-300 transition-colors"
-                        >
+                        <Link key={item.id} href={item.url} className="hover:text-green-300 transition-colors">
                             {item.title}
                         </Link>
                     ))}
@@ -96,9 +117,75 @@ export default function Navbar() {
                     Get In Touch
                 </button>
 
-                {/* Mobile Menu Icon */}
-                <Menu className='lg:hidden text-white cursor-pointer' />
+                {/* Hamburger Menu Icon (Mobile Only) */}
+                <button
+                    className='lg:hidden text-white cursor-pointer z-50 p-2'
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                </button>
             </div>
+
+            {/* --- MOBILE OVERLAY PANEL --- */}
+            {isMobileMenuOpen && (
+                // FIX 2: bg-zinc-950/95 ko bump kiya taake background hero content
+                // bilkul bhi bleed-through na ho (pehle 95% opacity se halka sa
+                // "AC Cleaning Dubai..." text peeche dikh raha tha).
+                <div className="lg:hidden fixed inset-0 bg-zinc-950 pt-28 px-8 flex flex-col justify-between pb-10 z-40 overflow-y-auto">
+                    <div className="flex flex-col gap-6 font-urbanist font-semibold text-2xl text-white">
+
+                        {/* Mobile Services Dropdown Accordion */}
+                        <div>
+                            <button
+                                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                                className="flex items-center justify-between w-full py-2 text-left"
+                            >
+                                <span>Services</span>
+                                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {isMobileServicesOpen && (
+                                <div className="mt-4 pl-4 grid grid-cols-1 gap-4 border-l border-zinc-700">
+                                    {servicesItems.map((item) => (
+                                        <Link
+                                            key={item.id}
+                                            href={item.url}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className="flex items-center gap-3 py-1"
+                                        >
+                                            <div className="w-10 h-10 relative rounded-full overflow-hidden shrink-0 bg-white">
+                                                <Image src={item.icon} alt={item.title} fill className="object-cover" />
+                                            </div>
+                                            <span className={`text-lg font-bold ${item.active ? 'text-[#12b359]' : 'text-zinc-300'}`}>
+                                                {item.title}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Mobile Standard Links */}
+                        {navLinks.map(item => (
+                            <Link
+                                key={item.id}
+                                href={item.url}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="py-2 hover:text-[#12b359] transition-colors"
+                            >
+                                {item.title}
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Mobile CTA Button */}
+                    <div className="mt-8">
+                        <button className="w-full py-4 rounded-xl font-urbanist font-bold text-xl bg-[#12b359] text-white hover:bg-[#0f994b] transition-colors">
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+            )}
         </nav>
     )
 }
