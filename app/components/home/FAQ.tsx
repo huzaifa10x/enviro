@@ -13,7 +13,7 @@ const faqData = [
 ];
 
 export default function FAQ() {
-    const [openIndex, setOpenIndex] = useState(0); // Pehla wala default open rahega
+    const [openIndex, setOpenIndex] = useState(0);
 
     return (
         <section className="py-20 px-6 flex flex-col lg:flex-row gap-12 items-center">

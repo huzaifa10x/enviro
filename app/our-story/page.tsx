@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Footer from "../components/Footer";
 import NavbarCarousel from "../components/NavbarCarousel";
+import ContactCta from "../components/ContactCta";
+import ContactForm from "../components/home/ContactForm";
 const slides = [
     {
         id: 1, title: "About Us",
@@ -10,10 +12,61 @@ const slides = [
         actionUrl: 'tel:+971800368476'
     },
 ];
-export default function Home() {
+export default function Story() {
     return (
         <>
             <NavbarCarousel slides={slides} contentBottom={true} />
+            <section className="bg-[#f0fff7] py-6 w-full">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-urbanist font-bold text-center">Enviroclean – HVAC Services</h2>
+                    <div className="grid md:grid-cols-2 md:mt-12 gap-12">
+                        <div className="">
+                            <h2 className="text-4xl font-urbanist font-bold mb-6">Enviroclean Top Rated Air Duct Cleaning Service provider</h2>
+                            <p className="font-extralight leading-6 text-[#333333]">Welcome to Enviroclean, a distinguished premier Air Duct Cleaning Service in Dubai and home maintenance service provider. Established in 2012, we have swiftly earned an exceptional reputation, earning high recommendations from our valued clientele.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">In 2015, recognizing the demand for our top-notch services, we expanded our operations to the vibrant cities of Dubai. Managed by a team of seasoned British expats, Enviroclean is dedicated to delivering unparalleled quality service marked by professionalism and reliability you can depend on.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">At Enviroclean, we take pride in being recognized as the foremost AC cleaning service in the UAE. Our commitment is to exceed your expectations, going above and beyond to ensure your satisfaction.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">Specializing in Duct Cleaning in Dubai, disinfection, coil cleaning, upholstery cleaning, carpet cleaning and home maintenance, our technicians boast over 12 years of expertise, each fully certified to guarantee excellence in every service we provide.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">Our unwavering dedication to offering a premium service that stands unmatched in the UAE sets us apart. Equipped with the latest cleaning technology and cutting-edge disinfection methods, we ensure our customers achieve optimal results.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">Over the past 9 years, Enviroclean has served more than 5000 delighted customers, spanning both residential and commercial sectors throughout Dubai and Abu Dhabi.</p>
+                            <br />
+                            <p className="font-extralight leading-6 text-[#333333]">Join our satisfied clientele and experience the epitome of AC cleaning and maintenance services with Enviroclean.</p>
+                            <br />
+                        </div>
+                        <div className="relative min-h-90 h-full w-full">
+                            <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/our-story-hvac-service.jpeg" />
+                        </div>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6 mt-12">
+                        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
+                            <div>
+                                <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
+                                <h3 className="text-2xl font-urbanist font-bold text-black my-3">Healthier Environment</h3>
+                                <p className="font-extralight text-[#333333] leading-relaxed">AC cleaning will significantly improve your indoor air quality.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
+                            <div>
+                                <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
+                                <h3 className="text-2xl font-urbanist font-bold text-black my-3">Odour Elimination</h3>
+                                <p className="font-extralight text-[#333333] leading-relaxed">Everyone wants and deserves an odour-free home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ContactCta
+                title={'Call Us Today to Get Started'}
+                button1Text={'Find Out More'}
+                button1Link={'tel:+971800368476'}
+                button2Text={'Whatsapp Now'}
+                button2Link={'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'}
+            />
+            <ContactForm />
         </>
     );
 }
