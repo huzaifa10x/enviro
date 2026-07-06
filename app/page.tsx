@@ -9,11 +9,45 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/home/ContactForm";
 import PartnerSlider from "./components/home/PartnerSlider";
 import { GoogleReviewsBlock } from "./GoogleReviewsBlock";
+const slides = [
+  {
+    id: 1, title: "AC Cleaning Dubai",
+    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    image: "/images/home-banner/banner1.webp",
+    actionTitle: 'Get a Quote',
+    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
+  },
+  {
+    id: 2,
+    title: "AC Cleaning Dubai",
 
+    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+
+    image: "/images/home-banner/banner2.webp",
+    actionTitle: 'Get a Quote',
+    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
+  },
+  {
+    id: 3,
+    title: "AC Cleaning Dubai",
+    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    image: "/images/home-banner/banner3.webp",
+    actionTitle: 'Get a Quote',
+    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
+  },
+  {
+    id: 4,
+    title: "AC Cleaning Dubai",
+    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    image: "/images/home-banner/banner4.webp",
+    actionTitle: 'Get a Quote',
+    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
+  },
+];
 export default function Home() {
   return (
     <>
-      <NavbarCarousel />
+      <NavbarCarousel slides={slides} />
       <AboutUs />
       <ServicesSection />
       <section className="py-16 px-6 md:px-20 bg-white">
@@ -47,7 +81,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-6">
@@ -80,7 +113,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="">
@@ -108,9 +140,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <GoogleReviewsBlock />
-
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
@@ -146,7 +176,6 @@ export default function Home() {
       <FAQ />
       <ContactForm />
       <PartnerSlider />
-      <Footer />
     </>
   );
 }
