@@ -5,7 +5,6 @@ import ServicesSection from "./components/home/ServicesSection";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import FAQ from "./components/home/FAQ";
-import Footer from "./components/Footer";
 import ContactForm from "./components/home/ContactForm";
 import PartnerSlider from "./components/home/PartnerSlider";
 import { GoogleReviewsBlock } from "./GoogleReviewsBlock";
@@ -48,7 +47,7 @@ const slides = [
 export default function Home() {
   return (
     <>
-      <NavbarCarousel slides={slides} />
+      <NavbarCarousel contentBottom={false} slides={slides} />
       <AboutUs />
       <ServicesSection />
       <section className="py-16 px-6 md:px-20 bg-white">
@@ -142,7 +141,6 @@ export default function Home() {
         </div>
       </section>
       <GoogleReviewsBlock />
-
 
       <RecentWork />
       <section className="py-16 px-6 md:px-20 bg-secondary">

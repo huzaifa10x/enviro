@@ -1,72 +1,76 @@
-import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function RecentWork() {
-    // Placeholder images - replace these with your actual asset paths
     const filterImages = [
-        { id: 1, src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&q=80', alt: 'Dirty AC Filter 1' },
-        { id: 2, src: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80', alt: 'Cleaned AC Filter 1' },
-        { id: 3, src: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=600&q=80', alt: 'Dirty AC Filter 2' },
-        { id: 4, src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80', alt: 'Cleaned AC Filter 2' },
+        { id: 1, src: '/images/recent-work/img1.jpg', alt: 'recent-work' },
+        { id: 2, src: '/images/recent-work/img2.jpg', alt: 'recent-work' },
+        { id: 3, src: '/images/recent-work/img3.jpg', alt: 'recent-work' },
+        { id: 4, src: '/images/recent-work/img4.jpg', alt: 'recent-work' },
+        { id: 5, src: '/images/recent-work/img5.jpg', alt: 'recent-work' },
+        { id: 6, src: '/images/recent-work/img6.jpg', alt: 'recent-work' },
     ];
 
     const videos = [
         {
             id: 1,
             title: 'Full AC Cleaning & Servicing by Envi...',
-            thumbnail: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=600&q=80',
-            link: '#',
+            thumbnail: 'https://img.youtube.com/vi/mNoDYXic4Wk/hqdefault.jpg',
+            link: 'https://www.youtube.com/watch?v=mNoDYXic4Wk',
         },
         {
             id: 2,
             title: 'AC cleaning by Enviroclean',
-            thumbnail: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80',
-            link: '#',
+            thumbnail: 'https://img.youtube.com/vi/GtUV31OiCf4/hqdefault.jpg',
+            link: 'https://www.youtube.com/watch?v=GtUV31OiCf4',
         },
         {
             id: 3,
             title: 'Enviroclean UAE- AC Duct Cleaning',
-            thumbnail: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80',
-            link: '#',
+            thumbnail: 'https://img.youtube.com/vi/F8dhYsoI2wk/hqdefault.jpg',
+            link: 'https://www.youtube.com/watch?v=F8dhYsoI2wk',
         },
     ];
 
     return (
         <section className="w-full bg-white py-12 px-4 md:px-8 font-sans">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-6">
-                    <h2 className="text-2xl md:text-3xl font-medium text-gray-900 tracking-wide">
+                    <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
                         Our Recent Work
+                        <div className="border-b-4 border-primary w-full my-4"></div>
                     </h2>
-                    <div className="w-full border-b border-slate-300 mt-6"></div>
                 </div>
 
-                <div className="mt-8">
-                    <div className="flex gap-1 sm:gap-2">
-                        {filterImages.map((img) => (
-                            <div key={img.id} className="relative aspect-[3/4] w-full bg-gray-100 overflow-hidden shadow-sm">
-                                <img
-                                    src={img.src}
-                                    alt={img.alt}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                        ))}
-                    </div>
+                <div className="flex gap-1 sm:gap-2 overflow-x-scroll no-scrollbar">
+                    {filterImages.map((img) => (
+                        <div key={img.id} className="flex-shrink-0 shadow-sm">
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                height={400}
+                                width={300}
+                                className="w-[400px] h-[400px]"
+                            />
+                        </div>
+                    ))}
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
                     {videos.map((video) => (
-                        <a
+                        <Link
                             key={video.id}
                             href={video.link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative block aspect-video w-full bg-black overflow-hidden shadow-md rounded-sm"
                         >
-                            <img
+                            <Image
                                 src={video.thumbnail}
                                 alt={video.title}
+                                height={400}
+                                width={300}
                                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-300"
                             />
 
@@ -100,7 +104,7 @@ export default function RecentWork() {
                                     YouTube
                                 </span>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

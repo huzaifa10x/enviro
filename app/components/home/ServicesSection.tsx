@@ -59,6 +59,7 @@ export default function ServicesSection() {
                             height={100}
                             width={200}
                             alt="steps"
+                            className="md:rotate-0 rotate-90"
                         />
                     </div>
                     <div className="border border-primary rounded-lg bg-white p-5 h">
@@ -76,6 +77,7 @@ export default function ServicesSection() {
                             height={100}
                             width={200}
                             alt="steps"
+                            className="md:rotate-0 rotate-90"
                         />
                     </div>
                     <div className="border border-primary rounded-lg bg-white p-5 h">

@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { ChevronLeft, ChevronRight, Menu } from 'lucide-react';
-import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
