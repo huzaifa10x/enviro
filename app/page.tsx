@@ -9,6 +9,7 @@ import ContactForm from "./components/home/ContactForm";
 import PartnerSlider from "./components/home/PartnerSlider";
 import { GoogleReviewsBlock } from "./GoogleReviewsBlock";
 import RecentWork from "./components/home/RecentWork";
+import Process from "./components/Process";
 const slides = [
   {
     id: 1, title: "AC Cleaning Dubai",
@@ -50,6 +51,7 @@ export default function Home() {
       <NavbarCarousel contentBottom={false} slides={slides} />
       <AboutUs />
       <ServicesSection />
+      <Process />
       <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
