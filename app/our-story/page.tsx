@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Footer from "../components/Footer";
 import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
@@ -12,6 +11,9 @@ const slides = [
         actionUrl: 'tel:+971800368476'
     },
 ];
+
+
+
 export default function Story() {
     return (
         <>
@@ -38,7 +40,7 @@ export default function Story() {
                             <br />
                         </div>
                         <div className="relative min-h-90 h-full w-full">
-                            <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/our-story-hvac-service.jpeg" />
+                            <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/image00421-min.jpeg" />
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 mt-12">

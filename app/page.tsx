@@ -7,9 +7,9 @@ import { ChevronRight } from "lucide-react";
 import FAQ from "./components/home/FAQ";
 import ContactForm from "./components/home/ContactForm";
 import PartnerSlider from "./components/home/PartnerSlider";
-import { GoogleReviewsBlock } from "./GoogleReviewsBlock";
 import RecentWork from "./components/home/RecentWork";
 import Process from "./components/Process";
+import GoogleReviewsBlock from "./GoogleReviewsBlock";
 const slides = [
   {
     id: 1, title: "AC Cleaning Dubai",

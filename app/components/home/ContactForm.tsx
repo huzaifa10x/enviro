@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-export default function ContactForm() {
+export default function ContactForm({ onlyForms = false }) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -53,20 +53,22 @@ export default function ContactForm() {
 
     return (
         <section className="py-20 px-6 max-w-7xl mx-auto">
-            <div className="bg-secondary rounded-3xl overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-2">
+            <div className={`bg-secondary rounded-3xl overflow-hidden shadow-lg ${onlyForms ? '' : 'grid grid-cols-1 lg:grid-cols-2'}`}>
                 {/* Left Side: Image */}
-                <div className="relative min-h-[350px] lg:min-h-full">
-                    <Image
-                        src="/images/contact-image.jpg"
-                        alt="Technician working"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                </div>
+                {onlyForms ?
+                    "" : <div className="relative min-h-[350px] lg:min-h-full">
+                        <Image
+                            src="/images/contact-image.jpg"
+                            alt="Technician working"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                }
 
                 {/* Right Side: Form */}
-                <div className="p-8 md:p-12 bg-[#DBF9F0]">
+                <div className="p-8 md:p-12 bg-[#DBF9F0]" >
                     <h2 className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</h2>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -150,7 +152,7 @@ export default function ContactForm() {
                             {loading ? "Sending..." : "Submit"} <span>↗</span>
                         </button>
                     </form>
-                </div>
+                </div >
             </div>
         </section>
     );
