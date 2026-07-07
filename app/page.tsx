@@ -13,8 +13,11 @@ import GoogleReviewsBlock from "./GoogleReviewsBlock";
 import { Metadata } from "next";
 const slides = [
   {
-    id: 1, title: "AC Cleaning Dubai",
-    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    id: 1, title: "Dubai AC Duct Cleaning",
+    desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai
+and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your
+indoor air quality is at its best. Discover the difference of our top-notch services for a
+healthier and more comfortable living or working environment.</p>`,
     image: "/images/home-banner/banner1.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
@@ -22,9 +25,7 @@ const slides = [
   {
     id: 2,
     title: "AC Cleaning Dubai",
-
     desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
-
     image: "/images/home-banner/banner2.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
