@@ -19,7 +19,7 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                 <div className="relative flex-grow w-full rounded-2xl pb-50 pt-90 overflow-hidden text-white">
                     {
                         slides?.map((slide: any, index: number) => {
-                            const isActive = index === current; // Check karein ke slide active hai ya nahi
+                            const isActive = index === current;
 
                             return (
                                 <div
@@ -49,12 +49,14 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                                     className="max-w-4xl mb-6 md:text-base"
                                                     dangerouslySetInnerHTML={{ __html: slide.desc }}
                                                 />
-                                                <Link
-                                                    href={slide.actionUrl}
-                                                    className="bg-primary px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block"
-                                                >
-                                                    {slide.actionTitle}
-                                                </Link>
+                                                {slide.actionTitle &&
+                                                    <Link
+                                                        href={slide.actionUrl}
+                                                        className="bg-primary px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block"
+                                                    >
+                                                        {slide.actionTitle}
+                                                    </Link>
+                                                }
                                             </div>
                                         </div>
                                     </div>

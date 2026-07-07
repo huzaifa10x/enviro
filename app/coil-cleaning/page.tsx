@@ -1,26 +1,17 @@
-import Image from "next/image";
-import Footer from "../components/Footer";
 import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
-import FaqsSection from "../components/FaqsSection";
-import ContentFlexSection from "../components/ContentFlexSection";
-import PackageIncludes from "../components/PackageIncludes";
-import DisinfectionSection from "../components/DisinfectionSection";
-import RecentWork from "../components/home/RecentWork";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import CoilCleaningService from "./CoilCleaningService";
 import WhyChooseCoilCleaning from "./WhyChooseCoilCleaning";
-import BenefitsSection from "./BenefitsSection";
 import EcoFriendlyServices from "./EcoFriendlyServices";
 import ServicesSection from "../components/home/ServicesSection";
 import SustainabilityCommitment from "./SustainabilityCommitment";
-import Process from "../components/Process";
 import CoilCleaningFAQ from "./CoilCleaningFAQ";
+import BenefitsSection from "../components/BenefitsSection";
 const slides = [
     {
         id: 1,
-        // subTitle: "WELCOME TO ENVIRO CLEAN",
         title: "AC Coil Cleaning in Dubai",
         desc: `✔ Operates 24/7 ✔ Competitive Pricing ✔ Trained and Insured`,
         image: "/images/coil-cleaning.jpeg",
@@ -35,7 +26,30 @@ export default function CoilCleaning() {
             <NavbarCarousel slides={slides} contentBottom={true} />
             <CoilCleaningService />
             <WhyChooseCoilCleaning />
-            <BenefitsSection />
+            <BenefitsSection
+                benefitsData={
+                    [
+                        {
+                            id: 1,
+                            title: "HEALTHIER LIVING ENVIRONMENT",
+                            content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
+                            icon: "/images/air-filter.png"
+                        },
+                        {
+                            id: 2,
+                            title: "REDUCED EXPOSURE TO ALLERGENS",
+                            content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
+                            icon: "/images/cleaning.png"
+                        },
+                        {
+                            id: 3,
+                            title: "ENERGY BILLS",
+                            content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
+                            icon: "/images/coils.png"
+                        }
+                    ]
+                }
+            />
             <EcoFriendlyServices />
             <GoogleReviewsBlock />
             <ServicesSection />

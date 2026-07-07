@@ -1,9 +1,6 @@
-import Image from "next/image";
-import Footer from "../components/Footer";
 import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
-import FaqsSection from "../components/FaqsSection";
 import ContentFlexSection from "../components/ContentFlexSection";
 import PackageIncludes from "../components/PackageIncludes";
 import BenefitsSection from "../components/BenefitsSection";
@@ -13,7 +10,6 @@ import GoogleReviewsBlock from "../GoogleReviewsBlock";
 const slides = [
     {
         id: 1,
-        // subTitle: "WELCOME TO ENVIRO CLEAN",
         title: "AC Cleaning Dubai & Abu Dhabi",
         desc: `AC cleaning Dubai & Abu Dhabi. When it comes to AC cleaning we are the market leaders. Enviroclean have services over 25,000 AC units in Dubai & Abu Dhabi.`,
         image: "/images/ac-cleaning-dubai-1-scaled.jpg",
@@ -43,7 +39,29 @@ export default function AccleaningServicing() {
                 imagePosition={'left'}
             />
             <PackageIncludes />
-            <BenefitsSection />
+            <BenefitsSection
+                benefitsData={
+                    [
+                        {
+                            id: 1,
+                            title: "Healthier Living Environment",
+                            content: "Ac cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Ac cleaning services in Dubai & Abu Dhabi",
+                            icon: "/images/air-filter.png"
+                        },
+                        {
+                            id: 2,
+                            title: "Reduced Exposure To Allergens",
+                            content: "Living with allergies can be debilitating, but you can minimise your exposure to those allergens that cause you to suffer. AC duct cleaning service removes many of the most common allergens from within your ductwork. This includes dirt, dust, debris and organic matter like pet hair. AC cleaning Dubai & Abu Dhabi.",
+                            icon: "/images/cleaning.png"
+                        },
+                        {
+                            id: 3,
+                            title: "Odour Elimination",
+                            content: "Everyone wants and deserves an odour-free home. Air fresheners mask bad smells, but AC cleaning can deal with the source of the issue, enabling you and your family to enjoy your home without the fear of unpleasant aromas.",
+                            icon: "/images/coils.png"
+                        }
+                    ]
+                } />
             <DisinfectionSection />
             <RecentWork />
             <ContactCta
