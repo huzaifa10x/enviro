@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Link from "next/link";
 import NavbarCarousel from "../components/NavbarCarousel";
-import Image from "next/image";
 import { notFound } from "next/navigation";
-import { JSX } from "react/jsx-runtime";
+import { JSX } from "react";
 import { Metadata } from "next";
+import BlogGrid from "./blogGrid";
 
 interface Post {
     id: number;
@@ -28,16 +27,14 @@ interface Slide {
     actionUrl: string;
 }
 
-const title = 'Blog - Enviro Clean UAE'
-const description = 'Blog Discover the key to a fresher, healthier environment with our AC Cleaning Blog. Unlock expert tips, step-by-step guides, and industry insights to ensure your air conditioning system operates at its best. From maintenance tricks to understanding the importance of clean air, empower yourself with knowledge for a cool and clean living space. Explore our'
-const canonical = 'https://envirocleanuae.com/blog'
+const title = 'Blog - Enviro Clean UAE';
+const description = 'Blog Discover the key to a fresher, healthier environment with our AC Cleaning Blog...';
+const canonical = 'https://envirocleanuae.com/blog';
+
 export const metadata: Metadata = {
     title: title,
     description: description,
-    alternates: {
-        canonical: canonical,
-    },
-
+    alternates: { canonical: canonical },
     robots: {
         index: true,
         follow: true,
@@ -50,8 +47,6 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
-
-    // Open Graph / Facebook Meta Data
     openGraph: {
         title: title,
         description: description,
@@ -59,7 +54,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -68,40 +63,45 @@ export const metadata: Metadata = {
         locale: 'en_AE',
         type: 'website',
     },
-
-    // Twitter Cards Meta Data
     twitter: {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
-        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai.',
         images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
     },
-}
+};
 
-
-async function getPosts(page: number): Promise<PostsResponse> {
-    const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts/?page=${page}`, {
+// Server-side fetching helper
+async function getPosts(): Promise<PostsResponse> {
+    // SERVER PAR HAMESHA ABSOLUTE URL YA DIRECT EXTERNAL API HIT KAREIN
+    const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts?page=1`, {
         cache: "no-store",
     });
+
     if (!res.ok) {
-        throw new Error("Failed to fetch");
+        throw new Error("Failed to fetch initial posts");
     }
     return res.json() as Promise<PostsResponse>;
 }
 
-
 export default async function page(): Promise<JSX.Element> {
-    const posts = await getPosts(1);
+    let postsData: PostsResponse = { posts: [] }; // Fallback initialization
 
-    if (!posts) {
-        notFound();
+    try {
+        const fetchedData = await getPosts();
+        if (fetchedData && Array.isArray(fetchedData.posts)) {
+            postsData = fetchedData;
+        }
+    } catch (e) {
+        console.error("Error fetching blogs on server:", e);
     }
+
     const slides: Slide[] = [
         {
             id: 1,
             subTitle: "",
             title: "Blog",
-            desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog. Unlock expert tips, step-by-step guides, and industry insights to ensure your air conditioning system operates at its best. From maintenance tricks to understanding the importance of clean air, empower yourself with knowledge for a cool and clean living space. Explore our blog now for a breath of fresh, informed air.`,
+            desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog...`,
             image: "/images/blogbg.jpg",
             actionTitle: 'Call Us',
             actionUrl: 'tel:+971800368476'
@@ -111,50 +111,8 @@ export default async function page(): Promise<JSX.Element> {
     return (
         <>
             <NavbarCarousel slides={slides} contentBottom={true} />
-            <div className="bg-[#f2faf7] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {posts.posts.map((post) => (
-                            <div
-                                key={post.id}
-                                className={`bg-white rounded-lg shadow-sm overflow-hidden flex flex-col justify-between border border-gray-100 relative`}
-                            >
-                                <div className="h-52 w-full overflow-hidden relative">
-                                    <Image
-                                        src={post.featured_image}
-                                        alt={post.title}
-                                        height={300}
-                                        width={400}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-
-                                <div className="p-6 flex flex-col grow justify-between">
-                                    <div>
-                                        <h3 className="text-[19px] font-semibold text-gray-800 leading-snug mb-3 hover:text-[#10b981] transition-colors duration-200 cursor-pointer">
-                                            {post.title}
-                                        </h3>
-
-                                        <div className="text-gray-500 text-sm mb-6 line-clamp-2" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
-                                    </div>
-
-                                    <div>
-                                        <Link href={`/${post.slug}`} className="bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-5 rounded-md transition-colors duration-200 shadow-sm">
-                                            Read More
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
-                <div className="flex items-center justify-center mt-10">
-                    <Link className="mx-auto px-6 py-2 rounded font-urbanist font-medium bg-[#12b359] text-white hover:bg-[#0f994b] transition-colors" href={''}>
-                        Load More
-                    </Link>
-                </div>
-            </div>
+            {/* Ab postsData me pehle page ka data successfully jayega */}
+            <BlogGrid initialData={postsData} />
         </>
-    )
+    );
 }

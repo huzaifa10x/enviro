@@ -22,7 +22,7 @@ async function getPosts(blogs: any) {
 }
 
 export default async function page({ params }: { params: { blogs: string } }) {
-    const { blogs } = params
+    const { blogs } = await params
     const data = await getPosts(blogs);
     if (!data) {
         notFound();
@@ -52,7 +52,7 @@ export default async function page({ params }: { params: { blogs: string } }) {
                             <div className="space-y-6">
                                 {data.related_posts.map((post: { slug: string | UrlObject; featured_image: string | StaticImport; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, key: Key | null | undefined) => (
                                     <div key={key}>
-                                        <Link href={post.slug}>
+                                        <Link href={"/" + post.slug}>
                                             <div className="grid grid-cols-5 gap-5 shrink-0">
                                                 <div className="col-span-2 relative h-[100px]">
                                                     <Image

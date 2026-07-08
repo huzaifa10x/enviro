@@ -95,7 +95,7 @@ export default function Footer() {
                             { label: 'Home', href: '/' },
                             { label: 'Our Story', href: '/our-story' },
                             { label: 'Blog', href: '/blog' },
-                            { label: 'Abu Dhabi', href: '/abu-dhabi' },
+                            { label: 'Abu Dhabi', href: '/duct-cleaning-abu-dhabi' },
                             { label: 'Contact', href: '/contact' }
                         ].map(item => (
                             <li key={item.label} className="hover:text-white transition">
@@ -111,10 +111,10 @@ export default function Footer() {
                     <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Our Services</h3>
                     <ul className="space-y-3 text-white text-sm">
                         {[
-                            { label: 'AC Cleaning', href: '/services/ac-cleaning' },
-                            { label: 'Duct Cleaning', href: '/services/duct-cleaning' },
-                            { label: 'Coil Cleaning', href: '/services/coil-cleaning' },
-                            { label: 'AC Sanitisation', href: '/services/ac-sanitisation' }
+                            { label: 'AC Cleaning', href: '/accleaning-servicing/' },
+                            { label: 'Duct Cleaning', href: '/duct-cleaning-service-dubai/' },
+                            { label: 'Coil Cleaning', href: '/coil-cleaning/' },
+                            { label: 'AC Sanitisation', href: '/ac-sanitisation/' }
                         ].map(item => (
                             <li key={item.label} className="hover:text-white transition">
                                 <Link className="cursor-pointer" href={item.href}>
