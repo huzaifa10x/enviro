@@ -59,7 +59,6 @@ export const metadata: Metadata = {
     canonical: canonical, // Aapka main production domain url
   },
 
-  // Robots Rules (Aapke screen me missing dikha raha tha, yahan index/follow explicit lagaya hai)
   robots: {
     index: true,
     follow: true,
