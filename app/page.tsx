@@ -11,6 +11,7 @@ import RecentWork from "./components/home/RecentWork";
 import Process from "./components/Process";
 import GoogleReviewsBlock from "./GoogleReviewsBlock";
 import { Metadata } from "next";
+import VideosSection from "./components/videosSection";
 const slides = [
   {
     id: 1, title: "Dubai AC Duct Cleaning",
@@ -198,6 +199,8 @@ export default function Home() {
       <GoogleReviewsBlock />
 
       <RecentWork />
+      <VideosSection />
+
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="space-y-6">
