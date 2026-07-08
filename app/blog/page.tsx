@@ -4,6 +4,7 @@ import NavbarCarousel from "../components/NavbarCarousel";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { JSX } from "react/jsx-runtime";
+import { Metadata } from "next";
 
 interface Post {
     id: number;
@@ -27,6 +28,57 @@ interface Slide {
     actionUrl: string;
 }
 
+const title = 'Blog - Enviro Clean UAE'
+const description = 'Blog Discover the key to a fresher, healthier environment with our AC Cleaning Blog. Unlock expert tips, step-by-step guides, and industry insights to ensure your air conditioning system operates at its best. From maintenance tricks to understanding the importance of clean air, empower yourself with knowledge for a cool and clean living space. Explore our'
+const canonical = 'https://envirocleanuae.com/blog'
+export const metadata: Metadata = {
+    title: title,
+    description: description,
+    alternates: {
+        canonical: canonical,
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+
+    // Open Graph / Facebook Meta Data
+    openGraph: {
+        title: title,
+        description: description,
+        url: canonical,
+        siteName: 'EnviroClean UAE',
+        images: [
+            {
+                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                width: 1200,
+                height: 630,
+                alt: 'EnviroClean AC Cleaning Services Dubai',
+            },
+        ],
+        locale: 'en_AE',
+        type: 'website',
+    },
+
+    // Twitter Cards Meta Data
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+    },
+}
+
+
 async function getPosts(page: number): Promise<PostsResponse> {
     const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts/?page=${page}`, {
         cache: "no-store",
@@ -36,6 +88,7 @@ async function getPosts(page: number): Promise<PostsResponse> {
     }
     return res.json() as Promise<PostsResponse>;
 }
+
 
 export default async function page(): Promise<JSX.Element> {
     const posts = await getPosts(1);

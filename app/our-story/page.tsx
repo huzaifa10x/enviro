@@ -12,16 +12,16 @@ const slides = [
         actionUrl: 'tel:+971800368476'
     },
 ];
-
+const title = 'Our Story - Enviro Clean UAE'
+const description = 'About Us ✅ More than 180 - 5-star Google reviews ✅ Trained ✅ Insured Call Now Enviroclean - HVAC Services Enviroclean Top Rated Air Duct Cleaning Service provider Welcome to Enviroclean, a distinguished premier Air Duct Cleaning Service in Dubai and home maintenance service provider. Established in 2012, we have swiftly earned an exceptional reputation,'
+const canonical = 'https://envirocleanuae.com/our-story'
 export const metadata: Metadata = {
-    // Primary Meta Tags
-    title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
-    description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!',
+    title: title,
+    description: description,
     alternates: {
-        canonical: 'https://envirocleanuae.com/', // Aapka main production domain url
+        canonical: canonical,
     },
 
-    // Robots Rules (Aapke screen me missing dikha raha tha, yahan index/follow explicit lagaya hai)
     robots: {
         index: true,
         follow: true,
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
 
     // Open Graph / Facebook Meta Data
     openGraph: {
-        title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
-        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!',
-        url: 'https://envirocleanuae.com/',
+        title: title,
+        description: description,
+        url: canonical,
         siteName: 'EnviroClean UAE',
         images: [
             {

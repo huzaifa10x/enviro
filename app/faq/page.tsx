@@ -4,6 +4,7 @@ import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
 import FaqsSection from "../components/FaqsSection";
+import { Metadata } from "next";
 const slides = [
     {
         id: 1,
@@ -52,6 +53,56 @@ const faqs = [
         "answer": "No, most of the mess is spinning around in your AC duct. However our team use plastic protection sheets to cover all of your furniture to ensure extra protection."
     }
 ]
+const title = 'FAQ - Enviro Clean UAE'
+const description = 'WELCOME TO ENVIRO CLEAN Frequently Asked Questions Check if the question you have is answered below, if not call our uk bookings team today for assistance. Call Now Frequently Asked Questions Duct Cleaning & AC Maintenance How Often Should I get My AC Serviced? Experts agree that ideally AC units should be serviced every 3'
+const canonical = 'https://envirocleanuae.com/faq'
+export const metadata: Metadata = {
+    title: title,
+    description: description,
+    alternates: {
+        canonical: canonical,
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+
+    // Open Graph / Facebook Meta Data
+    openGraph: {
+        title: title,
+        description: description,
+        url: canonical,
+        siteName: 'EnviroClean UAE',
+        images: [
+            {
+                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                width: 1200,
+                height: 630,
+                alt: 'EnviroClean AC Cleaning Services Dubai',
+            },
+        ],
+        locale: 'en_AE',
+        type: 'website',
+    },
+
+    // Twitter Cards Meta Data
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+    },
+}
+
 export default function Faq() {
     return (
         <>

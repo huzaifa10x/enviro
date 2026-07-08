@@ -6,6 +6,7 @@ import BenefitsSection from "../components/BenefitsSection";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import ServicesSection from "../components/home/ServicesSection";
 import CoilCleaningFAQ from "./CoilCleaningFAQ";
+import { Metadata } from "next";
 const slides = [
     {
         id: 1,
@@ -16,6 +17,57 @@ const slides = [
         actionUrl: 'tel:+971800368476'
     },
 ];
+
+const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai'
+const description = "EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC's performance and efficiency. Get a free quote today!"
+const canonical = 'https://envirocleanuae.com/ac-sanitisation'
+
+export const metadata: Metadata = {
+    title: title,
+    description: description,
+    alternates: {
+        canonical: canonical,
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+
+    // Open Graph / Facebook Meta Data
+    openGraph: {
+        title: title,
+        description: description,
+        url: canonical,
+        siteName: 'EnviroClean UAE',
+        images: [
+            {
+                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                width: 1200,
+                height: 630,
+                alt: 'EnviroClean AC Cleaning Services Dubai',
+            },
+        ],
+        locale: 'en_AE',
+        type: 'website',
+    },
+
+    // Twitter Cards Meta Data
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+    },
+}
 
 export default function AccleaningServicing() {
     return (

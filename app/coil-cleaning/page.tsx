@@ -9,6 +9,7 @@ import ServicesSection from "../components/home/ServicesSection";
 import SustainabilityCommitment from "./SustainabilityCommitment";
 import CoilCleaningFAQ from "./CoilCleaningFAQ";
 import BenefitsSection from "../components/BenefitsSection";
+import { Metadata } from "next";
 const slides = [
     {
         id: 1,
@@ -19,6 +20,59 @@ const slides = [
         actionUrl: 'tel:+971800368476'
     },
 ];
+
+const title = 'AC Coil Cleaning Dubai | Ac Coil Cleaning Services'
+const description = 'Professional AC coil cleaning services in Dubai to improve cooling efficiency & air quality. Book expert AC maintenance today!'
+const canonical = 'https://envirocleanuae.com/coil-cleaning'
+export const metadata: Metadata = {
+    // Primary Meta Tags
+    title: title,
+    description: description,
+    alternates: {
+        canonical: canonical, // Aapka main production domain url
+    },
+
+    // Robots Rules (Aapke screen me missing dikha raha tha, yahan index/follow explicit lagaya hai)
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+
+    // Open Graph / Facebook Meta Data
+    openGraph: {
+        title: title,
+        description: description,
+        url: canonical,
+        siteName: 'EnviroClean UAE',
+        images: [
+            {
+                url: 'images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                width: 1200,
+                height: 630,
+                alt: canonical,
+            },
+        ],
+        locale: 'en_AE',
+        type: 'website',
+    },
+
+    // Twitter Cards Meta Data
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
+        description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+    },
+}
+
 
 export default function CoilCleaning() {
     return (

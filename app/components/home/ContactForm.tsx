@@ -35,9 +35,9 @@ export default function ContactForm({ onlyForms = false }) {
 
             if (res.ok) {
                 // WordPress JSON APIs aksar direct messaging ya custom success statuses deti hain
-                setStatus({ 
-                    type: 'success', 
-                    msg: result?.data?.message || "Thank you! Your inquiry has been submitted successfully." 
+                setStatus({
+                    type: 'success',
+                    msg: result?.data?.message || "Thank you! Your inquiry has been submitted successfully."
                 });
                 // Form resetting
                 setFormData({ name: "", email: "", phone: "", location: "", service: "", message: "" });
@@ -109,9 +109,13 @@ export default function ContactForm({ onlyForms = false }) {
                                 onChange={handleChange}
                                 className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
                             >
-                                <option value="">Select Location</option>
+                                <option value="">Location</option>
                                 <option value="Dubai">Dubai</option>
-                                <option value="Abu Dhabi">Abu Dhabi</option>
+                                <option value="Arabian Ranches">Arabian Ranches</option>
+                                <option value="Dubai Marina">Dubai Marina</option>
+                                <option value="Palm Jumeirah">Palm Jumeirah</option>
+                                <option value="Emirates Hills">Emirates Hills</option>
+                                <option value="Jumeriah Park">Jumeriah Park</option>
                             </select>
                             <select
                                 name="service"

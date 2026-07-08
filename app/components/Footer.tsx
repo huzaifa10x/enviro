@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -90,8 +91,18 @@ export default function Footer() {
                 <div>
                     <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Quick Access</h3>
                     <ul className="space-y-3 text-white text-sm">
-                        {['Home', 'Our Story', 'Blog', 'Abu Dhabi', 'Contact'].map(item => (
-                            <li key={item} className="hover:text-white transition cursor-pointer">{item}</li>
+                        {[
+                            { label: 'Home', href: '/' },
+                            { label: 'Our Story', href: '/our-story' },
+                            { label: 'Blog', href: '/blog' },
+                            { label: 'Abu Dhabi', href: '/abu-dhabi' },
+                            { label: 'Contact', href: '/contact' }
+                        ].map(item => (
+                            <li key={item.label} className="hover:text-white transition">
+                                <Link className="cursor-pointer" href={item.href}>
+                                    {item.label}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -99,8 +110,17 @@ export default function Footer() {
                 <div>
                     <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Our Services</h3>
                     <ul className="space-y-3 text-white text-sm">
-                        {['AC Cleaning', 'Duct Cleaning', 'Coil Cleaning', 'AC Sanitisation'].map(item => (
-                            <li key={item} className="hover:text-white transition cursor-pointer">{item}</li>
+                        {[
+                            { label: 'AC Cleaning', href: '/services/ac-cleaning' },
+                            { label: 'Duct Cleaning', href: '/services/duct-cleaning' },
+                            { label: 'Coil Cleaning', href: '/services/coil-cleaning' },
+                            { label: 'AC Sanitisation', href: '/services/ac-sanitisation' }
+                        ].map(item => (
+                            <li key={item.label} className="hover:text-white transition">
+                                <Link className="cursor-pointer" href={item.href}>
+                                    {item.label}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>
