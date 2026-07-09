@@ -34,12 +34,10 @@ export default function ContactForm({ onlyForms = false }) {
             const result = await res.json();
 
             if (res.ok) {
-                // WordPress JSON APIs aksar direct messaging ya custom success statuses deti hain
                 setStatus({
                     type: 'success',
                     msg: result?.data?.message || "Thank you! Your inquiry has been submitted successfully."
                 });
-                // Form resetting
                 setFormData({ name: "", email: "", phone: "", location: "", service: "", message: "" });
             } else {
                 setStatus({ type: 'error', msg: result.error || "Failed to submit inquiry. Please try again." });
@@ -54,7 +52,6 @@ export default function ContactForm({ onlyForms = false }) {
     return (
         <section className="py-20 px-6 max-w-7xl mx-auto">
             <div className={`bg-secondary rounded-3xl overflow-hidden shadow-lg ${onlyForms ? '' : 'grid grid-cols-1 lg:grid-cols-2'}`}>
-                {/* Left Side: Image */}
                 {onlyForms ?
                     "" : <div className="relative min-h-[350px] lg:min-h-full">
                         <Image
@@ -67,9 +64,8 @@ export default function ContactForm({ onlyForms = false }) {
                     </div>
                 }
 
-                {/* Right Side: Form */}
                 <div className="p-8 md:p-12 bg-[#DBF9F0]" >
-                    <div className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input
@@ -140,7 +136,6 @@ export default function ContactForm({ onlyForms = false }) {
                             className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] placeholder-gray-600 text-gray-800 focus:border-green-500"
                         ></textarea>
 
-                        {/* Success / Error Status Alerts */}
                         {status.type && (
                             <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-green-100 text-green-900' : 'bg-red-100 text-red-900'}`}>
                                 {status.msg}

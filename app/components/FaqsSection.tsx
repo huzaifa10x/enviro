@@ -34,9 +34,9 @@ const FaqsSection = ({ faqs }: any) => {
                                     onClick={() => toggleAccordion(faq.id)}
                                     className="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none transition-colors duration-200"
                                 >
-                                    <span className="text-base md:text-lg font-urbanist font-medium text-zinc-900 tracking-wide pr-4">
+                                    <h5 className="text-base md:text-lg font-urbanist font-medium text-zinc-900 tracking-wide pr-4">
                                         {faq.question}
-                                    </span>
+                                    </h5>
 
                                     <span className="text-xl font-light text-zinc-500 w-6 h-6 flex items-center justify-center select-none transform transition-transform duration-300">
                                         {isOpen ? '−' : '+'}

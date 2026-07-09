@@ -100,7 +100,7 @@ export default async function page(): Promise<JSX.Element> {
         {
             id: 1,
             subTitle: "",
-            title: "Blog",
+            title: "<h1>Blog</h1>",
             desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog...`,
             image: "/images/blogbg.jpg",
             actionTitle: 'Call Us',

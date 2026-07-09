@@ -8,7 +8,7 @@ const slides = [
     {
         id: 1,
         subTitle: "",
-        title: "Contact Us",
+        title: "<h1>Contact Us</h1>",
         desc: `Get in touch with our UK bookings team today.`,
         image: "/images/our-story.jpeg",
         actionTitle: 'Call Us',
@@ -77,17 +77,17 @@ export default function contact() {
                         <div className="md:col-span-2 space-y-7 flex justify-center flex-col">
                             <div className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
                                 <Mail className="mx-auto" size={50} strokeWidth={1} />
-                                <div className="text-2xl">Email Address</div>
+                                <h4 className="text-2xl">Email Address</h4>
                                 <div>info@envirocleanuae.com</div>
                             </div>
                             <div className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
                                 <Phone className="mx-auto" size={50} strokeWidth={1} />
-                                <div className="text-2xl">Email Address</div>
+                                <h4 className="text-2xl">Email Address</h4>
                                 <div>info@envirocleanuae.com</div>
                             </div>
                             <div className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
                                 <MapPin className="mx-auto" size={50} strokeWidth={1} />
-                                <div className="text-2xl">Email Address</div>
+                                <h4 className="text-2xl">Email Address</h4>
                                 <div>info@envirocleanuae.com</div>
                             </div>
                         </div>

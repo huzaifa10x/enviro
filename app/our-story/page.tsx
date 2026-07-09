@@ -5,7 +5,7 @@ import ContactForm from "../components/home/ContactForm";
 import { Metadata } from "next";
 const slides = [
     {
-        id: 1, title: "About Us",
+        id: 1, title: `<h1>About Us</h1>`,
         desc: `✅  More than 180 – 5-star Google reviews  ✅  Trained   ✅  Insured`,
         image: "/images/our-story.jpeg",
         actionTitle: 'Call Us',
@@ -15,6 +15,7 @@ const slides = [
 const title = 'Our Story - Enviro Clean UAE'
 const description = 'About Us ✅ More than 180 - 5-star Google reviews ✅ Trained ✅ Insured Call Now Enviroclean - HVAC Services Enviroclean Top Rated Air Duct Cleaning Service provider Welcome to Enviroclean, a distinguished premier Air Duct Cleaning Service in Dubai and home maintenance service provider. Established in 2012, we have swiftly earned an exceptional reputation,'
 const canonical = 'https://envirocleanuae.com/our-story'
+
 export const metadata: Metadata = {
     title: title,
     description: description,
@@ -95,14 +96,14 @@ export default function Story() {
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
                             <div>
                                 <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
-                                <h3 className="text-2xl font-urbanist font-bold text-black my-3">Healthier Environment</h3>
+                                <h4 className="text-2xl font-urbanist font-bold text-black my-3">Healthier Environment</h4>
                                 <p className="font-extralight text-[#333333] leading-relaxed">AC cleaning will significantly improve your indoor air quality.</p>
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
                             <div>
                                 <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
-                                <h3 className="text-2xl font-urbanist font-bold text-black my-3">Odour Elimination</h3>
+                                <h4 className="text-2xl font-urbanist font-bold text-black my-3">Odour Elimination</h4>
                                 <p className="font-extralight text-[#333333] leading-relaxed">Everyone wants and deserves an odour-free home.</p>
                             </div>
                         </div>

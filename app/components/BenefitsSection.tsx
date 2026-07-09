@@ -28,9 +28,9 @@ export default function BenefitsSection({ benefitsData }) {
                                     className="w-full h-full object-contain"
                                 />
                             </div>
-                            <h3 className="text-xl font-urbanist font-bold text-zinc-900 mb-4 tracking-wide leading-snug">
+                            <h2 className="text-xl font-urbanist font-bold text-zinc-900 mb-4 tracking-wide leading-snug">
                                 {benefit.title}
-                            </h3>
+                            </h2>
                             <p className="font-extralight leading-5 text-sm md:text-base text-[#333333]">
                                 {benefit.content}
                             </p>

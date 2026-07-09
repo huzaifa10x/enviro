@@ -9,7 +9,7 @@ const slides = [
     {
         id: 1,
         subTitle: "WELCOME TO ENVIRO CLEAN",
-        title: "Frequently Asked Questions",
+        title: `<h1>Frequently Asked Questions</h1>`,
         desc: `Check if the question you have is answered below, if not call our uk bookings team today for assistance.`,
         image: "/images/our-story.jpeg",
         actionTitle: 'Call Us',
@@ -115,7 +115,6 @@ export default function Faq() {
                 button2Text={'Whatsapp Now'}
                 button2Link={'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'}
             />
-            <ContactForm />
         </>
     );
 }

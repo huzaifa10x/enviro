@@ -12,7 +12,7 @@ import { Metadata } from "next";
 const slides = [
     {
         id: 1,
-        title: "AC Duct Cleaning Service Abu Dhabi",
+        title: "<h1>AC Duct Cleaning Service Abu Dhabi</h1>",
         desc: `Market leaders in Abu Dhabi for duct cleaning. British managed and British trained technicians.`,
         image: "/images/Duct-Cleaning-Service-Dubai.jpg",
         actionTitle: 'Call Now',
@@ -128,7 +128,7 @@ export default function AccleaningServicing() {
                         <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-zinc-900 leading-tight mb-6">
                             Get AC Duct Cleaning In Abu Dhabi Today
                         </h2>
-                        <div className="text-lg font-bold">Desert Climate Challenges</div>
+                        <h3 className="text-lg font-bold">Desert Climate Challenges</h3>
                         <p>In Abu Dhabi, an increasing amount of fine sand and dust buildup causes clogs in the filter. With these clogs, the cooling system must exert a higher effort to operate its components. It expends more energy creating much higher costs to utilize air-conditioning units. It also lowers the ability to cool down homes during peak periods of heat. This is why duct cleaning Abu Dhabi is an essential preventive measure, when you’re living in the city during summers.</p>
 
                         <Link className="bg-[#333333] px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block" href="https://envirocleanuae.com/duct-cleaning-service-dubai/#headafing">Read More</Link>
@@ -176,11 +176,10 @@ export default function AccleaningServicing() {
                 subHeading={''}
                 heading={'Time To Get Your AC Duct Cleaned'}
                 content={`
-                    <div class='font-bold'>Dirt & Debris Are Visible</div>
+                    <h3 class='font-bold'>Dirt & Debris Are Visible</h3>
                     <p class='my-6'>If you notice accumulating dust on top of your indoor unit and on the outside of the condenser, it’s the first sign. This indicates that cleaning services will be helpful in removing these contaminants before they start to block off any air flow or cause damage to the cooling performance even further.</p>
-                    <div class='font-bold'>Less effective cooling</div>
-                    <p>When your air conditioning unit can’t keep the temperature acceptable even while it’s running all the time. This means it needs professional cleaning to get rid of any obstructions in the coils or channels right away.</p>
-                    `}
+                    <h3 class='font-bold'>Less effective cooling</h3>
+                    <p>When your air conditioning unit can’t keep the temperature acceptable even while it’s running all the time. This means it needs professional cleaning to get rid of any obstructions in the coils or channels right away.</p>`}
                 imageSrc={'/images/Sanitisation.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
