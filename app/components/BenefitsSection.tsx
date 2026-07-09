@@ -7,7 +7,7 @@ export default function BenefitsSection({ benefitsData }) {
 
                 {/* Heading Block */}
                 <div className="text-center mb-12">
-                    <span className="text-[#12b359] text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
+                    <span className="text-primary text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
                         Learn About Ac Cleaning Benefits
                     </span>
                     <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-zinc-900 tracking-wide">
@@ -21,7 +21,7 @@ export default function BenefitsSection({ benefitsData }) {
                             key={benefit.id}
                             className="bg-white rounded-xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-gray-100/50 flex flex-col items-start text-left min-h-[360px]"
                         >
-                            <div className="mb-6 w-14 h-14 text-[#12b359] flex items-center justify-center">
+                            <div className="mb-6 w-14 h-14 text-primary flex items-center justify-center">
                                 <img
                                     src={benefit.icon}
                                     alt={benefit.title}

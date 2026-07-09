@@ -33,7 +33,7 @@ export default function ContactCta({
                 <div className="flex flex-col gap-3 min-w-[180px] w-full md:w-auto">
                     <a
                         href={button1Link}
-                        className="bg-[#12b359] hover:bg-[#0f994b] text-white text-center font-urbanist font-medium py-2.5 px-6 rounded-lg transition-colors duration-200 text-sm whitespace-nowrap shadow-sm"
+                        className="bg-primary hover:bg-[#0f994b] text-white text-center font-urbanist font-medium py-2.5 px-6 rounded-lg transition-colors duration-200 text-sm whitespace-nowrap shadow-sm"
                     >
                         {button1Text}
                     </a>
@@ -41,7 +41,7 @@ export default function ContactCta({
                         href={button2Link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#12b359] hover:bg-[#0f994b] text-white text-center font-urbanist font-medium py-2.5 px-6 rounded-lg transition-colors duration-200 text-sm whitespace-nowrap shadow-sm"
+                        className="bg-primary hover:bg-[#0f994b] text-white text-center font-urbanist font-medium py-2.5 px-6 rounded-lg transition-colors duration-200 text-sm whitespace-nowrap shadow-sm"
                     >
                         {button2Text}
                     </a>

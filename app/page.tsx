@@ -12,37 +12,36 @@ import Process from "./components/Process";
 import GoogleReviewsBlock from "./GoogleReviewsBlock";
 import { Metadata } from "next";
 import VideosSection from "./components/videosSection";
+import RegularACDuctCleaningDubai from "./components/home/RegularACDuctCleaningDubai";
+import AboutOurServices from "./components/home/AboutOurServices";
 const slides = [
   {
     id: 1, title: "Dubai AC Duct Cleaning",
-    desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai
-and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your
-indoor air quality is at its best. Discover the difference of our top-notch services for a
-healthier and more comfortable living or working environment.</p>`,
+    desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai<br>and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
     image: "/images/home-banner/banner1.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
   {
     id: 2,
-    title: "AC Cleaning Dubai",
-    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    title: "Cleaner Indoor Air ",
+    desc: `<p>Expert cleaning and caring for the indoor air conditioning system to improve air quality and enhance comfort.</p>`,
     image: "/images/home-banner/banner2.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
   {
     id: 3,
-    title: "AC Cleaning Dubai",
-    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    title: "Complete System Cleaning",
+    desc: `<p>Every part of your HVAC system receives a thorough cleaning and complete attention.</p>`,
     image: "/images/home-banner/banner3.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
   {
     id: 4,
-    title: "AC Cleaning Dubai",
-    desc: `<p>Welcome to enviroclean, your premier choice for professional AC duct cleaning services in<br>Dubai and Abu Dhabi. As a British company, we bring expertise and excellence to ensure<br>your indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    title: "Total Comfort",
+    desc: `<p>Professional care will offer a consistently clean indoor air and a reliable cooling system that will function correctly all year.</p>`,
     image: "/images/home-banner/banner4.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
@@ -106,37 +105,7 @@ export default function Home() {
       <AboutUs />
       <ServicesSection />
       <Process />
-      <section className="py-16 px-6 md:px-20 bg-white">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
-              About Regular AC Maintenance
-              <div className="border-b-4 border-primary w-full my-4"></div>
-            </h2>
-
-            <div className="text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Regular AC cleaning and maintenance are essential for ensuring the optimal performance, energy efficiency, and longevity of your air conditioning system. Neglecting these routine tasks can lead to reduced efficiency, increased energy costs, and a shortened lifespan for your AC unit. Here are some key reasons why regular AC cleaning and maintenance should be a priority:
-              </p>
-              <p>
-                Improved performance: Over time, dust, dirt, and debris can accumulate on the filters,   <Link className="text-primary" href={'https://envirocleanuae.com/coil-cleaning/'}> coils </Link>, and other components of your AC system. Regular cleaning helps remove these build-ups, ensuring that your system can operate at its full capacity and effectively cool your space.
-              </p>
-            </div>
-
-            <Link href={'https://envirocleanuae.com/#about-section'} className="group duration-300 hover:scale-105 flex justify-center bg-black px-4 py-1 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition">
-              Get a Quote
-              <ChevronRight className="-ml-5 opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all" />
-            </Link>
-          </div>
-
-          <div className="">
-            <Image src="/images/About-Regular-AC-Maintenance-.jpg" width={500} height={500}
-              alt="Enviroclean Team"
-              className="rounded-2xl shadow-xl w-full max-h-[500px] object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <RegularACDuctCleaningDubai />
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-6">
@@ -201,38 +170,7 @@ export default function Home() {
       <RecentWork />
       <VideosSection />
 
-      <section className="py-16 px-6 md:px-20 bg-secondary">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
-              About Our Services:
-              <div className="border-b-4 border-primary w-full my-4"></div>
-            </h2>
-            <div className="font-bold text-2xl font-urbanist">AC Cleaning</div>
-            <div className="text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Air conditioning units are essential for maintaining comfortable indoor temperatures, especially in Dubai’s hot climate. However, over time, dirt, dust, and other contaminants can accumulate within the units, reducing their efficiency and negatively impacting air quality. EnviroClean’s AC cleaning service involves:
-              </p>
-              <ul className="list-disc pl-6">
-                <li>A thorough inspection of your air conditioning units</li>
-                <li>Cleaning of the evaporator and condenser coils</li>
-              </ul>
-            </div>
-
-            <Link href={'https://envirocleanuae.com/#about-section'} className="group duration-300 hover:scale-105 flex justify-center bg-black px-4 py-1 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition">
-              Get a Quote
-              <ChevronRight className="-ml-5 opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all" />
-            </Link>
-          </div>
-
-          <div className="">
-            <Image src="/images/About-Our-Services.jpg" width={500} height={500}
-              alt="Enviroclean Team"
-              className="rounded-2xl shadow-xl w-full max-h-[500px] object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <AboutOurServices />
       <FAQ />
       <ContactForm />
       <PartnerSlider />

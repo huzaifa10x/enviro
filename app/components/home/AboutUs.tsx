@@ -15,15 +15,12 @@ export default function AboutUs() {
                     </h2>
 
                     <div className="text-gray-600 leading-relaxed space-y-4">
-                        <p>
-                            In the bustling metropolis of Dubai, where temperatures can soar to extreme heights, air conditioning systems play a crucial role in providing comfort and relief from the scorching heat. Given the importance of AC units in maintaining a comfortable indoor environment, regular <Link className="text-primary" href={'https://goo.gl/maps/L8NtRXcv35B8n1yG6'}> Air Duct Cleaning Service</Link> is essential to ensure optimal performance, energy efficiency, and a healthy atmosphere.
-                        </p>
-                        <p>
-                            Air conditioning systems are an indispensable part of modern life, providing comfort and a pleasant indoor environment, especially during the hot summer months. Despite their importance, these systems can sometimes malfunction or become less efficient, necessitating prompt and professional AC repair services.
-                        </p>
+                        <p>In the bustling metropolis of Dubai, where temperatures can soar to extreme heights, air conditioning systems play a crucial role in providing comfort and relief from the scorching heat. Given the importance of AC units in maintaining a comfortable indoor environment, regular <Link className="text-primary" href={'https://goo.gl/maps/L8NtRXcv35B8n1yG6'}> Air Duct Cleaning Service</Link> is essential to ensure optimal performance, energy efficiency, and a healthy atmosphere.</p>
+
+                        <p>Air conditioning systems are an indispensable part of modern life, providing comfort and a pleasant indoor environment, especially during the hot summer months. Despite their importance, these systems can sometimes malfunction or become less efficient, necessitating prompt and professional AC repair services.</p>
                     </div>
 
-                    <button className="group duration-300 hover:scale-105 flex justify-center bg-black px-4 py-1 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition">
+                    <button className="group duration-300 hover:scale-105 flex justify-center bg-black px-4 py-1 w-fit rounded-lg text-white font-medium transition">
                         Get a Quote
                         <ChevronRight className="-ml-5 opacity-0 group-hover:opacity-100 group-hover:ml-2 transition-all" />
                     </button>

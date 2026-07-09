@@ -9,7 +9,7 @@ export default function SustainabilityCommitment() {
     return (
         <section className="w-full bg-white py-16 px-6 md:px-12 max-w-7xl mx-auto font-sans">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                
+
                 {/* Left Side: Content Block */}
                 <div className="space-y-6">
                     <div className="space-y-2">
@@ -20,13 +20,13 @@ export default function SustainabilityCommitment() {
                     </div>
 
                     {/* Initial & Expandable Content Box */}
-                    <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
+                    <div className={`text-gray-700 space-y-4 text-sm md:text-base duration-300 leading-relaxed ${isExpanded === true ? 'h-[300px] overflow-y-scroll' : ''} `}>
                         <p>
-                            We prioritize sustainability in every aspect of our services, using eco-friendly 
+                            We prioritize sustainability in every aspect of our services, using eco-friendly
                             cleaning solutions and adopting practices that contribute to a greener planet.
                         </p>
                         <p>
-                            EnviroClean Coil Cleaning is dedicated to providing effective cleaning solutions 
+                            EnviroClean Coil Cleaning is dedicated to providing effective cleaning solutions
                             for your HVAC system and being mindful of the environment.
                         </p>
 
@@ -34,7 +34,7 @@ export default function SustainabilityCommitment() {
                             <h3 className="font-bold text-gray-900 text-base mb-2">
                                 Experienced and Skilled Air Conditioner Technicians in Dubai:
                             </h3>
-                            
+
                             {/* Agar expanded nahi hai toh incomplete line dikhegi jaisa mockup "image_df53b6.jpg" mein hai */}
                             {!isExpanded ? (
                                 <p>Our team consists of experienced technicians with a wealth of...</p>
@@ -111,6 +111,6 @@ export default function SustainabilityCommitment() {
                 </div>
 
             </div>
-        </section>
+        </section >
     )
 }

@@ -19,7 +19,7 @@ const ContentFlexSection = ({
 
                 <div className={`flex flex-col ${textOrderClass}`}>
                     {subHeading && (
-                        <span className="text-[#12b359] text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
+                        <span className="text-primary text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
                             {subHeading}
                         </span>
                     )}

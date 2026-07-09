@@ -71,30 +71,28 @@ export default function Navbar() {
                           Agar user kisi bhi service page par ho, 
                           toh 'Services' main heading ko bhi active green color de sakte hain 
                         */}
-                        <div className={`flex items-center gap-1 hover:text-green-300 transition-colors ${
-                            servicesItems.some(item => pathname === item.url) ? 'text-[#12b359]' : ''
-                        }`}>
+                        <div className={`flex items-center gap-1 hover:text-green-300 transition-colors ${servicesItems.some(item => pathname === item.url) ? 'text-primary' : ''
+                            }`}>
                             <span>Services</span>
                             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                         </div>
 
                         {/* Mega Dropdown Panel */}
                         {isServicesOpen && (
-                            <div className="absolute top-full -left-6 w-[650px] bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border-t-4 border-[#12b359] z-50">
+                            <div className="absolute top-full -left-6 w-[650px] bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border-t-4 border-primary z-50">
                                 <div className="grid grid-cols-2 gap-x-12 gap-y-6">
                                     {servicesItems.map((item) => {
                                         // Dynamic Active Check (Current URL matches item URL)
                                         const isActive = pathname === item.url;
-                                        
+
                                         return (
                                             <Link
                                                 key={item.id}
                                                 href={item.url}
                                                 className="flex items-center gap-4 group transition-all duration-200"
                                             >
-                                                <div className={`w-16 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${
-                                                    isActive ? 'ring-2 ring-[#12b359]' : ''
-                                                }`}>
+                                                <div className={`w-16 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${isActive ? 'ring-2 ring-primary' : ''
+                                                    }`}>
                                                     <Image
                                                         src={item.icon}
                                                         alt={item.title}
@@ -102,9 +100,8 @@ export default function Navbar() {
                                                         className="object-cover"
                                                     />
                                                 </div>
-                                                <span className={`text-xl font-urbanist font-bold tracking-wide transition-colors group-hover:text-[#12b359] ${
-                                                    isActive ? 'text-[#12b359]' : 'text-zinc-900'
-                                                }`}>
+                                                <span className={`text-xl font-urbanist font-bold tracking-wide transition-colors group-hover:text-primary ${isActive ? 'text-primary' : 'text-zinc-900'
+                                                    }`}>
                                                     {item.title}
                                                 </span>
                                             </Link>
@@ -119,10 +116,10 @@ export default function Navbar() {
                     {navLinks.map(item => {
                         const isActive = pathname === item.url;
                         return (
-                            <Link 
-                                key={item.id} 
-                                href={item.url} 
-                                className={`transition-colors ${isActive ? 'text-[#12b359]' : 'hover:text-green-300'}`}
+                            <Link
+                                key={item.id}
+                                href={item.url}
+                                className={`transition-colors ${isActive ? 'text-primary' : 'hover:text-green-300'}`}
                             >
                                 {item.title}
                             </Link>
@@ -131,9 +128,11 @@ export default function Navbar() {
                 </div>
 
                 {/* Call to Action Button */}
-                <button className="lg:block hidden px-6 py-2 rounded font-urbanist font-medium bg-[#12b359] text-white hover:bg-[#0f994b] transition-colors">
-                    Get In Touch
-                </button>
+                <Link href={"tel:0585815833"}>
+                    <button className="lg:block hidden cursor-pointer px-6 py-2 rounded font-urbanist bg-secondary font-semibold transition-colors">
+                        Get In Touch
+                    </button>
+                </Link>
 
                 {/* Hamburger Menu Icon (Mobile Only) */}
                 <button
@@ -153,9 +152,8 @@ export default function Navbar() {
                         <div>
                             <button
                                 onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                                className={`flex items-center justify-between w-full py-2 text-left ${
-                                    servicesItems.some(item => pathname === item.url) ? 'text-[#12b359]' : ''
-                                }`}
+                                className={`flex items-center justify-between w-full py-2 text-left ${servicesItems.some(item => pathname === item.url) ? 'text-primary' : ''
+                                    }`}
                             >
                                 <span>Services</span>
                                 <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
@@ -165,7 +163,7 @@ export default function Navbar() {
                                 <div className="mt-4 pl-4 grid grid-cols-1 gap-4 border-l border-zinc-700">
                                     {servicesItems.map((item) => {
                                         const isActive = pathname === item.url;
-                                        
+
                                         return (
                                             <Link
                                                 key={item.id}
@@ -176,7 +174,7 @@ export default function Navbar() {
                                                 <div className="w-10 h-10 relative rounded-full overflow-hidden shrink-0 bg-white">
                                                     <Image src={item.icon} alt={item.title} fill className="object-cover" />
                                                 </div>
-                                                <span className={`text-lg font-bold ${isActive ? 'text-[#12b359]' : 'text-zinc-300'}`}>
+                                                <span className={`text-lg font-bold ${isActive ? 'text-primary' : 'text-zinc-300'}`}>
                                                     {item.title}
                                                 </span>
                                             </Link>
@@ -194,7 +192,7 @@ export default function Navbar() {
                                     key={item.id}
                                     href={item.url}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`py-2 transition-colors ${isActive ? 'text-[#12b359]' : 'hover:text-[#12b359]'}`}
+                                    className={`py-2 transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`}
                                 >
                                     {item.title}
                                 </Link>
@@ -204,7 +202,7 @@ export default function Navbar() {
 
                     {/* Mobile CTA Button */}
                     <div className="mt-8">
-                        <button className="w-full py-4 rounded-xl font-urbanist font-bold text-xl bg-[#12b359] text-white hover:bg-[#0f994b] transition-colors">
+                        <button className="w-full py-4 rounded-xl font-urbanist font-bold text-xl bg-secondary text-white hover:bg-primary/10 transition-colors">
                             Get In Touch
                         </button>
                     </div>

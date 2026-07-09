@@ -30,7 +30,7 @@ export default function PackageIncludes() {
                     <div className="flex flex-col gap-5">
                         {column1Items.map((item, index) => (
                             <div key={index} className="flex items-center gap-4">
-                                <div className="flex-shrink-0 text-[#12b359]">
+                                <div className="flex-shrink-0 text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                         <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.14-.1l4.14-5.5a.75.75 0 0 0-.1-.1l-.1-.12Z" clipRule="evenodd" />
                                     </svg>
@@ -44,7 +44,7 @@ export default function PackageIncludes() {
                     <div className="flex flex-col gap-5">
                         {column2Items.map((item, index) => (
                             <div key={index} className="flex items-center gap-4">
-                                <div className="flex-shrink-0 text-[#12b359]">
+                                <div className="flex-shrink-0 text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                         <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.14-.1l4.14-5.5a.75.75 0 0 0-.1-.1l-.1-.12Z" clipRule="evenodd" />
                                     </svg>

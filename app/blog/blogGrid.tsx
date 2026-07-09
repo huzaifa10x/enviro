@@ -103,7 +103,7 @@ export default function BlogGrid({
                         <button
                             onClick={loadMore}
                             disabled={loading}
-                            className="px-6 py-2 rounded bg-[#12b359] text-white hover:bg-[#0f994b] disabled:opacity-50"
+                            className="px-6 py-2 rounded bg-primary text-white hover:bg-[#0f994b] disabled:opacity-50"
                         >
                             {loading ? "Loading..." : "Load More"}
                         </button>

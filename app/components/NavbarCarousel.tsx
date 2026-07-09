@@ -2,7 +2,7 @@
 "use client";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Key } from 'react';
 
 export default function NavbarCarousel({ slides, contentBottom = false }: any) {
     const [current, setCurrent] = useState(0);
@@ -13,10 +13,9 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
     }, []);
 
     return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col">
             <div className='p-4 overflow-hidden relative'>
-
-                <div className="relative flex-grow w-full rounded-2xl pb-50 pt-90 overflow-hidden text-white">
+                <div className="relative group flex-grow w-full rounded-lg pb-50 pt-90 overflow-hidden text-white">
                     {
                         slides?.map((slide: any, index: number) => {
                             const isActive = index === current;
@@ -26,15 +25,13 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                     key={slide.id}
                                     className={`absolute inset-0 transition-opacity duration-1000 ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                                 >
-                                    <div
-                                        className="w-full h-full bg-cover bg-center"
+                                    <div className="w-full h-full bg-cover bg-center"
                                         style={{ backgroundImage: `url('${slide.image}')` }}
                                     >
                                         <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 ${contentBottom ? 'justify-end pb-16 md:pb-24' : 'justify-center'} flex-col`}>
                                             <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'}  w-full mx-auto`}>
                                                 {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
 
-                                                {/* FIX: Sirf active slide par H1 render hoga, baki hidden slides par H2 */}
                                                 {isActive ? (
                                                     <h1 className="md:text-5xl text-3xl font-bold mb-4 font-urbanist">
                                                         {slide.title}
@@ -44,7 +41,6 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                                         {slide.title}
                                                     </h2>
                                                 )}
-
                                                 <div
                                                     className="max-w-4xl mb-6 md:text-base"
                                                     dangerouslySetInnerHTML={{ __html: slide.desc }}
@@ -66,19 +62,24 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                     }
 
                     {slides.length > 1 ?
-                        <>
+                        <div className='group-hover:opacity-100 opacity-0 '>
                             <button
                                 onClick={() => setCurrent(prev => (prev - 1 + slides.length) % slides.length)}
-                                className="absolute md:left-8 left-2 top-1/2 rounded-full z-20"
+                                className="absolute group-hover:md:left-8 md:-left-8 duration-300 left-2 top-1/2 rounded-full z-20"
                             > <ChevronLeft size={40} /></button>
                             <button
                                 onClick={() => setCurrent(prev => (prev + 1) % slides.length)}
-                                className="absolute md:right-8 right-2 top-1/2 rounded-full z-20"
+                                className="absolute group-hover:md:right-8 md:-right-8 duration-300 right-2 top-1/2 rounded-full z-20"
                             >
                                 <ChevronRight size={40} />
                             </button>
-                        </> : ""
+                        </div> : ""
                     }
+                    <div className='absolute z-20 bottom-5 left-1/2 flex items-center justify-center gap-2'>
+                        {slides.map((i: any, key: Key | null | undefined) => (
+                            <div onClick={() => setCurrent(key)} key={key} className={`w-2 h-2 cursor-pointer ${key === current ? 'bg-white' : 'bg-white/70'} rounded-full`}></div>
+                        ))}
+                    </div>
                 </div >
             </div >
         </div >
