@@ -16,7 +16,7 @@ import RegularACDuctCleaningDubai from "./components/home/RegularACDuctCleaningD
 import AboutOurServices from "./components/home/AboutOurServices";
 const slides = [
   {
-    id: 1, title: "Dubai AC Duct Cleaning",
+    id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
     desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai<br>and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
     image: "/images/home-banner/banner1.webp",
     actionTitle: 'Get a Quote',
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     id: 2,
-    title: "Cleaner Indoor Air ",
+    title: `<h6>Cleaner Indoor Air </h6>`,
     desc: `<p>Expert cleaning and caring for the indoor air conditioning system to improve air quality and enhance comfort.</p>`,
     image: "/images/home-banner/banner2.webp",
     actionTitle: 'Get a Quote',
@@ -32,7 +32,7 @@ const slides = [
   },
   {
     id: 3,
-    title: "Complete System Cleaning",
+    title: `<h6>Complete System Cleaning</h6>`,
     desc: `<p>Every part of your HVAC system receives a thorough cleaning and complete attention.</p>`,
     image: "/images/home-banner/banner3.webp",
     actionTitle: 'Get a Quote',
@@ -40,7 +40,7 @@ const slides = [
   },
   {
     id: 4,
-    title: "Total Comfort",
+    title: `<h6>Total Comfort</h6>`,
     desc: `<p>Professional care will offer a consistently clean indoor air and a reliable cooling system that will function correctly all year.</p>`,
     image: "/images/home-banner/banner4.webp",
     actionTitle: 'Get a Quote',
@@ -166,10 +166,8 @@ export default function Home() {
         </div>
       </section>
       <GoogleReviewsBlock />
-
       <RecentWork />
       <VideosSection />
-
       <AboutOurServices />
       <FAQ />
       <ContactForm />

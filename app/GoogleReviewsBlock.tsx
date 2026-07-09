@@ -89,10 +89,10 @@ export default function GoogleReviewsBlock() {
         <section className="w-full overflow-x-hidden bg-linear-to-r from-secondary to-white py-12 px-4 md:px-8 font-sans">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-6">
-                    <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
+                    <div className="text-4xl font-bold text-gray-900 font-urbanist">
                         Why Local Dubai Residents Trust Us
                         <div className="border-b-4 border-primary w-full my-4"></div>
-                    </h2>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-7 gap-10 items-center">

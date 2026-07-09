@@ -30,7 +30,7 @@ export default function FAQ() {
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                     className="w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition"
                                 >
-                                    {item.title}:
+                                    <h5> {item.title}:</h5>
                                     <span className={`transform transition-transform ${openIndex === index ? 'rotate-180' : ''}`}>▼</span>
                                 </button>
 

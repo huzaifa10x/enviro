@@ -69,8 +69,7 @@ export default function ContactForm({ onlyForms = false }) {
 
                 {/* Right Side: Form */}
                 <div className="p-8 md:p-12 bg-[#DBF9F0]" >
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</h2>
-
+                    <div className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</div>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input

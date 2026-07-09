@@ -12,15 +12,15 @@ export default function AboutOurServices() {
                     {/* Left Side: Content Block */}
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h2 className="text-3xl font-bold text-gray-900 font-urbanist leading-tight">
+                            <div className="text-3xl font-bold text-gray-900 font-urbanist leading-tight">
                                 About Our Services:
-                            </h2>
+                            </div>
                             <div className="border-b-2 border-cyan-100 w-full pt-1"></div>
                         </div>
 
                         {/* Initial & Expandable Content Box */}
                         <div className={`text-gray-700 space-y-4 text-sm md:text-base duration-300 leading-relaxed ${isExpanded === true ? 'h-[300px] overflow-y-scroll' : ''} `}>
-                            <div className='font-bold text-2xl'>AC Cleaning UAE</div>
+                            <h3 className='font-bold text-2xl'>AC Cleaning UAE</h3>
                             <p>Air conditioning units are essential for maintaining comfortable indoor temperatures, especially in Dubai’s hot climate. However, over time, dirt, dust, and other contaminants can accumulate within the units, reducing their efficiency and negatively impacting air quality.
                             </p>
                             <p>
@@ -42,7 +42,7 @@ export default function AboutOurServices() {
                                             <li>Checking refrigerant levels and addressing potential leaks</li>
                                             <li>Ensuring the proper functioning of electrical components</li>
                                         </ul>
-                                        <div className='font-bold text-2xl'>Duct Cleaning</div>
+                                        <h3 className='font-bold text-2xl'>Duct Cleaning</h3>
                                         <p>Ductwork plays a crucial role in the distribution of conditioned air throughout your home or office. However, dust, allergens, mold, and other contaminants can accumulate within the ducts over time, impacting air quality and HVAC system efficiency. Our AC duct cleaning services Dubai includes:</p>
                                         <ul className='list-disc pl-6'>
                                             <li>A thorough inspection of your air duct system</li>

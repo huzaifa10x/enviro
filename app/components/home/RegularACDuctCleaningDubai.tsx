@@ -43,42 +43,6 @@ export default function RegularACDuctCleaningDubai() {
                                     </p>
                                     <p>Maintaining manufacturer warranties: Many AC manufacturers require cleaning to keep their warranties valid. By adhering to the recommended schedule, you can ensure that your system remains covered by its warranty in case of any issues.
                                     </p>
-                                    {/* Additional Full Content Sections */}
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Cutting-Edge Tools and Technology:</h4>
-                                        <p>We utilize state-of-the-art equipment and technology to ensure a thorough and efficient cleaning process for your AC.</p>
-                                        <p>Our advanced tools reach even the most challenging areas, leaving your coils spotless and your HVAC system operating at peak efficiency.</p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Optimal HVAC Performance:</h4>
-                                        <p>EnviroClean removes dirt, debris, and contaminants from coils, guaranteeing optimal AC and HVAC system performance.</p>
-                                        <p>Experience improved energy efficiency, lower utility bills, and enhanced indoor air quality with our comprehensive coil cleaning services.</p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Sustainable Maintenance Packages:</h4>
-                                        <p>Please choose from our sustainable maintenance packages, designed to prolong the lifespan of your AC or HVAC system while minimizing the risk of breakdowns.</p>
-                                        <p>Our packages encompass regular coil cleaning, filter replacement, and system inspections, providing a holistic approach to system care.</p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Eco-Conscious Solutions:</h4>
-                                        <p>Our commitment to eco-friendly practices extends beyond cleaning solutions to waste disposal and service delivery.</p>
-                                        <p>EnviroClean Coil Cleaning ensures that every step of the process aligns with our mission of creating a healthier indoor environment and a sustainable future.</p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Cost-Effective and Transparent Pricing:</h4>
-                                        <p>Enjoy cost-effective coil cleaning services with transparent pricing from EnviroClean.</p>
-                                        <p>Our competitive rates ensure that you receive the best value for your investment in HVAC maintenance without compromising on quality.</p>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <h4 className="font-bold text-gray-900 text-base">Customer Satisfaction Guarantee:</h4>
-                                        <p>We stand by the quality of our services with a customer satisfaction guarantee.</p>
-                                        <p>If, for any reason, you are not completely satisfied with the results, we are committed to making it suitable and ensuring your peace of mind.</p>
-                                    </div>
                                 </div>
                             )}
                         </div>
@@ -107,6 +71,6 @@ export default function RegularACDuctCleaningDubai() {
                 </div>
 
             </div>
-        </section >
+        </section>
     )
 }

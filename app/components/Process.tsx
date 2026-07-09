@@ -18,7 +18,7 @@ export default function Process() {
                             width={300}
                             alt="steps"
                         />
-                        <div className="text-md font-semibold mt-2">Book via Form or WhatsApp</div>
+                        <h5 className="text-md font-semibold mt-2">Book via Form or WhatsApp</h5>
                     </div>
                     <div>
                         <Image
@@ -36,7 +36,7 @@ export default function Process() {
                             width={300}
                             alt="steps"
                         />
-                        <div className="text-md font-semibold mt-2">We Inspect & Clean Your Ducts</div>
+                        <h5 className="text-md font-semibold mt-2">We Inspect & Clean Your Ducts</h5>
                     </div>
                     <div>
                         <Image
@@ -54,7 +54,7 @@ export default function Process() {
                             width={300}
                             alt="steps"
                         />
-                        <div className="text-md font-semibold mt-2">Enjoy Fresh, Clean Air</div>
+                        <h5 className="text-md font-semibold mt-2">Enjoy Fresh, Clean Air</h5>
                     </div>
                 </div>
             </div>

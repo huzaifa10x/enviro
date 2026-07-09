@@ -15,7 +15,7 @@ export default function ServicesSection() {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</h2>
+                    <div className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</div>
                     <div className="h-px w-full bg-green-500 mx-auto" />
                 </div>
 
@@ -30,7 +30,7 @@ export default function ServicesSection() {
                                 alt={service.title}
                                 className="w-full h-80 object-cover object-top rounded-xl"
                             />
-                            <div className="text-3xl font-medium font-urbanist">{service.title}</div>
+                            <h3 className="text-3xl font-medium font-urbanist">{service.title}</h3>
 
                             {/* Button ko Link se wrap kiya */}
                             <Link href={service.url} className="inline-block">

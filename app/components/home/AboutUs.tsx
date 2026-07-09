@@ -9,10 +9,10 @@ export default function AboutUs() {
 
                 {/* Left Side: Text Content */}
                 <div className="lg:w-1/2 space-y-6">
-                    <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
+                    <div className="text-4xl font-bold text-gray-900 font-urbanist">
                         About Us
                         <div className="border-b-4 border-primary max-w-1/3 my-4"></div>
-                    </h2>
+                    </div>
 
                     <div className="text-gray-600 leading-relaxed space-y-4">
                         <p>In the bustling metropolis of Dubai, where temperatures can soar to extreme heights, air conditioning systems play a crucial role in providing comfort and relief from the scorching heat. Given the importance of AC units in maintaining a comfortable indoor environment, regular <Link className="text-primary" href={'https://goo.gl/maps/L8NtRXcv35B8n1yG6'}> Air Duct Cleaning Service</Link> is essential to ensure optimal performance, energy efficiency, and a healthy atmosphere.</p>
@@ -30,7 +30,7 @@ export default function AboutUs() {
                         <div className="flex items-center gap-4">
                             <Image src="/images/nadca.webp" width={500} height={500} alt="NADCA" className="w-24 h-auto" />
                             <div>
-                                <h4 className="font-bold text-gray-900">A Trusted Partner</h4>
+                                <div className="font-bold text-gray-900">A Trusted Partner</div>
                                 <p className="text-sm text-gray-500">We Are NADCA Accredited</p>
                             </div>
                         </div>

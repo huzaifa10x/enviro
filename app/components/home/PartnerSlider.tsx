@@ -27,10 +27,10 @@ export default function PartnersSection() {
             `}</style>
 
             <div className="max-w-7xl mx-auto px-6 mb-16">
-                <h2 className="text-3xl text-center font-bold text-gray-900 font-urbanist">
+                <div className="text-3xl text-center font-bold text-gray-900 font-urbanist">
                     Our Trusted Partners
                     <div className="border-b-4 border-primary w-full my-4"></div>
-                </h2>
+                </div>
             </div>
 
             {/* Marquee Container */}

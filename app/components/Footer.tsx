@@ -101,7 +101,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Quick Access</h3>
+                        <div className="text-3xl font-urbanist font-medium text-primary mb-6">Quick Access</div>
                         <ul className="space-y-3 text-white text-sm">
                             {[
                                 { label: 'Home', href: '/' },
@@ -120,7 +120,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Our Services</h3>
+                        <div className="text-3xl font-urbanist font-medium text-primary mb-6">Our Services</div>
                         <ul className="space-y-3 text-white text-sm">
                             {[
                                 { label: 'AC Cleaning', href: '/accleaning-servicing/' },
@@ -138,7 +138,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-3xl font-urbanist font-medium text-primary mb-6">Follow Us</h3>
+                        <div className="text-3xl font-urbanist font-medium text-primary mb-6">Follow Us</div>
                         <div className="w-full h-32 bg-gray-800 rounded-lg overflow-hidden border border-gray-700 relative">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57765.36557119436!2d55.28446!3d25.191911!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f691d1aa5dc8b%3A0x2a6eefb3878c4bb!2sEnviro%20Clean%20UAE!5e0!3m2!1sen!2s!4v1783338169208!5m2!1sen!2s" width="600" height="450" loading="lazy"
