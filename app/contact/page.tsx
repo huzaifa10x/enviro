@@ -67,9 +67,32 @@ export const metadata: Metadata = {
     },
 }
 
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://envirocleanuae.com',
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Contact',
+            'item': 'https://envirocleanuae.com/contact',
+        },
+    ],
+}
+
 export default function contact() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <NavbarCarousel slides={slides} contentBottom={true} />
             <section className="bg-secondary py-10">
                 <div className="mx-auto max-w-7xl px-6">

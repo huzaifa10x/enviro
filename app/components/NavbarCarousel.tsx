@@ -32,13 +32,8 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                             <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'}  w-full mx-auto`}>
                                                 {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
 
-                                                {isActive ? (
-                                                    <div className="md:text-5xl text-3xl font-bold mb-4 font-urbanist delay-300" dangerouslySetInnerHTML={{ __html: slide.title }} />
-                                                ) : (
-                                                    <div className="md:text-5xl text-3xl font-bold mb-4 font-urbanist">
-                                                        {slide.title}
-                                                    </div>
-                                                )}
+                                                <div className="md:text-5xl text-3xl font-bold mb-4 font-urbanist delay-300" dangerouslySetInnerHTML={{ __html: slide.title }} />
+
                                                 <div
                                                     className="max-w-4xl mb-6 md:text-base"
                                                     dangerouslySetInnerHTML={{ __html: slide.desc }}

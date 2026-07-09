@@ -75,9 +75,7 @@ export default function BlogGrid({
 
                             <div className="p-6 flex flex-col grow justify-between">
                                 <div>
-                                    <h4 className="text-[19px] font-semibold mb-3">
-                                        {post.title}
-                                    </h4>
+                                    <div className="text-[19px] font-semibold mb-3" dangerouslySetInnerHTML={{ __html: post.title }} />
 
                                     <div
                                         className="text-gray-500 text-sm mb-6 line-clamp-2"

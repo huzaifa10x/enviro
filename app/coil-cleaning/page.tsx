@@ -72,11 +72,32 @@ export const metadata: Metadata = {
         images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
     },
 }
-
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://envirocleanuae.com',
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Coil Cleaning',
+            'item': 'https://envirocleanuae.com/coil-cleaning',
+        },
+    ],
+}
 
 export default function CoilCleaning() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <NavbarCarousel slides={slides} contentBottom={true} />
             <CoilCleaningService />
             <WhyChooseCoilCleaning />

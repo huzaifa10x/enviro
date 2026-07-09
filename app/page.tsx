@@ -2,8 +2,6 @@ import Image from "next/image";
 import NavbarCarousel from "./components/NavbarCarousel";
 import AboutUs from "./components/home/AboutUs";
 import ServicesSection from "./components/home/ServicesSection";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import FAQ from "./components/home/FAQ";
 import ContactForm from "./components/home/ContactForm";
 import PartnerSlider from "./components/home/PartnerSlider";
@@ -51,14 +49,13 @@ const slides = [
 const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai'
 const description = 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!'
 const canonical = 'https://envirocleanuae.com/'
+
 export const metadata: Metadata = {
-  // Primary Meta Tags
   title: title,
   description: description,
   alternates: {
-    canonical: canonical, // Aapka main production domain url
+    canonical: canonical,
   },
-
   robots: {
     index: true,
     follow: true,
@@ -71,8 +68,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
-  // Open Graph / Facebook Meta Data
   openGraph: {
     title: title,
     description: description,
@@ -80,27 +75,44 @@ export const metadata: Metadata = {
     siteName: 'EnviroClean UAE',
     images: [
       {
-        url: 'images/og-main-banner.jpg', // Is path par main meta banner image render karein
+        url: 'https://envirocleanuae.com/images/og-main-banner.jpg',
         width: 1200,
         height: 630,
-        alt: canonical,
+        alt: title,
       },
     ],
     locale: 'en_AE',
     type: 'website',
   },
-
-  // Twitter Cards Meta Data
   twitter: {
     card: 'summary_large_image',
-    title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
-    description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
+    title: title,
+    description: description,
     images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
   },
 }
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'name': 'Home',
+      'item': 'https://envirocleanuae.com',
+    },
+  ],
+}
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <NavbarCarousel contentBottom={false} slides={slides} />
       <AboutUs />
       <ServicesSection />

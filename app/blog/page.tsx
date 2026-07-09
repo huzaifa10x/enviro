@@ -70,6 +70,24 @@ export const metadata: Metadata = {
         images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
     },
 };
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://envirocleanuae.com',
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://envirocleanuae.com/blog',
+        },
+    ],
+}
 
 // Server-side fetching helper
 async function getPosts(): Promise<PostsResponse> {
@@ -110,6 +128,10 @@ export default async function page(): Promise<JSX.Element> {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <NavbarCarousel slides={slides} contentBottom={true} />
             {/* Ab postsData me pehle page ka data successfully jayega */}
             <BlogGrid initialData={postsData} />

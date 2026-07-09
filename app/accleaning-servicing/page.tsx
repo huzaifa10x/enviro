@@ -23,6 +23,7 @@ const slides = [
 const title = 'AC Cleaning - Enviro Clean UAE'
 const description = 'AC Cleaning & Servicing in Dubai & Abu Dhabi. British Managed & British Trained Technicians. Market Leaders In AC Cleaning.'
 const canonical = 'https://envirocleanuae.com/accleaning-servicing'
+
 export const metadata: Metadata = {
     title: title,
     description: description,
@@ -70,9 +71,32 @@ export const metadata: Metadata = {
     },
 }
 
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://envirocleanuae.com',
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Accleaning Serving',
+            'item': 'https://envirocleanuae.com/accleaning-serving',
+        },
+    ],
+}
+
 export default function AccleaningServicing() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <NavbarCarousel slides={slides} contentBottom={true} />
             <ContentFlexSection
                 subHeading={'AC Cleaning Dubai & Abu Dhabi'}

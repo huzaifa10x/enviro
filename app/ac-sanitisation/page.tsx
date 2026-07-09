@@ -69,9 +69,32 @@ export const metadata: Metadata = {
     },
 }
 
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+        {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://envirocleanuae.com',
+        },
+        {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'AC Sanitisation',
+            'item': 'https://envirocleanuae.com/ac-sanitisation',
+        },
+    ],
+}
+
 export default function AccleaningServicing() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <NavbarCarousel slides={slides} contentBottom={true} />
             <ContentFlexSection
                 subHeading={'AC Sanitisation Dubai & Abu Dhabi'}
