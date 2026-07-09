@@ -13,7 +13,7 @@ import { Metadata } from "next";
 const slides = [
     {
         id: 1,
-        title: "AC Coil Cleaning in Dubai",
+        title: "<h1>AC Coil Cleaning in Dubai/h1<>",
         desc: `✔ Operates 24/7 ✔ Competitive Pricing ✔ Trained and Insured`,
         image: "/images/coil-cleaning.jpeg",
         actionTitle: 'Call Now',
@@ -81,6 +81,9 @@ export default function CoilCleaning() {
             <CoilCleaningService />
             <WhyChooseCoilCleaning />
             <BenefitsSection
+                subTitle={'LEARN ABOUT BENEFITS'}
+                title={`<h2>Benefits of our <span class='text-primary'> AC Coil Cleaning Services</span></h2>`}
+                bottomLine={''}
                 benefitsData={
                     [
                         {

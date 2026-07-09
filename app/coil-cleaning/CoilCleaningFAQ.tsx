@@ -33,14 +33,16 @@ export default function CoilCleaningFAQ() {
         },
         {
             question: "What are the benefits of regular coil cleaning?",
-            answer: "Regular coil cleaning improves energy efficiency, reduces utility bills, enhances air quality, and extends the lifespan of your system. It is a sustainable and cost-effective way to ensure optimal system operation."
+            answer: `Regular coil cleaning improves energy efficiency, reduces utility bills, enhances air quality, and extends the lifespan of your system. It is a sustainable and cost-effective way to ensure optimal system operation.
+
+            EnviroClean Carpet Cleaning is your premier destination for a revolutionary approach to carpet care in Dubai.At EnviroClean, we provide comprehensive and sustainable carpet cleaning services that surpass traditional methods.Our mission is to transform your carpets into a source of renewed freshness and vitality while prioritizing environmental responsibility.`
         }
     ];
 
     return (
         <section className="w-full bg-[#F0FAF5] py-16 px-6 md:px-12 font-sans">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-start">
-                
+
                 {/* Left Side: Features Checklist (4 Columns on Desktop) */}
                 <div className="lg:col-span-5 space-y-5 lg:pt-14 lg:pl-10">
                     {checkItems.map((item, index) => (
@@ -48,12 +50,12 @@ export default function CoilCleaningFAQ() {
                             {/* SVG Green Check Icon matching image_df6620.jpg */}
                             <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#10B981] flex items-center justify-center shadow-xs">
                                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 5L4.5 8.5L13 1" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M1 5L4.5 8.5L13 1" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
-                            <span className="text-gray-800 font-medium text-base md:text-lg">
+                            <h4 className="text-gray-800 font-medium text-base md:text-lg">
                                 {item}
-                            </span>
+                            </h4>
                         </div>
                     ))}
                 </div>
@@ -68,8 +70,8 @@ export default function CoilCleaningFAQ() {
                         {faqData.map((faq, index) => {
                             const isOpen = openIndex === index;
                             return (
-                                <div 
-                                    key={index} 
+                                <div
+                                    key={index}
                                     className="bg-white rounded-xl shadow-xs border border-gray-100 overflow-hidden transition-all duration-300"
                                 >
                                     {/* Accordion Trigger Header */}
@@ -77,17 +79,16 @@ export default function CoilCleaningFAQ() {
                                         onClick={() => toggleAccordion(index)}
                                         className="w-full p-5 flex items-center justify-between text-left font-medium text-gray-800 text-sm md:text-base hover:text-gray-900 transition-colors focus:outline-hidden cursor-pointer"
                                     >
-                                        <span>{faq.question}</span>
+                                        <h5>{faq.question}</h5>
                                         <span className="text-xl font-light text-gray-500 ml-4 select-none">
                                             {isOpen ? '−' : '+'}
                                         </span>
                                     </button>
 
                                     {/* Accordion Content Panel */}
-                                    <div 
-                                        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                                            isOpen ? 'max-h-[300px] border-t border-gray-50 bg-gray-50/50' : 'max-h-0'
-                                        }`}
+                                    <div
+                                        className={`transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-[300px] border-t border-gray-50 bg-gray-50/50' : 'max-h-0'
+                                            }`}
                                     >
                                         <p className="p-5 text-gray-600 text-sm md:text-base leading-relaxed">
                                             {faq.answer}
@@ -98,7 +99,6 @@ export default function CoilCleaningFAQ() {
                         })}
                     </div>
                 </div>
-
             </div>
         </section>
     )

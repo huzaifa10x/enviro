@@ -16,10 +16,10 @@ export default function RecentWork() {
             <div className="max-w-7xl mx-auto">
 
                 <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-gray-900 font-urbanist">
+                    <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
                         Our Recent Work
                         <div className="border-b-4 border-primary w-full my-4"></div>
-                    </div>
+                    </h2>
                 </div>
 
                 <div className="flex gap-1 sm:gap-2 overflow-x-scroll no-scrollbar">

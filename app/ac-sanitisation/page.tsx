@@ -10,7 +10,7 @@ import { Metadata } from "next";
 const slides = [
     {
         id: 1,
-        title: "AC Sanitation Service For A Clean Home",
+        title: "<h1>AC Sanitation Service For A Clean Home</h1>",
         desc: `Market leaders in Dubai & Abu Dhabi for duct cleaning. British managed and British trained technicians.`,
         image: "/images/Sanitisation.webp",
         actionTitle: 'Call Now',
@@ -18,8 +18,8 @@ const slides = [
     },
 ];
 
-const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai'
-const description = "EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC's performance and efficiency. Get a free quote today!"
+const title = 'AC Sanitation Service Dubai - Enviro Clean UAE'
+const description = "AC sanitation service in Dubai by Enviro Clean UAE. Improve air quality, remove bacteria, and ensure a healthier indoor environment."
 const canonical = 'https://envirocleanuae.com/ac-sanitisation'
 
 export const metadata: Metadata = {
@@ -88,52 +88,57 @@ export default function AccleaningServicing() {
                 subHeading={''}
                 heading={'Reasons For Selecting EnviroClean AC Sanitation Services'}
                 content={`
-                <div class='font-bold'>Knowledgeable & Reliable Technicians</div>
+                <h3 class='font-bold'>Knowledgeable & Reliable Technicians</h3>
                     <p>Our trained technicians use safe and effective methods. We offer results that last, making your AC cleaner, operate smoothly, and more efficiently.</p>
                     <br/>
-                <div class='font-bold'>Next-Generation Deep-Cleaning Technology</div>
+                <h3 class='font-bold'>Next-Generation Deep-Cleaning Technology</h3>
                 <p>We use industrial strength tools that target unwanted contaminates. They provide comfort inside your home and reduce airborne irritants. We offer peace of mind to your family.</p>`}
                 imageSrc={'/images/about-us-banner.jpg'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'left'}
             />
 
-            <BenefitsSection benefitsData={
-                [
-                    {
-                        id: 1,
-                        title: "Healthier Living Environment",
-                        content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
-                        icon: "/images/air-filter.png"
-                    },
-                    {
-                        id: 2,
-                        title: "Reduced Exposure To Allergens",
-                        content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
-                        icon: "/images/cleaning.png"
-                    },
-                    {
-                        id: 3,
-                        title: "ENERGY BILLS",
-                        content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
-                        icon: "/images/coils.png"
-                    }
-                ]
-            } />
+            <BenefitsSection
+                subTitle={'LEARN ABOUT BENEFITS'}
+                title={`<h2>Benefits of our <span class='text-primary'> AC Sanitsation</span></h2>`}
+                bottomLine={'Duct cleaning removes dust, debri and mould from your AC system, helping you and your family breathe cleaner air.'}
+                benefitsData={
+
+                    [
+                        {
+                            id: 1,
+                            title: "Healthier Living Environment",
+                            content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
+                            icon: "/images/air-filter.png"
+                        },
+                        {
+                            id: 2,
+                            title: "Reduced Exposure To Allergens",
+                            content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
+                            icon: "/images/cleaning.png"
+                        },
+                        {
+                            id: 3,
+                            title: "ENERGY BILLS",
+                            content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
+                            icon: "/images/coils.png"
+                        }
+                    ]
+                } />
 
             <ContentFlexSection
                 subHeading={''}
                 heading={'Select Our AC Sanitation'}
                 content={`
-                    <div class='font-bold text-2xl'>Better Indoor Air Quality</div>
+                    <h3 class='font-bold text-2xl'>Better Indoor Air Quality</h3>
                     <br/>
                     <p> Get rid of allergens and bacteria to create cleaner and fresher air for every room.</p>
                     <br/>
-                    <div class='font-bold text-2xl'>Improved AC Cooling Performance</div>
+                    <h3 class='font-bold text-2xl'>Improved AC Cooling Performance</h3>
                     <br/>
                     <p> A sanitized AC cools faster and uses less energy. It will perform the same in every season.</p>
                     <br/>
-                    <div class='font-bold text-2xl'>Longer Life For Your AC</div>
+                    <h3 class='font-bold text-2xl'>Longer Life For Your AC</h3>
                `}
                 imageSrc={'/images/Sanitisation.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}

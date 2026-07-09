@@ -11,7 +11,7 @@ import { Metadata } from "next";
 const slides = [
     {
         id: 1,
-        title: "AC Cleaning Dubai & Abu Dhabi",
+        title: "<h1>AC Cleaning Dubai & Abu Dhabi</h1>",
         desc: `AC cleaning Dubai & Abu Dhabi. When it comes to AC cleaning we are the market leaders. Enviroclean have services over 25,000 AC units in Dubai & Abu Dhabi.`,
         image: "/images/ac-cleaning-dubai-1-scaled.jpg",
         actionTitle: 'Call Now',
@@ -92,6 +92,9 @@ export default function AccleaningServicing() {
             />
             <PackageIncludes />
             <BenefitsSection
+                subTitle={'Learn About Ac Cleaning Benefits'}
+                title={`<h2>Benefits of AC Cleaning</h2>`}
+                bottomLine={''}
                 benefitsData={
                     [
                         {

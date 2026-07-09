@@ -1,18 +1,25 @@
 import React from 'react';
 
-export default function BenefitsSection({ benefitsData }) {
+export default function BenefitsSection({ subTitle, title, bottomLine, benefitsData }) {
     return (
         <section className="w-full bg-[#f0fff7] py-16 px-6 md:px-0">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
 
                 {/* Heading Block */}
                 <div className="text-center mb-12">
-                    <span className="text-primary text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
-                        Learn About Ac Cleaning Benefits
-                    </span>
-                    <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-zinc-900 tracking-wide">
-                        Benefits of AC Cleaning
-                    </h2>
+                    {subTitle &&
+                        <span className="text-primary text-sm md:text-base font-urbanist font-semibold tracking-wide mb-2 block">
+                            {subTitle}
+                        </span>
+                    }
+                    {title &&
+                        <div className="text-3xl md:text-4xl font-urbanist font-bold text-zinc-900 tracking-wide" dangerouslySetInnerHTML={{ __html: title }} />
+                    }
+                    {bottomLine &&
+                        <span className="">
+                            {bottomLine}
+                        </span>
+                    }
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8 w-full max-w-6xl mt-4">

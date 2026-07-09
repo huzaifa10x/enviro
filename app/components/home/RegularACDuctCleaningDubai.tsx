@@ -62,14 +62,13 @@ export default function RegularACDuctCleaningDubai() {
                 {/* Right Side: Image Holder */}
                 <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xs">
                     <Image
-                        src="/images/coil-cleaning-4.jpeg" // Referencing mockup "image_df53b6.jpg" visual layout
+                        src="/images/About-Regular-AC-Maintenance-.jpg" // Referencing mockup "image_df53b6.jpg" visual layout
                         alt="HVAC system and AC Coils installation"
                         fill
-                        className="object-cover grayscale" // Mockup monochrome style matching
+                        className="object-cover" // Mockup monochrome style matching
                         priority
                     />
                 </div>
-
             </div>
         </section>
     )

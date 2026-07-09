@@ -34,10 +34,7 @@ export default function DisinfectionSection() {
                     </h2>
 
                     <p className="font-extralight text-sm md:text-base text-[#333333] leading-relaxed mb-6">
-                        Once you have had our premium ac cleaning service the second stage is the disinfection process.
-                        Our disinfection is designed specifically for AC/HVAC systems only. EnviroCON is highly effective
-                        in eliminating odour causing microorganisms as well as those associated with mould, mildew,
-                        and bacteria growth. AC cleaning & disinfection services throughout Dubai & Abu Dhabi.
+                        Our disinfection is designed specifically for AC/HVAC systems only. EnviroCON is highly effective in eliminating odour causing microorganisms as well as those associated with mould, mildew, and bacteria growth.
                     </p>
 
                     <div className="flex flex-col gap-3.5 mb-8 w-full">
@@ -48,9 +45,9 @@ export default function DisinfectionSection() {
                                         <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.14-.1l4.14-5.5a.75.75 0 0 0-.1-.1l-.1-.12Z" clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <span className="text-base md:text-lg font-urbanist font-medium text-zinc-900 tracking-wide">
+                                <h4 className="text-base md:text-lg font-urbanist font-medium text-zinc-900 tracking-wide">
                                     {point}
-                                </span>
+                                </h4>
                             </div>
                         ))}
                     </div>

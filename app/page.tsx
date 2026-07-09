@@ -154,12 +154,12 @@ export default function Home() {
 
             <div className="text-gray-600 leading-relaxed space-y-4">
               <p>
-                In today’s fast-paced world, maintaining a comfortable and healthy indoor environment is essential for our well-being. One crucial component of that environment is an efficient and clean air conditioning system. EnviroClean AC Cleaning is a leading provider of professional air conditioning cleaning services that ensure your AC units function at their best, offering you optimal cooling, energy efficiency, and improved indoor air quality. In this article, we will explore the advantages of choosing EnviroClean AC Cleaning for your air conditioning maintenance needs.
+                In today’s fast-paced world, maintaining a comfortable and healthy indoor environment is essential for our well-being. One crucial component of that environment is an efficient and clean air conditioning system. EnviroClean AC Cleaning is a leading AC cleaning company Dubai that ensures your AC units function at their best, offering you optimal cooling, energy efficiency, and improved indoor air quality. In this article, we will explore the advantages of choosing EnviroClean AC Cleaning for your air conditioning service needs.
               </p>
               <p>
-                EnviroClean AC Cleaning in Dubai is a professional air conditioning cleaning and maintenance service provider dedicated to ensuring the optimal performance and efficiency of your AC units.
+                EnviroClean is the best AC cleaning company Dubai dedicated to ensuring the optimal performance and efficiency of your AC units.
               </p>
-              <p>In the hot and arid climate of Dubai, air conditioning systems are essential for maintaining a comfortable indoor environment. As such, regular cleaning and maintenance are crucial for keeping your AC system running smoothly and efficiently.
+              <p>In the hot and arid climate of Dubai, air conditioning systems are essential for maintaining a comfortable indoor environment. As such, regular cleaning is crucial for keeping your AC system running smoothly and efficiently.
               </p>
             </div>
           </div>

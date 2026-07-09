@@ -14,7 +14,7 @@ const slides = [
         id: 1,
         title: "<h1>AC Duct Cleaning Service Abu Dhabi</h1>",
         desc: `Market leaders in Abu Dhabi for duct cleaning. British managed and British trained technicians.`,
-        image: "/images/Duct-Cleaning-Service-Dubai.jpg",
+        image: "/images/Duct-Cleaning-Service-Dubai.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },

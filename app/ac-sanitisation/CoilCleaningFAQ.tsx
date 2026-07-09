@@ -67,9 +67,8 @@ export default function CoilCleaningFAQ() {
                                     {/* Accordion Trigger Header */}
                                     <button
                                         onClick={() => toggleAccordion(index)}
-                                        className="w-full p-5 flex items-center justify-between text-left font-medium text-gray-800 text-sm md:text-base hover:text-gray-900 transition-colors focus:outline-hidden cursor-pointer"
-                                    >
-                                        <span>{faq.question}</span>
+                                        className="w-full p-5 flex items-center justify-between text-left font-medium text-gray-800 text-sm md:text-base hover:text-gray-900 transition-colors focus:outline-hidden cursor-pointer">
+                                        <h5>{faq.question}</h5>
                                         <span className="text-xl font-light text-gray-500 ml-4 select-none">
                                             {isOpen ? '−' : '+'}
                                         </span>
@@ -89,7 +88,6 @@ export default function CoilCleaningFAQ() {
                         })}
                     </div>
                 </div>
-
             </div>
         </section>
     )
