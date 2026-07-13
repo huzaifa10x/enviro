@@ -17,7 +17,7 @@ export default function DisinfectionSection() {
 
                 <div className="relative w-full max-w-md mx-auto aspect-square flex items-center justify-center p-6">
                     <Image
-                        src="/images/iioio.png"
+                        src="/images/iioio.webp"
                         alt="EnviroCON Disinfection Product"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

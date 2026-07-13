@@ -13,7 +13,7 @@ export default function Process() {
                 <div className="flex md:flex-nowrap flex-wrap gap-14 items-center justify-center">
                     <div className="border border-primary rounded-lg bg-white p-5 h">
                         <Image
-                            src={'/images/Book-via-Form-or-WhatsApp.png'}
+                            src={'/images/Book-via-Form-or-WhatsApp.webp'}
                             height={300}
                             width={300}
                             alt="steps"
@@ -22,7 +22,7 @@ export default function Process() {
                     </div>
                     <div>
                         <Image
-                            src={'/images/arrow-icon.png'}
+                            src={'/images/arrow-icon.webp'}
                             height={100}
                             width={200}
                             alt="steps"
@@ -40,7 +40,7 @@ export default function Process() {
                     </div>
                     <div>
                         <Image
-                            src={'/images/arrow-icon.png'}
+                            src={'/images/arrow-icon.webp'}
                             height={100}
                             width={200}
                             alt="steps"
@@ -49,7 +49,7 @@ export default function Process() {
                     </div>
                     <div className="border border-primary rounded-lg bg-white p-5 h">
                         <Image
-                            src={'/images/Enjoy-Fresh,-Clean-Air.png'}
+                            src={'/images/Enjoy-Fresh,-Clean-Air.webp'}
                             height={300}
                             width={300}
                             alt="steps"

@@ -179,19 +179,19 @@ export default function AccleaningServicing() {
                         id: 1,
                         title: "Clean Air",
                         content: "Removes bacteria and mold growth from your indoor air, providing a better indoor quality for healthier homes.",
-                        icon: "/images/air-filter.png"
+                        icon: "/images/air-filter.webp"
                     },
                     {
                         id: 2,
                         title: "Low Bills",
                         content: "Reduced energy consumption to lower your electric bill and greater system efficiency.",
-                        icon: "/images/cleaning.png"
+                        icon: "/images/cleaning.webp"
                     },
                     {
                         id: 3,
                         title: "No Repairs",
                         content: "Extended equipment life span by reducing the chance of premature equipment failure, which is expensive to repair.",
-                        icon: "/images/coils.png"
+                        icon: "/images/coils.webp"
                     }
                 ]
             } />

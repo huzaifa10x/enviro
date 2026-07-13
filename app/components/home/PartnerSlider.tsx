@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function PartnersSection() {
     const partners = [
-        { name: "SAP", src: "/images/sap.png" },
+        { name: "SAP", src: "/images/sap.webp" },
         { name: "Hilton", src: "/images/hilton.webp" },
-        { name: "Radisson", src: "/images/radisson.png" },
-        { name: "Starbucks", src: "/images/starbucks.png" },
-        { name: "CRS", src: "/images/crs.png" },
+        { name: "Radisson", src: "/images/radisson.webp" },
+        { name: "Starbucks", src: "/images/starbucks.webp" },
+        { name: "CRS", src: "/images/crs.webp" },
     ];
 
     return (

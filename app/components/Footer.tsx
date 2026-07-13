@@ -12,11 +12,11 @@ export default function Footer() {
             </Link>
             <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-0 bottom-0 p-2 m-2 z-20" href={'https://wa.me/+971505160610'}>
                 <button className="btn rounded btn-warning border-warning rounded-5 shadow">
-                    <Image src={'/images/whatsapp-white-icon-1.png'} width={25} height={25} alt="WPICon" />
+                    <Image src={'/images/whatsapp-white-icon-1.webp'} width={25} height={25} alt="WPICon" />
                 </button>
             </Link>
             <footer className="bg-[#1a1a1ae6] text-white relative overflow-hidden">
-                <div className="bg-[url('/images/footer-bg.png')] w-full h-full absolute bg-contain bg-center bg-no-repeat brightness-20"></div>
+                <div className="bg-[url('/images/footer-bg.webp')] w-full h-full absolute bg-contain bg-center bg-no-repeat brightness-20"></div>
                 <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-5 py-20">
                     <div className="space-y-4">
                         <Image

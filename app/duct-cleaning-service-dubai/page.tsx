@@ -155,19 +155,19 @@ export default function AccleaningServicing() {
                             id: 1,
                             title: "Healthier Living Environment",
                             content: "Duct cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment for you and your family.",
-                            icon: "/images/air-filter.png"
+                            icon: "/images/air-filter.webp"
                         },
                         {
                             id: 2,
                             title: "Reduced Exposure To Allergens",
                             content: "Living with allergies can be debilitating, but you can minimise your exposure to those allergens that cause you to suffer. Our AC duct cleaning service removes many of the most common allergens from within your ductwork. This includes dirt, dust, debris and organic matter like pet hair.",
-                            icon: "/images/cleaning.png"
+                            icon: "/images/cleaning.webp"
                         },
                         {
                             id: 3,
                             title: "ENERGY BILLS",
                             content: "Everyone wants and deserves an odour-free home. Air fresheners mask bad smells, but duct cleaning can deal with the source of the issue, enabling you and your family to enjoy your home without the fear of unpleasant aromas.",
-                            icon: "/images/coils.png"
+                            icon: "/images/coils.webp"
                         }
                     ]
                 } />

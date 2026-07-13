@@ -119,14 +119,14 @@ export default function Story() {
                     <div className="grid md:grid-cols-2 gap-6 mt-12">
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
                             <div>
-                                <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
+                                <Image src={'/images/wipes.webp'} alt='wipes' width={50} height={50} />
                                 <h4 className="text-2xl font-urbanist font-bold text-black my-3">Healthier Environment</h4>
                                 <p className="font-extralight text-[#333333] leading-relaxed">AC cleaning will significantly improve your indoor air quality.</p>
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
                             <div>
-                                <Image src={'/images/wipes.png'} alt='wipes' width={50} height={50} />
+                                <Image src={'/images/wipes.webp'} alt='wipes' width={50} height={50} />
                                 <h4 className="text-2xl font-urbanist font-bold text-black my-3">Odour Elimination</h4>
                                 <p className="font-extralight text-[#333333] leading-relaxed">Everyone wants and deserves an odour-free home.</p>
                             </div>
