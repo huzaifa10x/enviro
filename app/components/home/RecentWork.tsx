@@ -28,7 +28,7 @@ export default function RecentWork() {
                                 alt={img.alt}
                                 height={400}
                                 width={300}
-                                className="w-auto h-auto"
+                                className=""
                             />
                         </div>
                     ))}
