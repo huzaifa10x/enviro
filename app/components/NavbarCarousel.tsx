@@ -34,15 +34,31 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                     className={`absolute inset-0 transition-opacity duration-1000 ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                                 >
                                     {slide.image && (
-                                        <Image
-                                            src={slide.image}
-                                            alt={slide.title ? slide.title.replace(/<[^>]*>/g, '') : "EnviroClean UAE Banner"}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            priority={index === 0}
-                                            className="object-cover object-center"
-                                            quality={80}
-                                        />
+                                        <>
+                                            <Image
+                                                src={slide.mobileImage || slide.image}
+                                                alt={slide.title ? slide.title.replace(/<[^>]*>/g, '') : "EnviroClean UAE Banner"}
+                                                fill
+                                                fetchPriority="high"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                priority={true}
+                                                className={`object-cover object-center ${slide.mobileImage ? 'block md:hidden' : 'block'}`}
+                                                quality={80}
+                                            />
+
+                                            {slide.mobileImage && (
+                                                <Image
+                                                    src={slide.image}
+                                                    alt={slide.title ? slide.title.replace(/<[^>]*>/g, '') : "EnviroClean UAE Banner"}
+                                                    fill
+                                                    fetchPriority="high"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    priority={true}
+                                                    className="hidden md:block object-cover object-center"
+                                                    quality={80}
+                                                />
+                                            )}
+                                        </>
                                     )}
 
                                     <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 ${contentBottom ? 'justify-end pb-16 md:pb-24' : 'justify-center'} flex-col`}>

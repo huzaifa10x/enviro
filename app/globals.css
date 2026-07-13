@@ -16,7 +16,7 @@
   --color-secondary: var(--secondary);
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Urbanist';
   src: url('/font/Urbanist-VariableFont_wght.ttf') format('truetype');
   font-weight: 6800;
@@ -28,7 +28,7 @@
   src: url('/font/Poppins-Regular.ttf') format('truetype');
   font-weight: 6800;
   font-style: normal;
-}
+} */
 
 .font-urbanist {
   font-family: 'Urbanist', Helvetica, Arial, Lucida, sans-serif !important;

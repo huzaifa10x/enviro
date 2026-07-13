@@ -17,6 +17,7 @@ const slides = [
     id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
     desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai<br>and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
     image: "/images/home-banner/banner1.webp",
+    mobileImage: "/images/home-banner/mbanner1.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -25,6 +26,7 @@ const slides = [
     title: `<h6>Cleaner Indoor Air </h6>`,
     desc: `<p>Expert cleaning and caring for the indoor air conditioning system to improve air quality and enhance comfort.</p>`,
     image: "/images/home-banner/banner2.webp",
+    mobileImage: "/images/home-banner/mbanner2.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -33,6 +35,7 @@ const slides = [
     title: `<h6>Complete System Cleaning</h6>`,
     desc: `<p>Every part of your HVAC system receives a thorough cleaning and complete attention.</p>`,
     image: "/images/home-banner/banner3.webp",
+    mobileImage: "/images/home-banner/mbanner3.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -41,6 +44,7 @@ const slides = [
     title: `<h6>Total Comfort</h6>`,
     desc: `<p>Professional care will offer a consistently clean indoor air and a reliable cooling system that will function correctly all year.</p>`,
     image: "/images/home-banner/banner4.webp",
+    mobileImage: "/images/home-banner/mbanner4.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
