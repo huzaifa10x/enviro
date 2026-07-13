@@ -56,7 +56,7 @@ export default function Navbar() {
                         width={130}
                         height={260}
                         alt='logo'
-                        className="w-[120px] md:w-[150px] h-auto"
+                        className="w-[120px] md:w-[150px] h-[40px] object-contain"
                     />
                 </Link>
 
