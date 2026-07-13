@@ -29,10 +29,105 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://envirocleanuae.com/#organization",
+      "name": "Enviro Clean UAE",
+      "url": "https://envirocleanuae.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://envirocleanuae.com/images/logo.webp"
+      },
+      "email": "info@envirocleanuae.com",
+      "telephone": "+971528389414",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971528389414",
+        "email": "info@envirocleanuae.com",
+        "contactType": "customer service",
+        "areaServed": "AE",
+        "availableLanguage": ["en", "ar"]
+      },
+      "sameAs": [
+        "https://m.facebook.com/envirocleanuae/",
+        "https://www.instagram.com/envirocleanuae/",
+        "https://www.youtube.com/channel/UCG0mBHHt0bURaDQxwOs03qw"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://envirocleanuae.com/#localbusiness",
+      "name": "Enviro Clean UAE",
+      "url": "https://envirocleanuae.com/",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://envirocleanuae.com/images/logo.webp"
+      },
+      "telephone": "+971528389414",
+      "email": "info@envirocleanuae.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Empire Heights A, 9th Floor",
+        "addressLocality": "Business Bay",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://m.facebook.com/envirocleanuae/",
+        "https://www.instagram.com/envirocleanuae/",
+        "https://www.youtube.com/channel/UCG0mBHHt0bURaDQxwOs03qw"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://envirocleanuae.com/#website",
+      "url": "https://envirocleanuae.com/",
+      "name": "Enviro Clean UAE",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://envirocleanuae.com/#organization"
+      },
+      "inLanguage": "en"
+    }
+  ];
+
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <head>
+        {/* Schema inject karne ka tarika */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
 
       <body className="min-h-full flex flex-col">
         <noscript
