@@ -10,9 +10,10 @@ export default function EcoFriendlyServices() {
                 {/* Left Side: Image Container */}
                 <div className="w-full relative h-full aspect-square  rounded-2xl overflow-hidden shadow-md">
                     <Image
-                        src="/images/coil-cleaning-3.jpeg" 
+                        src="/images/coil-cleaning-3.webp"
                         alt="EnviroClean technician working on AC unit"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                         priority
                     />
@@ -20,7 +21,7 @@ export default function EcoFriendlyServices() {
 
                 {/* Right Side: Content Container */}
                 <div className="space-y-6">
-                    {/* Heading matching image_de7d62.jpg styling */}
+                    {/* Heading matching image_de7d62.webp styling */}
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-950 font-urbanist leading-tight">
                         Our <span className="text-[#3CB474]">Eco-Friendly Services</span> will Clean your Coils
                     </h2>

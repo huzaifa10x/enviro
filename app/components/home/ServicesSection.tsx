@@ -6,7 +6,7 @@ export default function ServicesSection() {
     const services = [
         { title: "Duct Cleaning", img: "/images/Duct-Cleaning-Service-Dubai.webp", url: "/duct-cleaning-service-dubai/" },
         { title: "Full AC Service", img: "/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp", url: "/accleaning-servicing/" },
-        { title: "Coil Cleaning", img: "/images/Coil-Cleaning.jpg", url: "/coil-cleaning/" },
+        { title: "Coil Cleaning", img: "/images/Coil-Cleaning.webp", url: "/coil-cleaning/" },
         { title: "Sanitisation", img: "/images/Sanitisation.webp", url: "/ac-sanitisation/" },
     ];
 

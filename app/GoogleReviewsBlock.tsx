@@ -15,7 +15,7 @@ export default function GoogleReviewsBlock() {
             "name": "Rizwan Afr",
             "rating": 5,
             "date": "3 days ago",
-            "avatar": "/images/reviews/rizwan.png",
+            "avatar": "/images/reviews/rizwan.webp",
             "comment": `We had our AC Duct checked and cleaned by Envirolclean and he’s been far better since. Omg we had no idea about the state of our AC.They came in, very professional, covered everything, cut hatches in the ceiling where needed and made very good after.Took away all their mess and gave everything a thorough clean.I’ve included some before and after pics.Great price, would thoroughly recommend these red team guys 100% 👏🏻👏🏻👏🏻`
         },
         {
@@ -23,7 +23,7 @@ export default function GoogleReviewsBlock() {
             "name": "Ajay Arora",
             "rating": 5,
             "date": "a month ago",
-            "avatar": "/images/reviews/ajay.png",
+            "avatar": "/images/reviews/ajay.webp",
             "comment": `Very happy with the services of Patrick and his team members Ricardo, Arjee and Jonathan.
             Very professional and perfect in their work.
             Also kept our house neat and clean after the service.
@@ -35,7 +35,7 @@ export default function GoogleReviewsBlock() {
             "name": "Mary Ann Afable",
             "rating": 5,
             "date": "a month ago",
-            "avatar": "/images/reviews/mary.png",
+            "avatar": "/images/reviews/mary.webp",
             "comment": `The team was great service and excellent highly recommend the company’s staff ,Jonathan, Ricardo and Arjhel`
         },
         {
@@ -43,7 +43,7 @@ export default function GoogleReviewsBlock() {
             "name": "oana picincu",
             "rating": 5,
             "date": "2 month ago",
-            "avatar": "/images/reviews/osna.png",
+            "avatar": "/images/reviews/osna.webp",
             "comment": `We needed their services after moving in a new place, recent development, so everything was full of dust. We regularly use their service now, twice a year. Since we have a baby and we want the airficts to be extra clean. Great team of professionals! They cleaned the aircon ducts really well in just few hours. They show before and after pictures ñ.`
         },
         {
@@ -59,7 +59,7 @@ export default function GoogleReviewsBlock() {
             "name": "Doreen Khayongo",
             "rating": 5,
             "date": "2 months ago",
-            "avatar": "/images/reviews/doreen.png",
+            "avatar": "/images/reviews/doreen.webp",
             "comment": `Romulo Jonathan Patrick
             They clean good
             They are the best
@@ -70,7 +70,7 @@ export default function GoogleReviewsBlock() {
             "name": "Danie Botha",
             "rating": 5,
             "date": "2 months ago",
-            "avatar": "/images/reviews/danie.png",
+            "avatar": "/images/reviews/danie.webp",
             "comment": `Patrick, Johnathan, Romulo came to te apartment and did a great shop. The vents were cleaned professionally and they made sure all areas are covered and protected. They finished the work in a timely manner and made sure everything was in order before they left. I can recommend this company for sure! Thank you Enviro Clean ⭐️`
         }
     ]
@@ -100,16 +100,16 @@ export default function GoogleReviewsBlock() {
                     <div className="md:col-span-2 flex items-start gap-3">
                         <div className="relative w-[50px] h-[50px] bg-white rounded-full">
                             <Image
-                                src={"/images/reviews/2021-03-03.jpg"}
+                                src={"/images/reviews/2021-03-03.webp"}
                                 alt="Enviro Clean"
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-cover rounded-full"
                             />
                         </div>
                         <div className="space-y-2">
                             <div className="font-semibold text-gray-800">Enviro Clean UAE</div>
-                            <div className="text-yellow-500 flex items-center font-bold text-2xl">
-                                4.8 &nbsp;
+                            <div className="text-yellow-500 flex items-center font-bold text-2xl"> 4.8 &nbsp;
                                 {[...Array(5)].map((_, i) => (
                                     <svg key={i} width="20px" height="20px" viewBox="0 0 24 24" fill="#FFBF00" stroke="#FFBF00" xmlns="http://www.w3.org/2000/svg" strokeWidth="1.5">
                                         <path d="M8.58737 8.23597L11.1849 3.00376C11.5183 2.33208 12.4817 2.33208 12.8151 3.00376L15.4126 8.23597L21.2215 9.08017C21.9668 9.18848 22.2638 10.0994 21.7243 10.6219L17.5217 14.6918L18.5135 20.4414C18.6409 21.1798 17.8614 21.7428 17.1945 21.3941L12 18.678L6.80547 21.3941C6.1386 21.7428 5.35909 21.1798 5.48645 20.4414L6.47825 14.6918L2.27575 10.6219C1.73617 10.0994 2.03322 9.18848 2.77852 9.08017L8.58737 8.23597Z" strokeLinecap="round" strokeLinejoin="round" />
@@ -120,13 +120,21 @@ export default function GoogleReviewsBlock() {
                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                 <div>powered by</div>
                                 <div className="relative w-[50px] h-[30px]">
-                                    <Image src={'/images/Google-Logo-2015.png'} alt="Google" fill className="object-contain" />
+                                    <Image src={'/images/Google-Logo-2015.webp'}
+                                        alt="Google"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-contain" />
                                 </div>
                             </div>
                             <Link href={'https://search.google.com/local/writereview?placeid=ChIJi9ylGh1pXz4Ru8R4OPvupgI'} className="bg-blue-600 rounded-3xl text-white px-4 py-2 flex items-center justify-between text-sm shadow-xs cursor-pointer">
                                 <div>review us on</div>
                                 <div className="relative w-[20px] h-[20px] bg-white rounded-full">
-                                    <Image src={'/images/google-logo.webp'} alt="G" fill className="p-0.5" />
+                                    <Image src={'/images/google-logo.webp'}
+                                        alt="G"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="p-0.5" />
                                 </div>
                             </Link>
                         </div>
@@ -166,7 +174,10 @@ export default function GoogleReviewsBlock() {
                                             </div>
 
                                             <div className="relative w-[20px] h-[20px] shrink-0">
-                                                <Image src={'/images/google-logo.webp'} alt="G" fill />
+                                                <Image src={'/images/google-logo.webp'}
+                                                    alt="G"
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    fill />
                                             </div>
                                         </div>
 

@@ -13,7 +13,7 @@ const slides = [
         id: 1,
         title: "<h1>AC Cleaning Dubai & Abu Dhabi</h1>",
         desc: `AC cleaning Dubai & Abu Dhabi. When it comes to AC cleaning we are the market leaders. Enviroclean have services over 25,000 AC units in Dubai & Abu Dhabi.`,
-        image: "/images/ac-cleaning-dubai-1-scaled.jpg",
+        image: "/images/ac-cleaning-dubai-1-scaled.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 

@@ -83,7 +83,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: canonical,
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 
@@ -144,8 +144,8 @@ export default function AccleaningServicing() {
             <section className="w-full bg-white py-12 md:py-16 px-6 md:px-0">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
                     <BeforeAfterSlider
-                        beforeImage1="/images/recent-work/img5.jpg"
-                        afterImage1="/images/recent-work/img6.jpg"
+                        beforeImage1="/images/recent-work/img5.webp"
+                        afterImage1="/images/recent-work/img6.webp"
                     />
                     <div className="flex flex-col space-y-3">
                         <h2 className="text-3xl md:text-4xl font-urbanist font-bold text-zinc-900 leading-tight mb-6">
@@ -169,7 +169,7 @@ export default function AccleaningServicing() {
                     <br/>
                <p>Professional inspection will provide wear indicators and possible future failure points before major repair costs are incurred. Our preventive approach protects your investment in equipment. It provides you with a consistent, comfortable indoor climate in extremely hot conditions. Call EnviroClean for AC cleaning Abu Dhabi today and see to the best way we can help you have a cool environment.</p>
                `}
-                imageSrc={'/images/about-us-banner.jpg'}
+                imageSrc={'/images/about-us-banner.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
             />

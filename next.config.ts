@@ -11,8 +11,9 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "envirocleanuae.com",
-      }
+      },
     ],
+    qualities: [25, 50, 80],
   },
   typescript: {
     ignoreBuildErrors: true,

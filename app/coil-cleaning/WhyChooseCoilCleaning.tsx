@@ -6,13 +6,14 @@ export default function WhyChooseCoilCleaning() {
     return (
         <section className="w-full bg-white py-16 px-6 md:px-12 max-w-7xl mx-auto font-sans">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
+
                 {/* Left Side: Image Container */}
                 <div className="w-full h-full relative aspect-square rounded-2xl overflow-hidden shadow-md">
                     <Image
-                        src="/images/coil-cleaning-2.jpeg" // Is image ko aap image_de7d62.jpg ke mutabik replace kar sakte hain
+                        src="/images/coil-cleaning-2.webp" // Is image ko aap image_de7d62.webp ke mutabik replace kar sakte hain
                         alt="EnviroClean technician working on AC unit"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover"
                         priority
                     />
@@ -20,7 +21,7 @@ export default function WhyChooseCoilCleaning() {
 
                 {/* Right Side: Content Container */}
                 <div className="space-y-6">
-                    {/* Heading matching image_de7d62.jpg styling */}
+                    {/* Heading matching image_de7d62.webp styling */}
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-950 font-urbanist leading-tight">
                         Why Choose <span className="text-[#3CB474]">EnviroClean Coil Cleaning in Dubai?</span>
                     </h2>
@@ -40,7 +41,7 @@ export default function WhyChooseCoilCleaning() {
 
                     {/* CTA Button matching the green tone of the image */}
                     <div className="pt-2">
-                        <Link 
+                        <Link
                             href="tel:+971800368476"
                             className="inline-block bg-[#4CAF78] hover:bg-[#3d9664] text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-xs cursor-pointer"
                         >

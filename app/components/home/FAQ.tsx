@@ -45,7 +45,7 @@ export default function FAQ() {
 
                     <div className="">
                         <Image
-                            src="/images/About-Regular-AC-Maintenance-.jpg"
+                            src="/images/About-Regular-AC-Maintenance-.webp"
                             height={500}
                             width={500}
                             alt="Technician checking AC"

@@ -14,9 +14,10 @@ export default function ContactCta({
             <div className="absolute top-0 left-0 bottom-0 w-6 bg-[#004d25] z-20" />
             <div className="absolute inset-0 w-full h-full z-0">
                 <Image
-                    src="/images/coil-cleaning-2.jpeg"
+                    src="/images/coil-cleaning-2.webp"
                     alt="HVAC technician at work"
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover object-center opacity-30"
                     priority
                 />

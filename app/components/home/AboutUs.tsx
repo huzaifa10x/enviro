@@ -39,7 +39,7 @@ export default function AboutUs() {
 
                 {/* Right Side: Image */}
                 <div className="lg:w-1/2 w-full">
-                    <Image src="/images/about-us-banner.jpg" width={500} height={500}
+                    <Image src="/images/about-us-banner.webp" width={500} height={500}
                         alt="Enviroclean Team"
                         className="rounded-2xl shadow-xl w-full max-h-[600px] object-cover"
                     />

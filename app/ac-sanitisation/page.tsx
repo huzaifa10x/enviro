@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 
@@ -102,7 +102,7 @@ export default function AccleaningServicing() {
                 content={`<p> Enjoy a higher level of indoor comfort that our AC sanitation can do for you. Our trained staff uses cleaning technologies that eliminate dust and allergens that detract from the cooling performance of your HVAC.</p>
                     <br/>
                <p>With sanitation, energy efficiency and long HVAC life are not compromised by cleaning. We have cleaned and disinfected all components so that your home is fresher and more comfortable. Choose EnviroClean and have a fresh place. You can trust us to take care of your cooling system.</p>`}
-                imageSrc={'/images/coil-cleaning-2.jpeg'}
+                imageSrc={'/images/coil-cleaning-2.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
             />
@@ -116,7 +116,7 @@ export default function AccleaningServicing() {
                     <br/>
                 <h3 class='font-bold'>Next-Generation Deep-Cleaning Technology</h3>
                 <p>We use industrial strength tools that target unwanted contaminates. They provide comfort inside your home and reduce airborne irritants. We offer peace of mind to your family.</p>`}
-                imageSrc={'/images/about-us-banner.jpg'}
+                imageSrc={'/images/about-us-banner.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'left'}
             />

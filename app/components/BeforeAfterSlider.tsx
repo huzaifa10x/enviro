@@ -113,10 +113,10 @@ interface BeforeAfterSliderProps {
 
 export default function BeforeAfterSlider({
     showTwo = false, // Default: single slider
-    beforeImage1 = "/images/recent-work/img5.jpg",
-    afterImage1 = "/images/recent-work/img6.jpg",
-    beforeImage2 = "/images/recent-work/img5.jpg", // Dusre section ki default images
-    afterImage2 = "/images/recent-work/img6.jpg"
+    beforeImage1 = "/images/recent-work/img5.webp",
+    afterImage1 = "/images/recent-work/img6.webp",
+    beforeImage2 = "/images/recent-work/img5.webp", // Dusre section ki default images
+    afterImage2 = "/images/recent-work/img6.webp"
 }: BeforeAfterSliderProps) {
     return (
         <section className="py-16 px-4 sm:px-6 lg:px-8 font-urbanist bg-[#f2faf7]">

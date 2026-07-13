@@ -2,9 +2,9 @@
 "use client";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image'; // LCP Fix: Imported Next.js dynamic image optimizer
-import { useState, useEffect, Key } from 'react';
-import ReactDOM from 'react-dom'; // LCP Fix: React 19/Next 15 specific resource preloader
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 export default function NavbarCarousel({ slides, contentBottom = false }: any) {
     const [current, setCurrent] = useState(0);
@@ -15,7 +15,6 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
         return () => clearInterval(timer);
     }, [slides]);
 
-    // LCP CRITICAL FIX: Browser ko page request hote hi instruct karo active image preload karne ke liye
     const activeSlide = slides?.[current];
     if (activeSlide?.image) {
         ReactDOM.preload(activeSlide.image, { as: 'image', fetchPriority: 'high' });
@@ -34,20 +33,18 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                     key={slide.id || index}
                                     className={`absolute inset-0 transition-opacity duration-1000 ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                                 >
-                                    {/* --- LCP FIX: Removed background-image inline styles, using Next.js Image Component --- */}
                                     {slide.image && (
                                         <Image
                                             src={slide.image}
                                             alt={slide.title ? slide.title.replace(/<[^>]*>/g, '') : "EnviroClean UAE Banner"}
                                             fill
-                                            sizes="100vw"
-                                            priority={index === 0} // Pehli layout slide ko extreme priority do background load par
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            priority={index === 0}
                                             className="object-cover object-center"
-                                            quality={85}
+                                            quality={80}
                                         />
                                     )}
 
-                                    {/* Content layer containing text. Added z-10 so it stays above the absolute Next.js <Image /> */}
                                     <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 ${contentBottom ? 'justify-end pb-16 md:pb-24' : 'justify-center'} flex-col`}>
                                         <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'} w-full mx-auto`}>
                                             {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
@@ -88,7 +85,6 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                         </div> : ""
                     }
 
-                    {/* Bottom Indicators navigation dot layer */}
                     <div className='absolute z-20 bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2'>
                         {slides?.map((i: any, key: number) => (
                             <div
@@ -98,8 +94,8 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                             ></div>
                         ))}
                     </div>
-                </div >
-            </div >
-        </div >
+                </div>
+            </div>
+        </div>
     );
 }

@@ -7,7 +7,7 @@ const slides = [
     {
         id: 1, title: `<h1>About Us</h1>`,
         desc: `✅  More than 180 – 5-star Google reviews  ✅  Trained   ✅  Insured`,
-        image: "/images/our-story.jpeg",
+        image: "/images/our-story.webp",
         actionTitle: 'Call Us',
         actionUrl: 'tel:+971800368476'
     },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 
@@ -113,7 +113,7 @@ export default function Story() {
                             <br />
                         </div>
                         <div className="relative min-h-90 h-full w-full">
-                            <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/image00421-min.jpeg" />
+                            <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/image00421-min.webp" />
                         </div>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 mt-12">

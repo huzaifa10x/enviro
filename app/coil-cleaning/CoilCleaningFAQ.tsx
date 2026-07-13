@@ -47,7 +47,7 @@ export default function CoilCleaningFAQ() {
                 <div className="lg:col-span-5 space-y-5 lg:pt-14 lg:pl-10">
                     {checkItems.map((item, index) => (
                         <div key={index} className="flex items-center gap-4">
-                            {/* SVG Green Check Icon matching image_df6620.jpg */}
+                            {/* SVG Green Check Icon matching image_df6620.webp */}
                             <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#10B981] flex items-center justify-center shadow-xs">
                                 <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 5L4.5 8.5L13 1" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />

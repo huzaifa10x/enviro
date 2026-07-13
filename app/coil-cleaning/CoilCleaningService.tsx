@@ -60,7 +60,7 @@ export default function CoilCleaningService() {
                         playsInline
                         preload="metadata"
                         className="w-full h-full object-contain"
-                        poster="/images/coil-cleaning-poster.jpg"
+                        poster="/images/coil-cleaning-poster.webp"
                     >
                         Your browser does not support the video tag.
                     </video>

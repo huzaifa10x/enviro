@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg',
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp',
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 };
 const breadcrumbJsonLd = {
@@ -120,7 +120,7 @@ export default async function page(): Promise<JSX.Element> {
             subTitle: "",
             title: "<h1>Blog</h1>",
             desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog...`,
-            image: "/images/blogbg.jpg",
+            image: "/images/blogbg.webp",
             actionTitle: 'Call Us',
             actionUrl: 'tel:+971800368476'
         },

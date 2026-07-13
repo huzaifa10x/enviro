@@ -11,7 +11,7 @@ const slides = [
         subTitle: "WELCOME TO ENVIRO CLEAN",
         title: `<h1>Frequently Asked Questions</h1>`,
         desc: `Check if the question you have is answered below, if not call our uk bookings team today for assistance.`,
-        image: "/images/our-story.jpeg",
+        image: "/images/our-story.webp",
         actionTitle: 'Call Us',
         actionUrl: 'tel:+971800368476'
     },
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 const breadcrumbJsonLd = {

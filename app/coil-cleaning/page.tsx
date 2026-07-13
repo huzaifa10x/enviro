@@ -15,7 +15,7 @@ const slides = [
         id: 1,
         title: "<h1>AC Coil Cleaning in Dubai/h1<>",
         desc: `✔ Operates 24/7 ✔ Competitive Pricing ✔ Trained and Insured`,
-        image: "/images/coil-cleaning.jpeg",
+        image: "/images/coil-cleaning.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'images/og-main-banner.jpg', // Is path par main meta banner image render karein
+                url: 'images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: canonical,
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
-        images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+        images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 }
 const breadcrumbJsonLd = {

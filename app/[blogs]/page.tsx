@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ blogs: st
     const pageTitle = `${data.title} | EnviroClean UAE`;
     const pageDescription = data.excerpt ? data.excerpt.replace(/<[^>]*>/g, '').slice(0, 160) : `Read our latest article: ${data.title}`;
     const canonicalUrl = `https://envirocleanuae.com/${blogs}`;
-    const imageUrl = data.featured_image || 'https://envirocleanuae.com/images/og-main-banner.jpg';
+    const imageUrl = data.featured_image || 'https://envirocleanuae.com/images/og-main-banner.webp';
 
     return {
         title: pageTitle,

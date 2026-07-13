@@ -35,7 +35,7 @@ export default function SustainabilityCommitment() {
                                 Experienced and Skilled Air Conditioner Technicians in Dubai:
                             </p>
 
-                            {/* Agar expanded nahi hai toh incomplete line dikhegi jaisa mockup "image_df53b6.jpg" mein hai */}
+                            {/* Agar expanded nahi hai toh incomplete line dikhegi jaisa mockup "image_df53b6.webp" mein hai */}
                             {!isExpanded ? (
                                 <p>Our team consists of experienced technicians with a wealth of...</p>
                             ) : (
@@ -102,9 +102,10 @@ export default function SustainabilityCommitment() {
                 {/* Right Side: Image Holder */}
                 <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xs">
                     <Image
-                        src="/images/coil-cleaning-4.jpeg" // Referencing mockup "image_df53b6.jpg" visual layout
+                        src="/images/coil-cleaning-4.webp" // Referencing mockup "image_df53b6.webp" visual layout
                         alt="HVAC system and AC Coils installation"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover grayscale" // Mockup monochrome style matching
                         priority
                     />

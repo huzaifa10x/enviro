@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     siteName: 'EnviroClean UAE',
     images: [
       {
-        url: 'https://envirocleanuae.com/images/og-main-banner.jpg',
+        url: 'https://envirocleanuae.com/images/og-main-banner.webp',
         width: 1200,
         height: 630,
         alt: title,
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: title,
     description: description,
-    images: ['https://envirocleanuae.com/images/og-main-banner.jpg'],
+    images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
   },
 }
 
