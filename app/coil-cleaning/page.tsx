@@ -15,7 +15,7 @@ const slides = [
         id: 1,
         title: "<h1>AC Coil Cleaning in Dubai</h1>",
         desc: `✔ Operates 24/7 ✔ Competitive Pricing ✔ Trained and Insured`,
-        image: "/images/coil-cleaning.webp",
+        image: "/images/Coil-Cleaning.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
