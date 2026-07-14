@@ -30,9 +30,9 @@
   font-style: normal;
 } */
 
-.font-urbanist {
+/* .font-urbanist {
   font-family: 'Urbanist', Helvetica, Arial, Lucida, sans-serif !important;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -47,7 +47,7 @@ body {
   font-family: 'Poppins', Helvetica, sans-serif;
 }
 
-@keyframes fadeSlide {
+/* @keyframes fadeSlide {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -61,4 +61,4 @@ body {
 
 .animate-fade {
   animation: fadeSlide 1s ease-out forwards;
-}
+} */

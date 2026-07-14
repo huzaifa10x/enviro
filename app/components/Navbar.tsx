@@ -141,6 +141,7 @@ export default function Navbar() {
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+                    <span className="sr-only">Open navigation menu</span>
                 </button>
             </div>
 

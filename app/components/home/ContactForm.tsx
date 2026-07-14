@@ -99,32 +99,42 @@ export default function ContactForm({ onlyForms = false }) {
                         />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <select
-                                name="location"
-                                value={formData.location}
-                                onChange={handleChange}
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
-                            >
-                                <option value="">Location</option>
-                                <option value="Dubai">Dubai</option>
-                                <option value="Arabian Ranches">Arabian Ranches</option>
-                                <option value="Dubai Marina">Dubai Marina</option>
-                                <option value="Palm Jumeirah">Palm Jumeirah</option>
-                                <option value="Emirates Hills">Emirates Hills</option>
-                                <option value="Jumeriah Park">Jumeriah Park</option>
-                            </select>
-                            <select
-                                name="service"
-                                value={formData.service}
-                                onChange={handleChange}
-                                className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
-                            >
-                                <option value="">Service You Require</option>
-                                <option value="AC Cleaning">AC Cleaning</option>
-                                <option value="Duct Cleaning">Duct Cleaning</option>
-                                <option value="Coil Cleaning">Coil Cleaning</option>
-                                <option value="AC Sanitisation">AC Sanitisation</option>
-                            </select>
+                            <div>
+                                <label htmlFor="location-select" className="text-sm font-medium text-gray-700">
+                                    Select Location
+                                </label>
+                                <select
+                                    name="location"
+                                    value={formData.location}
+                                    onChange={handleChange}
+                                    className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
+                                >
+                                    <option value="">Location</option>
+                                    <option value="Dubai">Dubai</option>
+                                    <option value="Arabian Ranches">Arabian Ranches</option>
+                                    <option value="Dubai Marina">Dubai Marina</option>
+                                    <option value="Palm Jumeirah">Palm Jumeirah</option>
+                                    <option value="Emirates Hills">Emirates Hills</option>
+                                    <option value="Jumeriah Park">Jumeriah Park</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label htmlFor="location-select" className="text-sm font-medium text-gray-700">
+                                    Select Location
+                                </label>
+                                <select
+                                    name="service"
+                                    value={formData.service}
+                                    onChange={handleChange}
+                                    className="p-4 rounded-lg border border-gray-200 w-full outline-none bg-[#c9f1e0] text-gray-700 focus:border-green-500"
+                                >
+                                    <option value="">Service You Require</option>
+                                    <option value="AC Cleaning">AC Cleaning</option>
+                                    <option value="Duct Cleaning">Duct Cleaning</option>
+                                    <option value="Coil Cleaning">Coil Cleaning</option>
+                                    <option value="AC Sanitisation">AC Sanitisation</option>
+                                </select>
+                            </div>
                         </div>
 
                         <textarea
