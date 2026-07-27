@@ -61,7 +61,7 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                         </>
                                     )}
 
-                                    <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 ${contentBottom ? 'justify-end pb-16 md:pb-24' : 'justify-center'} flex-col`}>
+                                    <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 justify-end pb-16 md:pb-24 flex-col`}>
                                         <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'} w-full mx-auto`}>
                                             {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
 
@@ -90,12 +90,12 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                         <div className='group-hover:opacity-100 opacity-0 '>
                             <button
                                 onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
-                                className="absolute group-hover:md:left-8 md:-left-8 duration-300 left-2 top-1/2 -translate-y-1/2 rounded-full z-20 text-white"
+                                className="absolute group-hover:md:left-8 md:-left-8 duration-300 left-2 top-1/2 -translate-y-1/2 cursor-pointers rounded-full z-20 text-white"
                             > <ChevronLeft size={40} /></button>
                             <span className="sr-only">Carousel Left Arrow</span>
                             <button
                                 onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-                                className="absolute group-hover:md:right-8 md:-right-8 duration-300 right-2 top-1/2 -translate-y-1/2 rounded-full z-20 text-white"
+                                className="absolute group-hover:md:right-8 md:-right-8 duration-300 right-2 top-1/2 -translate-y-1/2 cursor-pointers rounded-full z-20 text-white"
                             >
                                 <ChevronRight size={40} />
                                 <span className="sr-only">Carousel Right Arrow</span>
@@ -103,15 +103,17 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                         </div> : ""
                     }
 
-                    <div className='absolute z-20 bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2'>
-                        {slides?.map((i: any, key: number) => (
-                            <div
-                                onClick={() => setCurrent(key)}
-                                key={key}
-                                className={`w-2 h-2 cursor-pointer ${key === current ? 'bg-white' : 'bg-white/70'} rounded-full`}
-                            ></div>
-                        ))}
-                    </div>
+                    {slides.length > 1 &&
+                        <div className='absolute z-20 bottom-5 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2'>
+                            {slides?.map((i: any, key: number) => (
+                                <div
+                                    onClick={() => setCurrent(key)}
+                                    key={key}
+                                    className={`w-2 h-2 cursor-pointer ${key === current ? 'bg-white' : 'bg-white/70'} rounded-full`}
+                                ></div>
+                            ))}
+                        </div>
+                    }
                 </div>
             </div>
         </div>

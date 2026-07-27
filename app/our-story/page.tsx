@@ -82,7 +82,6 @@ const breadcrumbJsonLd = {
     ],
 }
 
-
 export default function Story() {
     return (
         <>
@@ -134,6 +133,52 @@ export default function Story() {
                     </div>
                 </div>
             </section>
+
+            <section className=" py-6 w-full">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-urbanist font-bold text-center">Our Team</h2>
+
+                    <div className="grid grid-cols-3 gap-15">
+                        <div className="bg-[#f0fff7] p-5 space-y-4 text-center">
+                            <div className="relative w-full h-[400px]">
+                                <Image
+                                    src={'/images/our-team/e2.webp'}
+                                    alt=""
+                                    fill
+                                />
+                            </div>
+                            <div className="font-semibold">Gareth Evans – Managing Director</div>
+                            <p className="text-black/80 text-sm">With over a decade of industry experience, Gareth founded Enviroclean with a commitment to raising standards in AC cleaning across the UAE. Since launching in the UK in 2015 and expanding to Dubai in 2018, he has built the company around quality workmanship, transparency, and exceptional customer service. Gareth oversees the company’s strategy, growth, and customer experience, ensuring every project reflects Enviroclean’s commitment to excellence.
+                            </p>
+                        </div>
+                        <div className="bg-[#f0fff7] p-5 space-y-4 text-center">
+                            <div className="relative w-full h-[400px]">
+                                <Image
+                                    src={'/images/our-team/e1.webp'}
+                                    alt=""
+                                    fill
+                                />
+                            </div>
+                            <div className="font-semibold">Steve – Commercial Manager</div>
+                            <p className="text-black/80 text-sm">Steve leads our commercial division, working closely with schools, hospitals, offices, warehouses, retail spaces, and property management companies throughout the UAE. He specialises in developing tailored AC cleaning and maintenance solutions for businesses, ensuring projects are delivered efficiently, professionally, and with minimal disruption to daily operations. His focus is on building long-term partnerships and maintaining the highest standards of service.
+                            </p>
+                        </div>
+                        <div className="bg-[#f0fff7] p-5 space-y-4 text-center">
+                            <div className="relative w-full h-[400px]">
+                                <Image
+                                    src={'/images/our-team/e3.webp'}
+                                    alt=""
+                                    fill
+                                />
+                            </div>
+                            <div className="font-semibold">Patrick – Operations Manager</div>
+                            <p className="text-black/80 text-sm">Patrick is responsible for the day-to-day operations of Enviroclean, ensuring every project runs smoothly from booking through to completion. He manages our field teams, coordinates schedules, maintains quality control, and ensures every technician follows our strict operating procedures. His hands-on approach and attention to detail help deliver the high standards our clients expect on every job.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <ContactCta
                 title={'Call Us Today to Get Started'}
                 button1Text={'Find Out More'}

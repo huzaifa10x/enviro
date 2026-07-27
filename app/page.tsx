@@ -15,7 +15,7 @@ import AboutOurServices from "./components/home/AboutOurServices";
 const slides = [
   {
     id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
-    desc: `<p>Welcome to enviroclean, your premier choice for the best ac cleaning company Dubai<br>and Abu Dhabi. As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best. Discover the difference of our top-notch services for a<br>healthier and more comfortable living or working environment.</p>`,
+    desc: `<p>As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best.</p>`,
     image: "/images/home-banner/banner1.webp",
     mobileImage: "/images/home-banner/mbanner1.webp",
     actionTitle: 'Get a Quote',
