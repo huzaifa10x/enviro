@@ -5,15 +5,15 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-18 bottom-14 p-2 m-2 z-20" href='tel:+971505160610'>
-                <span className="sr-only">Call us at +971505160610</span>
+            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-18 bottom-14 p-2 m-2 z-20" href="tel:971800368476">
+                <span className="sr-only">Call us at +971800368476</span>
                 <button className="btn rounded btn-warning border-warning rounded-5">
                     <Phone className="text-white" size={26} />
                     <span className="sr-only">Call Button</span>
                 </button>
             </Link>
-            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-0 bottom-0 p-2 m-2 z-20" href={'https://wa.me/+971505160610'}>
-                <span className="sr-only">Whatsaap us at +971505160610</span>
+            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-0 bottom-0 p-2 m-2 z-20" href={'https://wa.me/+971800368476'}>
+                <span className="sr-only">Whatsaap us at +971800368476</span>
                 <button className="btn rounded btn-warning border-warning rounded-5 shadow">
                     <Image src={'/images/whatsapp-white-icon-1.webp'} width={25} height={25} alt="WPICon" />
                     <span className="sr-only">Whatsapp Button</span>
