@@ -90,12 +90,12 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                         <div className='group-hover:opacity-100 opacity-0 '>
                             <button
                                 onClick={() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)}
-                                className="absolute group-hover:md:left-8 md:-left-8 duration-300 left-2 top-1/2 -translate-y-1/2 cursor-pointers rounded-full z-20 text-white"
+                                className="absolute group-hover:md:left-8 md:-left-8 duration-300 left-2 top-1/2 -translate-y-1/2 rounded-full z-20 text-white"
                             > <ChevronLeft size={40} /></button>
                             <span className="sr-only">Carousel Left Arrow</span>
                             <button
                                 onClick={() => setCurrent((prev) => (prev + 1) % slides.length)}
-                                className="absolute group-hover:md:right-8 md:-right-8 duration-300 right-2 top-1/2 -translate-y-1/2 cursor-pointers rounded-full z-20 text-white"
+                                className="absolute group-hover:md:right-8 md:-right-8 duration-300 right-2 top-1/2 -translate-y-1/2 rounded-full z-20 text-white"
                             >
                                 <ChevronRight size={40} />
                                 <span className="sr-only">Carousel Right Arrow</span>

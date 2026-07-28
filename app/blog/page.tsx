@@ -119,7 +119,7 @@ export default async function page(): Promise<JSX.Element> {
             id: 1,
             subTitle: "",
             title: "<h1>Blog</h1>",
-            desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog...`,
+            desc: `Discover the key to a fresher, healthier environment with our AC Cleaning Blog. Unlock expert tips, step-by-step guides, and industry insights to ensure your air conditioning system operates at its best. From maintenance tricks to understanding the importance of clean air, empower yourself with knowledge for a cool and clean living space. Explore our blog now for a breath of fresh, informed air.`,
             image: "/images/blogbg.webp",
             actionTitle: 'Call Us',
             actionUrl: 'tel:+971800368476'
