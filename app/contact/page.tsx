@@ -105,13 +105,13 @@ export default function contact() {
                             </div>
                             <div className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
                                 <Phone className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Email Address</h4>
-                                <div>info@envirocleanuae.com</div>
+                                <h4 className="text-2xl">Phone no</h4>
+                                <div>TOLL FREE- 800 368 476</div>
                             </div>
                             <div className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
                                 <MapPin className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Email Address</h4>
-                                <div>info@envirocleanuae.com</div>
+                                <h4 className="text-2xl">Address</h4>
+                                <div>Empire Heights A, 09/13 Business Bay Dubai</div>
                             </div>
                         </div>
                         <div className="md:col-span-3">

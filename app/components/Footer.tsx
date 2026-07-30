@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <>
-            <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-18 bottom-14 p-2 m-2 z-20" href="tel:971800368476">
+            <Link className="fixed right-0 bg-blue-950 grid rounded-full md:p-4 md:m-8 md:bottom-18 bottom-14 p-2 m-2 z-20" href="tel:971800368476">
                 <span className="sr-only">Call us at +971800368476</span>
                 <button className="btn rounded btn-warning border-warning rounded-5">
                     <Phone className="text-white" size={26} />
