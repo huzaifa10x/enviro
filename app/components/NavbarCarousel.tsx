@@ -22,8 +22,8 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
 
     return (
         <div className="flex flex-col">
-            <div className='p-4 overflow-hidden relative'>
-                <div className="relative group flex-grow w-full rounded-lg pb-50 pt-90 overflow-hidden text-white">
+            <div className='lg:p-4 overflow-hidden relative'>
+                <div className="relative group flex-grow w-full lg:rounded-lg pb-50 md:pt-90 py-65 overflow-hidden text-white">
                     {
                         slides?.map((slide: any, index: number) => {
                             const isActive = index === current;
@@ -68,13 +68,13 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                             <div className="md:text-5xl text-3xl font-bold mb-4 font-urbanist delay-300" dangerouslySetInnerHTML={{ __html: slide.title }} />
 
                                             <div
-                                                className="max-w-4xl mb-6 md:text-base"
+                                                className="max-w-4xl mb-6 md:text-base text-sm"
                                                 dangerouslySetInnerHTML={{ __html: slide.desc }}
                                             />
                                             {slide.actionTitle &&
                                                 <Link
                                                     href={slide.actionUrl}
-                                                    className="bg-primary px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block"
+                                                    className="bg-primary px-6 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block"
                                                 >
                                                     {slide.actionTitle}
                                                 </Link>

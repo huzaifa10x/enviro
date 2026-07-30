@@ -47,7 +47,7 @@ export default function Navbar() {
     ]
 
     return (
-        <nav className={`${isMobileMenuOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full px-6 md:px-10 py-6 md:py-8 z-50`}>
+        <nav className={`${isMobileMenuOpen ? 'fixed' : 'absolute'} top-0 left-0 w-full px-10 py-6 md:py-8 z-50`}>
             <div className='max-w-7xl mx-auto flex items-center justify-between relative'>
                 <Link href='/' onClick={() => setIsMobileMenuOpen(false)} className="z-50">
                     <Image
