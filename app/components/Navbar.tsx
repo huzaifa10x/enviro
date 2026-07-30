@@ -187,11 +187,11 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    <div className="mt-8">
+                    <Link href={"tel:0585815833"} className="mt-8">
                         <button className="w-full py-4 rounded-xl font-urbanist font-bold text-xl bg-primary text-white hover:bg-primary/10 transition-colors">
                             Get In Touch
                         </button>
-                    </div>
+                    </Link>
                 </div>
             )}
         </nav>
