@@ -99,7 +99,6 @@ export default function RootLayout({
     "url": "https://envirocleanuae.com/"
   };
 
-
   return (
     <html
       lang="en"
