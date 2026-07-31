@@ -120,7 +120,9 @@ export default function Home() {
       <NavbarCarousel contentBottom={false} slides={slides} />
       <AboutUs />
       <ServicesSection />
-      <Process />
+      <div className="bg-secondary">
+        <Process />
+      </div>
       <RegularACDuctCleaningDubai />
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto">
@@ -144,10 +146,10 @@ export default function Home() {
                   Inspect the electrical components: Regularly inspect the electrical connections, fuses, and breakers for any signs of wear or damage.
                 </p>
                 <p>
-                  Schedule professional maintenance: In addition to performing basic cleaning tasks, it’s essential to schedule a professional maintenance check at least once a year. A trained technician can perform a thorough inspection, identify potential issues, and make necessary repairs or adjustments to keep your system running smoothly.
+                  Schedule professional Service: In addition to performing basic cleaning tasks, it’s essential to schedule a professional check at least once a year. A trained technician can perform a thorough inspection, identify potential issues, and make necessary repairs or adjustments to keep your system running smoothly.
                 </p>
                 <p>
-                  By prioritizing regular AC cleaning and maintenance, you can ensure that your air conditioning system remains efficient, effective, and reliable, providing you with comfort and peace of mind throughout the year.
+                  By prioritizing regular air duct cleaning Dubai, you can ensure that your air conditioning system remains efficient, effective, and reliable, providing you with comfort and peace of mind throughout the year.
                 </p>
               </div>
             </div>

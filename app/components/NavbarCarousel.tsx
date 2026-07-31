@@ -61,7 +61,7 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                         </>
                                     )}
 
-                                    <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 justify-end pb-16 md:pb-24 flex-col`}>
+                                    <div className={`absolute flex inset-0 bg-black/60 md:px-20 px-10 transition-all duration-500 z-10 justify-end pb-16 md:pb-45 flex-col`}>
                                         <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'} w-full mx-auto`}>
                                             {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
 

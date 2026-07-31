@@ -81,11 +81,11 @@ export default function AboutOurServices() {
                     {/* Right Side: Image Holder */}
                     <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xs">
                         <Image
-                            src="/images/coil-cleaning-4.webp" // Referencing mockup "image_df53b6.webp" visual layout
+                            src="/images/About-Our-Services.webp" // Referencing mockup "image_df53b6.webp" visual layout
                             alt="HVAC system and AC Coils installation"
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover grayscale" // Mockup monochrome style matching
+                            className="object-cover" // Mockup monochrome style matching
                             priority
                         />
                     </div>

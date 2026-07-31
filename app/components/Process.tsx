@@ -1,10 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
 
 export default function Process() {
     return (
         <>
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6 mb-13">
                 <div className="text-center my-16">
                     <h2 className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Simple 3 Step Process</h2>
                     <div className="h-px w-full bg-green-500 mx-auto" />

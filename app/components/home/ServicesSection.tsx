@@ -15,7 +15,7 @@ export default function ServicesSection() {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</h2>
+                    <p className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</p>
                     <div className="h-px w-full bg-green-500 mx-auto" />
                 </div>
 
