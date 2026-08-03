@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "envirocleanuae.com",
+        hostname: "api.envirocleanuae.com",
       },
     ],
     qualities: [25, 50, 80],

@@ -1,3 +1,4 @@
+import { api_base_url } from "@/app/utils";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -5,9 +6,8 @@ export async function GET(request: Request) {
         const { searchParams } = new URL(request.url);
         const page = searchParams.get("page") || "1";
 
-        // External staging API ko server-side hit karein
-        const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts?page=${page}`, {
-            cache: "no-store", // Taki hamesha latest posts milein
+        const res = await fetch(`${api_base_url}/api/posts?page=${page}`, {
+            cache: "no-store",
         });
 
         if (!res.ok) {

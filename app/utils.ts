@@ -1,0 +1,1 @@
+export const api_base_url = "http://api.envirocleanuae.com"

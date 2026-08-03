@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { JSX } from "react";
 import { Metadata } from "next";
 import BlogGrid from "./blogGrid";
+import { api_base_url } from "../utils";
 
 interface Post {
     id: number;
@@ -92,7 +93,7 @@ const breadcrumbJsonLd = {
 // Server-side fetching helper
 async function getPosts(): Promise<PostsResponse> {
     // SERVER PAR HAMESHA ABSOLUTE URL YA DIRECT EXTERNAL API HIT KAREIN
-    const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts?page=1`, {
+    const res = await fetch(`${api_base_url}/api/posts?page=1`, {
         cache: "no-store",
     });
 

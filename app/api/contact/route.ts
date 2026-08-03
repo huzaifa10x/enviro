@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { api_base_url } from "@/app/utils";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
@@ -6,7 +7,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, phone, location, service, message } = body;
 
-    // Basic Validation
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Name, Email, and Message are required fields." },
@@ -14,8 +14,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Direct Forwarding to the Correct API Endpoint
-    const response = await fetch("https://envirocleanuae.com/apistaging/wp-json/cim/v1/inquiry", {
+    const response = await fetch(`${api_base_url}/wp-json/cim/v1/inquiry`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
