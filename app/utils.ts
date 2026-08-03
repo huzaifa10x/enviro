@@ -1,1 +1,1 @@
-export const api_base_url = "http://api.envirocleanuae.com"
+export const api_base_url = "https://api.envirocleanuae.com"
