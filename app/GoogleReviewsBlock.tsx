@@ -7,7 +7,6 @@ import Link from "next/link"
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-
 export default function GoogleReviewsBlock() {
     const reviews = [
         {
