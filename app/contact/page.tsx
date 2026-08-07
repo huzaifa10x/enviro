@@ -99,17 +99,17 @@ export default function contact() {
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="grid md:grid-cols-5 gap-8">
                         <div className="md:col-span-2 space-y-7 flex justify-center flex-col">
-                            <Link href={'mailto:info@envirocleanuae.com'} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
+                            <Link href={'mailto:info@envirocleanuae.com'} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
                                 <Mail className="mx-auto" size={50} strokeWidth={1} />
                                 <h4 className="text-2xl">Email Address</h4>
                                 <div>info@envirocleanuae.com</div>
                             </Link>
-                            <Link href={"tel:971800368476"} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
+                            <Link href={"tel:971800368476"} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
                                 <Phone className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Phone no</h4>
+                                <h4 className="text-2xl">Phone nwwo</h4>
                                 <div>TOLL FREE- 800 368 476</div>
                             </Link>
-                            <Link href={""} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3s">
+                            <Link href={""} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
                                 <MapPin className="mx-auto" size={50} strokeWidth={1} />
                                 <h4 className="text-2xl">Address</h4>
                                 <div>Empire Heights A, 09/13 Business Bay Dubai</div>
