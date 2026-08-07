@@ -11,9 +11,10 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 import { UrlObject } from "url";
 import { Metadata } from "next";
+import { api_base_url } from "../utils";
 
 async function getPosts(blogs: any) {
-    const res = await fetch(`https://envirocleanuae.com/apistaging/api/posts/${blogs}`, {
+    const res = await fetch(`${api_base_url}/api/posts/${blogs}`, {
         cache: "no-store",
     });
     if (!res.ok) {
