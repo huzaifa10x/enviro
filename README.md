@@ -44,3 +44,17 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 }
 
 npm run convert-webp
+
+for out build
+
+find . -mindepth 2 -name "index.html" -type f | while read -r file; do
+    dir=$(dirname "$file")
+    base=$(basename "$dir")
+    parent=$(dirname "$dir")
+    newPath="$parent/$base.html"
+
+    if [ ! -f "$newPath" ]; then
+        mv "$file" "$newPath"
+        rmdir "$dir" 2>/dev/null
+    fi
+done
