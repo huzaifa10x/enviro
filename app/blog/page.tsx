@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import NavbarCarousel from "../components/NavbarCarousel";
-import { notFound } from "next/navigation";
 import { JSX } from "react";
 import { Metadata } from "next";
-import BlogGrid from "./blogGrid";
 import { api_base_url } from "../utils";
+import BlogGrid from "./blogGrid";
 
 interface Post {
     id: number;
@@ -16,6 +15,8 @@ interface Post {
 
 interface PostsResponse {
     posts: Post[];
+    current_page?: number;
+    last_page?: number;
 }
 
 interface Slide {
@@ -71,6 +72,7 @@ export const metadata: Metadata = {
         images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
 };
+
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -88,32 +90,25 @@ const breadcrumbJsonLd = {
             'item': 'https://envirocleanuae.com/blog',
         },
     ],
-}
+};
 
-// Server-side fetching helper
 async function getPosts(): Promise<PostsResponse> {
-    // SERVER PAR HAMESHA ABSOLUTE URL YA DIRECT EXTERNAL API HIT KAREIN
-    const res = await fetch(`${api_base_url}/api/posts?page=1`, {
-        cache: "no-store",
-    });
-
-    if (!res.ok) {
-        throw new Error("Failed to fetch initial posts");
+    try {
+        // Build time static fetch (No cache: 'no-store')
+        const res = await fetch(`${api_base_url}/api/posts?page=1`);
+        if (!res.ok) {
+            console.error("Failed to fetch initial posts, status:", res.status);
+            return { posts: [] };
+        }
+        return (await res.json()) as PostsResponse;
+    } catch (error) {
+        console.error("Error fetching initial posts for blog page:", error);
+        return { posts: [] };
     }
-    return res.json() as Promise<PostsResponse>;
 }
 
 export default async function page(): Promise<JSX.Element> {
-    let postsData: PostsResponse = { posts: [] }; // Fallback initialization
-
-    try {
-        const fetchedData = await getPosts();
-        if (fetchedData && Array.isArray(fetchedData.posts)) {
-            postsData = fetchedData;
-        }
-    } catch (e) {
-        console.error("Error fetching blogs on server:", e);
-    }
+    const postsData = await getPosts();
 
     const slides: Slide[] = [
         {
@@ -134,8 +129,13 @@ export default async function page(): Promise<JSX.Element> {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <NavbarCarousel slides={slides} contentBottom={true} />
-            {/* Ab postsData me pehle page ka data successfully jayega */}
-            <BlogGrid initialData={postsData} />
+
+            {/* Added container section for padding and width constraints */}
+            <section className="my-12">
+                <div className="max-w-7xl mx-auto px-6">
+                    <BlogGrid initialData={postsData} />
+                </div>
+            </section>
         </>
     );
 }

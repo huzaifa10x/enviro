@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image";
+import Image1 from "@/public/images/About-Regular-AC-Maintenance-.webp";
 import { useState } from "react";
 
 export default function RegularACDuctCleaningDubai() {
@@ -62,7 +63,7 @@ export default function RegularACDuctCleaningDubai() {
                 {/* Right Side: Image Holder */}
                 <div className="w-full relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xs">
                     <Image
-                        src="/images/About-Regular-AC-Maintenance-.webp" // Referencing mockup "image_df53b6.webp" visual layout
+                        src={Image1} // Referencing mockup "image_df53b6.webp" visual layout
                         alt="HVAC system and AC Coils installation"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

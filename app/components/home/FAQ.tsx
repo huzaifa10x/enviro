@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Image1 from '@/public/images/About-Regular-AC-Maintenance-.webp';
 import { useState } from 'react';
 
 const faqData = [
@@ -45,7 +46,7 @@ export default function FAQ() {
 
                     <div className="">
                         <Image
-                            src="/images/About-Regular-AC-Maintenance-.webp"
+                            src={Image1}
                             height={500}
                             width={500}
                             alt="Technician checking AC"

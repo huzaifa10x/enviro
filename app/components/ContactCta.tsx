@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import image1 from '@/public/images/coil-cleaning-2.webp'
 import React from 'react'
 
 export default function ContactCta({
@@ -14,7 +15,7 @@ export default function ContactCta({
             <div className="absolute top-0 left-0 bottom-0 w-6 bg-[#004d25] z-20" />
             <div className="absolute inset-0 w-full h-full z-0">
                 <Image
-                    src="/images/coil-cleaning-2.webp"
+                    src={image1}
                     alt="HVAC technician at work"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

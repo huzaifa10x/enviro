@@ -1,14 +1,19 @@
 'use client'
 
 import Image from "next/image";
+import sapLogo from '@/public/images/sap.webp';
+import hiltonLogo from '@/public/images/hilton.webp';
+import radissonLogo from '@/public/images/radisson.webp';
+import starbucksLogo from '@/public/images/starbucks.webp';
+import crsLogo from '@/public/images/crs.webp';
 
 export default function PartnersSection() {
     const partners = [
-        { name: "SAP", src: "/images/sap.webp" },
-        { name: "Hilton", src: "/images/hilton.webp" },
-        { name: "Radisson", src: "/images/radisson.webp" },
-        { name: "Starbucks", src: "/images/starbucks.webp" },
-        { name: "CRS", src: "/images/crs.webp" },
+        { name: "SAP", src: sapLogo },
+        { name: "Hilton", src: hiltonLogo },
+        { name: "Radisson", src: radissonLogo },
+        { name: "Starbucks", src: starbucksLogo },
+        { name: "CRS", src: crsLogo },
     ];
 
     return (

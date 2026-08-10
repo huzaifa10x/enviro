@@ -1,4 +1,8 @@
 import Image from 'next/image'
+import arrow from '@/public/images/arrow-icon.webp'
+import Image1 from '@/public/images/Book-via-Form-or-WhatsApp.webp'
+import Image2 from '@/public/images/We-Inspect-&-Clean-Your-Ducts.webp'
+import Image3 from '@/public/images/Enjoy-Fresh,-Clean-Air.webp'
 
 export default function Process() {
     return (
@@ -12,7 +16,7 @@ export default function Process() {
                 <div className="flex md:flex-nowrap flex-wrap gap-14 items-center justify-center">
                     <div className="border border-primary rounded-lg bg-white p-5 h">
                         <Image
-                            src={'/images/Book-via-Form-or-WhatsApp.webp'}
+                            src={Image1}
                             height={300}
                             width={300}
                             alt="steps"
@@ -21,7 +25,7 @@ export default function Process() {
                     </div>
                     <div>
                         <Image
-                            src={'/images/arrow-icon.webp'}
+                            src={arrow}
                             height={100}
                             width={200}
                             alt="steps"
@@ -30,7 +34,7 @@ export default function Process() {
                     </div>
                     <div className="border border-primary rounded-lg bg-white p-5 h">
                         <Image
-                            src={'/images/We-Inspect-&-Clean-Your-Ducts.webp'}
+                            src={Image2}
                             height={300}
                             width={300}
                             alt="steps"
@@ -39,7 +43,7 @@ export default function Process() {
                     </div>
                     <div>
                         <Image
-                            src={'/images/arrow-icon.webp'}
+                            src={arrow}
                             height={100}
                             width={200}
                             alt="steps"
@@ -48,7 +52,7 @@ export default function Process() {
                     </div>
                     <div className="border border-primary rounded-lg bg-white p-5 h">
                         <Image
-                            src={'/images/Enjoy-Fresh,-Clean-Air.webp'}
+                            src={Image3}
                             height={300}
                             width={300}
                             alt="steps"

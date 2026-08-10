@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
+  assetPrefix: '../',
   trailingSlash: true,
   images: {
+    unoptimized: true, // static export mein next/image optimization API kaam nahi karta
     remotePatterns: [
       {
         protocol: "https",

@@ -13,14 +13,39 @@ import { UrlObject } from "url";
 import { Metadata } from "next";
 import { api_base_url } from "../utils";
 
-async function getPosts(blogs: any) {
-    const res = await fetch(`${api_base_url}/api/posts/${blogs}`, {
-        cache: "no-store",
-    });
-    if (!res.ok) {
-        notFound();
+// Force static export handling
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+    try {
+        const res = await fetch(`${api_base_url}/api/posts`);
+
+        if (!res.ok) {
+            console.warn("API call failed in generateStaticParams, returning empty array");
+            return [];
+        }
+
+        const data = await res.json();
+        const posts = Array.isArray(data) ? data : data.posts || [];
+
+        return posts.map((post: any) => ({
+            blogs: String(post.slug || post.id),
+        }));
+    } catch (error) {
+        console.error("Error generating static params:", error);
+        return [];
     }
-    return res.json();
+}
+
+async function getPosts(blogs: string) {
+    try {
+        const res = await fetch(`${api_base_url}/api/posts/${blogs}`);
+        if (!res.ok) return null;
+        return await res.json();
+    } catch (error) {
+        console.error("Error fetching post data:", error);
+        return null;
+    }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ blogs: string }> }): Promise<Metadata> {
@@ -69,9 +94,10 @@ export async function generateMetadata({ params }: { params: Promise<{ blogs: st
     };
 }
 
-export default async function page({ params }: { params: { blogs: string } }) {
-    const { blogs } = await params
+export default async function page({ params }: { params: Promise<{ blogs: string }> }) {
+    const { blogs } = await params;
     const data = await getPosts(blogs);
+
     if (!data) {
         notFound();
     }
@@ -122,7 +148,7 @@ export default async function page({ params }: { params: { blogs: string } }) {
                         <div className="lg:col-span-2 space-y-5">
                             <div className="text-3xl font-semibold">Related Post</div>
                             <div className="space-y-6">
-                                {data.related_posts.map((post: { slug: string | UrlObject; featured_image: string | StaticImport; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, key: Key | null | undefined) => (
+                                {data.related_posts?.map((post: { slug: string | UrlObject; featured_image: string | StaticImport; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, key: Key | null | undefined) => (
                                     <div key={key}>
                                         <Link href={"/" + post.slug}>
                                             <div className="grid grid-cols-5 gap-5 shrink-0">
@@ -149,10 +175,10 @@ export default async function page({ params }: { params: { blogs: string } }) {
                         </div>
                     </div>
                 </div>
-            </section >
+            </section>
 
             <GoogleReviewsBlock />
             <ContactForm />
-        </div >
-    )
+        </div>
+    );
 }

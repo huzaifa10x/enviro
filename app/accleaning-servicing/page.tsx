@@ -8,21 +8,29 @@ import DisinfectionSection from "../components/DisinfectionSection";
 import RecentWork from "../components/home/RecentWork";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import { Metadata } from "next";
+
+// Image Imports
+import acCleaningDubaiSlideImg from "@/public/images/ac-cleaning-dubai-1-scaled.webp";
+import sanitisationImg from "@/public/images/Sanitisation.webp";
+import acCleaningDuctImg from "@/public/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp";
+import airFilterIcon from "@/public/images/air-filter.webp";
+import cleaningIcon from "@/public/images/cleaning.webp";
+import coilsIcon from "@/public/images/coils.webp";
+
 const slides = [
     {
         id: 1,
         title: "<h1>AC Cleaning Dubai & Abu Dhabi</h1>",
         desc: `AC cleaning Dubai & Abu Dhabi. When it comes to AC cleaning we are the market leaders. Enviroclean have services over 25,000 AC units in Dubai & Abu Dhabi.`,
-        image: "/images/ac-cleaning-dubai-1-scaled.webp",
+        image: acCleaningDubaiSlideImg,
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
 ];
 
-
-const title = 'AC Cleaning - Enviro Clean UAE'
-const description = 'AC Cleaning & Servicing in Dubai & Abu Dhabi. British Managed & British Trained Technicians. Market Leaders In AC Cleaning.'
-const canonical = 'https://envirocleanuae.com/accleaning-servicing'
+const title = 'AC Cleaning - Enviro Clean UAE';
+const description = 'AC Cleaning & Servicing in Dubai & Abu Dhabi. British Managed & British Trained Technicians. Market Leaders In AC Cleaning.';
+const canonical = 'https://envirocleanuae.com/accleaning-servicing';
 
 export const metadata: Metadata = {
     title: title,
@@ -52,7 +60,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp',
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -69,7 +77,7 @@ export const metadata: Metadata = {
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
         images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
-}
+};
 
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -88,7 +96,7 @@ const breadcrumbJsonLd = {
             'item': 'https://envirocleanuae.com/accleaning-serving',
         },
     ],
-}
+};
 
 export default function AccleaningServicing() {
     return (
@@ -102,7 +110,7 @@ export default function AccleaningServicing() {
                 subHeading={'AC Cleaning Dubai & Abu Dhabi'}
                 heading={'AC Cleaning Dubai & Abu Dhabi'}
                 content={`Enviroclean use the best ac cleaning equipment in Dubai & Abu Dhabi. Our AC cleaning machine cleans to the very back of your AC duct, cleaning dirt, dust, mould and odours along the way. We will photograph your internal ducts and show you the condition before and after we have finished the AC cleaning. After a forward and backwards clean, we will disinfect your ducts with our microbial disinfection spray after we have completed the ac cleaning, this kills any bacteria and mould. Ac cleaning clears the way for fresher, healthier, cleaner air throughout your home. We provide the best AC cleaning service in Dubai & Abu Dhabi.`}
-                imageSrc={'/images/Sanitisation.webp'}
+                imageSrc={sanitisationImg}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
             />
@@ -110,7 +118,7 @@ export default function AccleaningServicing() {
                 subHeading={'Full AC Cleaning & Servicing Package'}
                 heading={'Ac Cleaning & Ac Servicing'}
                 content={`Our full ac cleaning package ensures your whole system from front to back is cleaned and disinfected. After we have cleaned your AC we carry out a full service to ensure the unit is running at full capacity.`}
-                imageSrc={'/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp'}
+                imageSrc={acCleaningDuctImg}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'left'}
             />
@@ -125,19 +133,19 @@ export default function AccleaningServicing() {
                             id: 1,
                             title: "Healthier Living Environment",
                             content: "Ac cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Ac cleaning services in Dubai & Abu Dhabi",
-                            icon: "/images/air-filter.webp"
+                            icon: airFilterIcon
                         },
                         {
                             id: 2,
                             title: "Reduced Exposure To Allergens",
                             content: "Living with allergies can be debilitating, but you can minimise your exposure to those allergens that cause you to suffer. AC duct cleaning service removes many of the most common allergens from within your ductwork. This includes dirt, dust, debris and organic matter like pet hair. AC cleaning Dubai & Abu Dhabi.",
-                            icon: "/images/cleaning.webp"
+                            icon: cleaningIcon
                         },
                         {
                             id: 3,
                             title: "Odour Elimination",
                             content: "Everyone wants and deserves an odour-free home. Air fresheners mask bad smells, but AC cleaning can deal with the source of the issue, enabling you and your family to enjoy your home without the fear of unpleasant aromas.",
-                            icon: "/images/coils.webp"
+                            icon: coilsIcon
                         }
                     ]
                 } />

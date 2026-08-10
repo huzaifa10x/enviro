@@ -4,6 +4,8 @@ import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
 import FaqsSection from "../components/FaqsSection";
+import image1 from "@/public/images/our-story.webp";
+
 import { Metadata } from "next";
 const slides = [
     {
@@ -11,7 +13,7 @@ const slides = [
         subTitle: "WELCOME TO ENVIRO CLEAN",
         title: `<h1>Frequently Asked Questions</h1>`,
         desc: `Check if the question you have is answered below, if not call our uk bookings team today for assistance.`,
-        image: "/images/our-story.webp",
+        image: image1,
         actionTitle: 'Call Us',
         actionUrl: 'tel:+971800368476'
     },
