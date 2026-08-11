@@ -141,7 +141,7 @@ export default function AccleaningServicing() {
                         <div className="text-lg font-bold">Improved indoor air quality:</div>
 
                         <p>Over time, air ducts accumulate dust, allergens, mold, bacteria, and other contaminants that can be circulated throughout your home or office. Regular duct cleaning helps to remove these pollutants, resulting in improved air quality and a healthier environment for occupants.</p>
-                        <Link className="bg-[#333333] px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block" href="https://envirocleanuae.com/duct-cleaning-service-dubai/#headafing">Read More</Link>
+                        <Link className="bg-[#333333] px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block" href="/duct-cleaning-service-dubai/#headafing">Read More</Link>
                     </div>
                 </div>
             </section>

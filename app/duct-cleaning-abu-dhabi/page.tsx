@@ -154,7 +154,7 @@ export default function AccleaningServicing() {
                         <h3 className="text-lg font-bold">Desert Climate Challenges</h3>
                         <p>In Abu Dhabi, an increasing amount of fine sand and dust buildup causes clogs in the filter. With these clogs, the cooling system must exert a higher effort to operate its components. It expends more energy creating much higher costs to utilize air-conditioning units. It also lowers the ability to cool down homes during peak periods of heat. This is why duct cleaning Abu Dhabi is an essential preventive measure, when you’re living in the city during summers.</p>
 
-                        <Link className="bg-[#333333] px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block" href="https://envirocleanuae.com/duct-cleaning-service-dubai/#headafing">Read More</Link>
+                        <Link className="bg-[#333333] px-4 py-2 w-fit rounded-lg text-white font-medium hover:bg-green-700 transition inline-block" href="/duct-cleaning-service-dubai/#headafing">Read More</Link>
                     </div>
                 </div>
             </section>

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import Image from "next/image";
 import ContactForm from "../components/home/ContactForm";
 import NavbarCarousel from "../components/NavbarCarousel";
@@ -7,18 +5,38 @@ import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { notFound } from "next/navigation";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
-import { UrlObject } from "url";
 import { Metadata } from "next";
 import { api_base_url } from "../utils";
 
-// Force static export handling
 export const dynamicParams = false;
+
+interface RelatedPost {
+    id?: number;
+    slug: string;
+    title: string;
+    featured_image: string;
+}
+
+interface PostDetail {
+    id: number;
+    title: string;
+    slug: string;
+    content: string;
+    excerpt?: string;
+    featured_image?: string;
+    date?: string;
+    related_posts?: RelatedPost[];
+}
+
+const getBaseUrl = () => {
+    const rawUrl = process.env.NEXT_PUBLIC_API_BASE_URL || api_base_url || "https://api.envirocleanuae.com";
+    return rawUrl.replace(/\/$/, "");
+};
 
 export async function generateStaticParams() {
     try {
-        const res = await fetch(`${api_base_url}/api/posts`);
+        const BASE_URL = getBaseUrl();
+        const res = await fetch(`${BASE_URL}/api/posts`);
 
         if (!res.ok) {
             console.warn("API call failed in generateStaticParams, returning empty array");
@@ -26,9 +44,9 @@ export async function generateStaticParams() {
         }
 
         const data = await res.json();
-        const posts = Array.isArray(data) ? data : data.posts || [];
+        const posts: PostDetail[] = Array.isArray(data) ? data : data.posts || [];
 
-        return posts.map((post: any) => ({
+        return posts.map((post) => ({
             blogs: String(post.slug || post.id),
         }));
     } catch (error) {
@@ -37,9 +55,10 @@ export async function generateStaticParams() {
     }
 }
 
-async function getPosts(blogs: string) {
+async function getPosts(blogs: string): Promise<PostDetail | null> {
     try {
-        const res = await fetch(`${api_base_url}/api/posts/${blogs}`);
+        const BASE_URL = getBaseUrl();
+        const res = await fetch(`${BASE_URL}/api/posts/${blogs}`);
         if (!res.ok) return null;
         return await res.json();
     } catch (error) {
@@ -54,8 +73,11 @@ export async function generateMetadata({ params }: { params: Promise<{ blogs: st
 
     if (!data) return {};
 
-    const pageTitle = `${data.title} | EnviroClean UAE`;
-    const pageDescription = data.excerpt ? data.excerpt.replace(/<[^>]*>/g, '').slice(0, 160) : `Read our latest article: ${data.title}`;
+    const cleanTitle = data.title.replace(/<[^>]*>/g, '');
+    const pageTitle = `${cleanTitle} | EnviroClean UAE`;
+    const pageDescription = data.excerpt
+        ? data.excerpt.replace(/<[^>]*>/g, '').slice(0, 160)
+        : `Read our latest article: ${cleanTitle}`;
     const canonicalUrl = `https://envirocleanuae.com/${blogs}`;
     const imageUrl = data.featured_image || 'https://envirocleanuae.com/images/og-main-banner.webp';
 
@@ -81,7 +103,7 @@ export async function generateMetadata({ params }: { params: Promise<{ blogs: st
                     url: imageUrl,
                     width: 1200,
                     height: 630,
-                    alt: data.title,
+                    alt: cleanTitle,
                 },
             ],
         },
@@ -94,7 +116,7 @@ export async function generateMetadata({ params }: { params: Promise<{ blogs: st
     };
 }
 
-export default async function page({ params }: { params: Promise<{ blogs: string }> }) {
+export default async function Page({ params }: { params: Promise<{ blogs: string }> }) {
     const { blogs } = await params;
     const data = await getPosts(blogs);
 
@@ -108,7 +130,7 @@ export default async function page({ params }: { params: Promise<{ blogs: string
             subTitle: "",
             title: `<h1>${data.title}</h1>`,
             desc: ``,
-            image: data.featured_image,
+            image: data.featured_image || "/images/placeholder.webp",
             actionTitle: '',
             actionUrl: ''
         },
@@ -127,7 +149,7 @@ export default async function page({ params }: { params: Promise<{ blogs: string
             {
                 '@type': 'ListItem',
                 'position': 2,
-                'name': data.title,
+                'name': data.title.replace(/<[^>]*>/g, ''),
                 'item': `https://envirocleanuae.com/${blogs}`,
             },
         ],
@@ -143,33 +165,48 @@ export default async function page({ params }: { params: Promise<{ blogs: string
             <section className="my-10">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid lg:grid-cols-6 gap-10">
-                        <div className="lg:col-span-4 [&_ul]:list-disc [&_ul]:pl-6 [&_b]:text-2xl space-y-6" dangerouslySetInnerHTML={{ __html: data.content }} />
+                        {/* Main Blog Content */}
+                        <div
+                            className="lg:col-span-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_b]:text-2xl space-y-6 overflow-hidden"
+                            dangerouslySetInnerHTML={{ __html: data.content }}
+                        />
 
+                        {/* Sidebar: Related Posts */}
                         <div className="lg:col-span-2 space-y-5">
-                            <div className="text-3xl font-semibold">Related Post</div>
+                            <h2 className="text-3xl font-semibold">Related Posts</h2>
                             <div className="space-y-6">
-                                {data.related_posts?.map((post: { slug: string | UrlObject; featured_image: string | StaticImport; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }, key: Key | null | undefined) => (
-                                    <div key={key}>
-                                        <Link href={"/" + post.slug}>
-                                            <div className="grid grid-cols-5 gap-5 shrink-0">
-                                                <div className="col-span-2 relative h-[100px]">
-                                                    <Image
-                                                        src={post.featured_image}
-                                                        alt=""
-                                                        fill
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                        className="object-cover"
+                                {data.related_posts && data.related_posts.length > 0 ? (
+                                    data.related_posts.map((post, idx) => (
+                                        <div key={post.slug || idx}>
+                                            <Link href={`/${post.slug}`}>
+                                                <div className="grid grid-cols-5 gap-4 shrink-0 group">
+                                                    <div className="col-span-2 relative h-[90px] rounded-md overflow-hidden">
+                                                        <Image
+                                                            src={post.featured_image || "/images/placeholder.webp"}
+                                                            alt={post.title.replace(/<[^>]*>/g, '') || "Related post"}
+                                                            fill
+                                                            sizes="120px"
+                                                            className="object-cover group-hover:scale-105 transition-transform duration-200"
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        className="col-span-3 font-semibold text-sm group-hover:text-[#10b981] transition-colors duration-200 line-clamp-3"
+                                                        dangerouslySetInnerHTML={{ __html: post.title }}
                                                     />
                                                 </div>
-                                                <div className="col-span-3 font-semibold text-sm">{post.title}</div>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                ))}
+                                            </Link>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p className="text-gray-500 text-sm">No related posts found.</p>
+                                )}
                             </div>
-                            <div>
-                                <Link href={`/blog`} className="flex items-center w-fit bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-5 rounded-md transition-colors duration-200 shadow-sm">
-                                    Read More <ArrowRight />
+                            <div className="pt-2">
+                                <Link
+                                    href="/blog"
+                                    className="inline-flex items-center gap-2 bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-5 rounded-md transition-colors duration-200 shadow-sm"
+                                >
+                                    Read More <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
                         </div>

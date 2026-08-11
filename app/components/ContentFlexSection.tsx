@@ -1,5 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+
+interface ContentFlexSectionProps {
+    subHeading?: string;
+    heading?: string;
+    content?: string;
+    imageSrc?: string | StaticImageData;
+    imageAlt?: string;
+    imagePosition?: 'left' | 'right' | string;
+}
 
 const ContentFlexSection = ({
     subHeading = "",
@@ -8,7 +17,7 @@ const ContentFlexSection = ({
     imageSrc = "",
     imageAlt = "hvac-service-image",
     imagePosition = "right"
-}): any => {
+}: ContentFlexSectionProps): any => {
 
     const imageOrderClass = imagePosition === 'left' ? 'md:order-1' : 'md:order-2';
     const textOrderClass = imagePosition === 'left' ? 'md:order-2' : 'md:order-1';
