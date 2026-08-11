@@ -77,7 +77,7 @@ export default function BlogGrid({
 
                         <div className="p-5 pt-0">
                             <Link
-                                href={`/${post.slug}`}
+                                href={`/blogs/${post.slug}`}
                                 className="inline-block bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-4 rounded-md transition-colors duration-200"
                             >
                                 Read Article
