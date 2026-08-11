@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import coilcleaning2 from "@/public/images/coil-cleaning-2.webp"
 
 export default function WhyChooseCoilCleaning() {
     return (
@@ -10,7 +11,7 @@ export default function WhyChooseCoilCleaning() {
                 {/* Left Side: Image Container */}
                 <div className="w-full h-full relative aspect-square rounded-2xl overflow-hidden shadow-md">
                     <Image
-                        src="/images/coil-cleaning-2.webp" // Is image ko aap image_de7d62.webp ke mutabik replace kar sakte hain
+                        src={coilcleaning2}
                         alt="EnviroClean technician working on AC unit"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

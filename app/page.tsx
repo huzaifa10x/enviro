@@ -20,6 +20,7 @@ import DesktopBanner3 from "@/public/images/home-banner/banner1.webp";
 import MBanner3 from "@/public/images/home-banner/mbanner1.webp";
 import DesktopBanner4 from "@/public/images/home-banner/banner4.webp";
 import MBanner4 from "@/public/images/home-banner/mbanner4.webp";
+import CountonEnviroclean from "@/public/images/Count-on-Enviroclean.webp"
 
 const slides = [
   {
@@ -168,7 +169,7 @@ export default function Home() {
       <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="">
-            <Image src="/images/Count-on-Enviroclean.webp" width={500} height={500}
+            <Image src={CountonEnviroclean} width={500} height={500}
               alt="Enviroclean Team"
               className="rounded-2xl shadow-xl w-full max-h-[500px] object-cover"
             />

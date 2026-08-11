@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import iioio from "@/public/images/iioio.webp"
 
 export default function DisinfectionSection() {
     const featurePoints = [
@@ -17,7 +18,7 @@ export default function DisinfectionSection() {
 
                 <div className="relative w-full max-w-md mx-auto aspect-square flex items-center justify-center p-6">
                     <Image
-                        src="/images/iioio.webp"
+                        src={iioio} 
                         alt="EnviroCON Disinfection Product"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import coilcleaning3 from "@/public/images/coil-cleaning-3.webp"
 
 export default function EcoFriendlyServices() {
     return (
@@ -10,7 +11,7 @@ export default function EcoFriendlyServices() {
                 {/* Left Side: Image Container */}
                 <div className="w-full relative h-full aspect-square  rounded-2xl overflow-hidden shadow-md">
                     <Image
-                        src="/images/coil-cleaning-3.webp"
+                        src={coilcleaning3}
                         alt="EnviroClean technician working on AC unit"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
