@@ -10,37 +10,29 @@ import SustainabilityCommitment from "./SustainabilityCommitment";
 import CoilCleaningFAQ from "./CoilCleaningFAQ";
 import BenefitsSection from "../components/BenefitsSection";
 import { Metadata } from "next";
-
-// Image Imports
-import coilCleaningSlideImg from "@/public/images/Coil-Cleaning.webp";
-import airFilterIcon from "@/public/images/air-filter.webp";
-import cleaningIcon from "@/public/images/cleaning.webp";
-import coilsIcon from "@/public/images/coils.webp";
-
 const slides = [
     {
         id: 1,
         title: "<h1>AC Coil Cleaning in Dubai</h1>",
         desc: `✔ Operates 24/7 ✔ Competitive Pricing ✔ Trained and Insured`,
-        image: coilCleaningSlideImg,
+        image: "/images/Coil-Cleaning.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
 ];
 
-const title = 'AC Coil Cleaning Dubai | Ac Coil Cleaning Services';
-const description = 'Professional AC coil cleaning services in Dubai to improve cooling efficiency & air quality. Book expert AC maintenance today!';
-const canonical = 'https://envirocleanuae.com/coil-cleaning';
-
+const title = 'AC Coil Cleaning Dubai | Ac Coil Cleaning Services'
+const description = 'Professional AC coil cleaning services in Dubai to improve cooling efficiency & air quality. Book expert AC maintenance today!'
+const canonical = 'https://envirocleanuae.com/coil-cleaning'
 export const metadata: Metadata = {
     // Primary Meta Tags
     title: title,
     description: description,
     alternates: {
-        canonical: canonical, // Production domain url
+        canonical: canonical, // Aapka main production domain url
     },
 
-    // Robots Rules
+    // Robots Rules (Aapke screen me missing dikha raha tha, yahan index/follow explicit lagaya hai)
     robots: {
         index: true,
         follow: true,
@@ -62,7 +54,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'images/og-main-banner.webp',
+                url: 'images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: canonical,
@@ -79,8 +71,7 @@ export const metadata: Metadata = {
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
         images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
-};
-
+}
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -98,7 +89,7 @@ const breadcrumbJsonLd = {
             'item': 'https://envirocleanuae.com/coil-cleaning',
         },
     ],
-};
+}
 
 export default function CoilCleaning() {
     return (
@@ -120,19 +111,19 @@ export default function CoilCleaning() {
                             id: 1,
                             title: "HEALTHIER LIVING ENVIRONMENT",
                             content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
-                            icon: airFilterIcon
+                            icon: "/images/air-filter.webp"
                         },
                         {
                             id: 2,
                             title: "REDUCED EXPOSURE TO ALLERGENS",
                             content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
-                            icon: cleaningIcon
+                            icon: "/images/cleaning.webp"
                         },
                         {
                             id: 3,
                             title: "ENERGY BILLS",
                             content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
-                            icon: coilsIcon
+                            icon: "/images/coils.webp"
                         }
                     ]
                 }

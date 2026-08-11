@@ -1,14 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // experimental: {
-  //   cpus: 1,
-  // },
   trailingSlash: true,
-  // output: 'export',
-  // assetPrefix: '../',
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

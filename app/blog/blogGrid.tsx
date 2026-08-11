@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 interface Post {
     id: number;
@@ -10,117 +12,102 @@ interface Post {
     excerpt: string;
 }
 
-interface Pagination {
-    total_posts: number;
-    posts_per_page: number;
-    current_page: number;
-    total_pages: number;
-    has_next_page: boolean;
-    has_prev_page: boolean;
-}
-
 interface PostsResponse {
-    pagination?: Pagination;
-    posts?: Post[];
+    posts: Post[];
 }
 
 export default function BlogGrid({
-    data,
-    currentPage = 1,
+    initialData,
 }: {
-    data?: PostsResponse;
-    currentPage?: number;
+    initialData: PostsResponse;
 }) {
-    const posts = data?.posts || [];
-    const totalPages = data?.pagination?.total_pages || 1;
+    const [posts, setPosts] = useState<Post[]>(initialData.posts);
+    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState(false);
+    const [hasMore, setHasMore] = useState(true);
 
-    if (posts.length === 0) {
-        return (
-            <div className="text-center py-12 text-gray-500 font-medium">
-                No blog posts found.
-            </div>
-        );
-    }
+    const loadMore = async () => {
+        if (loading || !hasMore) return;
+
+        try {
+            setLoading(true);
+            const nextPage = page + 1;
+
+            // Apne local Server-Side API Route ko call krein
+            const res = await fetch(`/api/blog?page=${nextPage}`);
+
+            if (!res.ok) return;
+
+            const data: PostsResponse = await res.json();
+
+            if (!data.posts || data.posts.length === 0) {
+                setHasMore(false);
+                return;
+            }
+
+            setPosts((prev) => [...prev, ...data.posts]);
+            setPage(nextPage);
+        } catch (error) {
+            console.error("Error loading more posts:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
-        <div className="space-y-10">
-            {/* Blog Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {posts.map((post) => (
-                    <article
-                        key={post.id}
-                        className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
-                    >
-                        <div>
-                            <div className="relative h-48 w-full bg-gray-100">
+        <div className="bg-[#f2faf7] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {posts.map((post) => (
+                        <div
+                            key={post.id}
+                            className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col justify-between border border-gray-100"
+                        >
+                            <div className="h-52 relative overflow-hidden">
                                 <Image
-                                    src={post.featured_image || "/images/placeholder.webp"}
-                                    alt={post.title ? post.title.replace(/<[^>]*>/g, '') : "Blog post"}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-cover"
+                                    src={post.featured_image}
+                                    alt={post.title}
+                                    width={400}
+                                    height={300}
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
-                            <div className="p-5 space-y-3">
-                                <h2 className="text-xl font-bold text-gray-900 line-clamp-2">
-                                    <span dangerouslySetInnerHTML={{ __html: post.title }} />
-                                </h2>
-                                <div
-                                    className="text-gray-600 text-sm line-clamp-3"
-                                    dangerouslySetInnerHTML={{
-                                        __html: post.excerpt ? post.excerpt.replace(/<[^>]*>/g, '') : '',
-                                    }}
-                                />
+                            <div className="p-6 flex flex-col grow justify-between">
+                                <div>
+                                    <div className="text-[19px] font-semibold mb-3" dangerouslySetInnerHTML={{ __html: post.title }} />
+
+                                    <div
+                                        className="text-gray-500 text-sm mb-6 line-clamp-2"
+                                        dangerouslySetInnerHTML={{
+                                            __html: post.excerpt,
+                                        }}
+                                    />
+                                </div>
+
+                                <Link
+                                    href={`/${post.slug}`}
+                                    className="bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-5 rounded-md w-fit"
+                                >
+                                    Read More
+                                </Link>
                             </div>
                         </div>
-
-                        <div className="p-5 pt-0">
-                            <Link
-                                href={`/blogs/${post.slug}`}
-                                className="inline-block bg-[#10b981] hover:bg-[#0e9f6e] text-white font-medium text-sm py-2 px-4 rounded-md transition-colors duration-200"
-                            >
-                                Read Article
-                            </Link>
-                        </div>
-                    </article>
-                ))}
-            </div>
-
-            {/* Pagination Links */}
-            {totalPages > 1 && (
-                <div className="flex justify-center items-center gap-4 pt-6">
-                    {currentPage > 1 ? (
-                        <Link
-                            href={currentPage - 1 === 1 ? "/blog" : `/blog/page/${currentPage - 1}`}
-                            className="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 shadow-md"
-                        >
-                            Previous
-                        </Link>
-                    ) : (
-                        <span className="bg-gray-200 text-gray-400 font-semibold py-2 px-6 rounded-lg cursor-not-allowed">
-                            Previous
-                        </span>
-                    )}
-
-                    <span className="text-gray-700 font-medium">
-                        Page {currentPage} of {totalPages}
-                    </span>
-
-                    {currentPage < totalPages ? (
-                        <Link
-                            href={`/blog/page/${currentPage + 1}`}
-                            className="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 shadow-md"
-                        >
-                            Next
-                        </Link>
-                    ) : (
-                        <span className="bg-gray-200 text-gray-400 font-semibold py-2 px-6 rounded-lg cursor-not-allowed">
-                            Next
-                        </span>
-                    )}
+                    ))}
                 </div>
-            )}
+
+                {hasMore && (
+                    <div className="flex justify-center mt-10">
+                        <button
+                            onClick={loadMore}
+                            disabled={loading}
+                            className="px-6 py-2 rounded bg-primary text-white hover:bg-[#0f994b] disabled:opacity-50"
+                        >
+                            {loading ? "Loading..." : "Load More"}
+                        </button>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

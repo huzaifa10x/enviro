@@ -4,12 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '@/public/images/logo.webp'
-import serviceIcon1 from '@/public/service-icons/enviro-01-scaled.webp'
-import serviceIcon2 from '@/public/service-icons/enviro-02-scaled.webp'
-import serviceIcon3 from '@/public/service-icons/enviro-03-scaled.webp'
-import serviceIcon4 from '@/public/service-icons/enviro-04-scaled.webp'
-
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
@@ -17,6 +11,7 @@ export default function Navbar() {
     const [isServicesOpen, setIsServicesOpen] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -37,10 +32,10 @@ export default function Navbar() {
     }, [isMobileMenuOpen])
 
     const servicesItems = [
-        { id: 1, title: 'AC Cleaning', icon: serviceIcon1, url: '/accleaning-servicing/' },
-        { id: 2, title: 'Coil Cleaning', icon: serviceIcon2, url: '/coil-cleaning/' },
-        { id: 3, title: 'Duct Cleaning', icon: serviceIcon3, url: '/duct-cleaning-service-dubai/' },
-        { id: 4, title: 'AC Sanitisation', icon: serviceIcon4, url: '/ac-sanitisation/' },
+        { id: 1, title: 'AC Cleaning', icon: '/service-icons/enviro-01-scaled.webp', url: '/accleaning-servicing/' },
+        { id: 2, title: 'Coil Cleaning', icon: '/service-icons/enviro-02-scaled.webp', url: '/coil-cleaning/' },
+        { id: 3, title: 'Duct Cleaning', icon: '/service-icons/enviro-03-scaled.webp', url: '/duct-cleaning-service-dubai/' },
+        { id: 4, title: 'AC Sanitisation', icon: '/service-icons/enviro-04-scaled.webp', url: '/ac-sanitisation/' },
     ]
 
     const navLinks = [
@@ -55,7 +50,7 @@ export default function Navbar() {
             <div className='max-w-7xl mx-auto flex items-center justify-between relative'>
                 <Link href='/' onClick={() => setIsMobileMenuOpen(false)} className="z-50">
                     <Image
-                        src={Logo}
+                        src={'/images/logo.webp'}
                         width={130}
                         height={260}
                         alt='logo'
@@ -155,6 +150,7 @@ export default function Navbar() {
                                 <div className="mt-4 pl-4 grid grid-cols-1 gap-4 border-l border-zinc-700">
                                     {servicesItems.map((item) => {
                                         const isActive = pathname === item.url;
+
                                         return (
                                             <Link
                                                 key={item.id}

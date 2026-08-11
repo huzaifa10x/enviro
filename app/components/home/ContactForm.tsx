@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Image1 from "@/public/images/contact-image.webp";
 
 export default function ContactForm({ onlyForms = false }) {
     const [formData, setFormData] = useState({
@@ -56,7 +55,7 @@ export default function ContactForm({ onlyForms = false }) {
                 {onlyForms ?
                     "" : <div className="relative min-h-[350px] lg:min-h-full col-span-2">
                         <Image
-                            src={Image1}
+                            src="/images/contact-image.webp"
                             alt="Technician working"
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
