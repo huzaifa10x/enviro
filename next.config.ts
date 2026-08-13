@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   // experimental: {
   //   cpus: 1,
   // },
+  output: 'export',
+  // assetPrefix: './',
   trailingSlash: true,
   // output: 'export',
   // assetPrefix: '../',

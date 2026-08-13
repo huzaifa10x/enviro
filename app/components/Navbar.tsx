@@ -41,6 +41,7 @@ export default function Navbar() {
         { id: 2, title: 'Coil Cleaning', icon: serviceIcon2, url: '/coil-cleaning/' },
         { id: 3, title: 'Duct Cleaning', icon: serviceIcon3, url: '/duct-cleaning-service-dubai/' },
         { id: 4, title: 'AC Sanitisation', icon: serviceIcon4, url: '/ac-sanitisation/' },
+        { id: 5, title: 'Ac Repair', icon: serviceIcon4, url: '/ac-repair-maintenance-dubai/' },
     ]
 
     const navLinks = [
@@ -86,7 +87,7 @@ export default function Navbar() {
                                                 href={item.url}
                                                 className="flex items-center gap-4 group transition-all duration-200"
                                             >
-                                                <div className={`w-16 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${isActive ? 'ring-2 ring-primary' : ''
+                                                <div className={`w-17 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${isActive ? 'ring-1 ring-primary' : ''
                                                     }`}>
                                                     <Image
                                                         src={item.icon}

@@ -15,10 +15,10 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
         return () => clearInterval(timer);
     }, [slides]);
 
-    const activeSlide = slides?.[current];
-    if (activeSlide?.image) {
-        ReactDOM.preload(activeSlide.image, { as: 'image', fetchPriority: 'high' });
-    }
+    // const activeSlide = slides?.[current];
+    // if (activeSlide?.image) {
+    //     ReactDOM.preload(activeSlide.image, { as: 'image', fetchPriority: 'high' });
+    // }
 
     return (
         <div className="flex flex-col">
@@ -27,7 +27,6 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                     {
                         slides?.map((slide: any, index: number) => {
                             const isActive = index === current;
-
                             return (
                                 <div
                                     key={slide.id || index}
@@ -45,7 +44,6 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                                 className={`object-cover object-center ${slide.mobileImage ? 'block md:hidden' : 'block'}`}
                                                 quality={80}
                                             />
-
                                             {slide.mobileImage && (
                                                 <Image
                                                     src={slide.image}

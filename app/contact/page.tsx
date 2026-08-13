@@ -107,7 +107,7 @@ export default function contact() {
                             </Link>
                             <Link href={"tel:971800368476"} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
                                 <Phone className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Phone no</h4>
+                                <h4 className="text-2xl">Phone nwwo</h4>
                                 <div>TOLL FREE- 800 368 476</div>
                             </Link>
                             <Link href={""} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">

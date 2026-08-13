@@ -12,18 +12,17 @@ export default function ServicesSection() {
         { title: "Full AC Service", img: Image2, url: "/accleaning-servicing/" },
         { title: "Coil Cleaning", img: Image3, url: "/coil-cleaning/" },
         { title: "Sanitisation", img: Image4, url: "/ac-sanitisation/" },
+        { title: "Ac Repair", img: Image4, url: "/ac-repair-maintenance-dubai/" },
     ];
 
     return (
         <section className="py-20 bg-secondary">
             <div className="max-w-7xl mx-auto px-6">
-                {/* Header */}
                 <div className="text-center mb-16">
                     <p className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</p>
                     <div className="h-px w-full bg-green-500 mx-auto" />
                 </div>
 
-                {/* Services Grid */}
                 <div className="grid md:grid-cols-2 gap-10">
                     {services.map((service, index) => (
                         <div key={index} className="bg-white p-4 rounded-2xl shadow-2xl hover:shadow-xl transition space-y-5">
@@ -36,7 +35,6 @@ export default function ServicesSection() {
                             />
                             <h3 className="text-3xl font-medium font-urbanist">{service.title}</h3>
 
-                            {/* Button ko Link se wrap kiya */}
                             <Link href={service.url} className="inline-block">
                                 <button className="group duration-300 hover:scale-105 flex items-center justify-center bg-black px-4 py-2 w-fit rounded-lg text-white font-semibold hover:bg-green-700 transition cursor-pointer">
                                     Read More
