@@ -12,6 +12,7 @@ import { Metadata } from "next";
 import VideosSection from "./components/videosSection";
 import RegularACDuctCleaningDubai from "./components/home/RegularACDuctCleaningDubai";
 import AboutOurServices from "./components/home/AboutOurServices";
+import HomeBanner from "./components/home/HomeBanner";
 const slides = [
   {
     id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
@@ -117,7 +118,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <NavbarCarousel contentBottom={false} slides={slides} />
+      <HomeBanner />
       <AboutUs />
       <ServicesSection />
       <div className="bg-secondary">
