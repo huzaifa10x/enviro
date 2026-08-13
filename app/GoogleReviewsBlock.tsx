@@ -7,14 +7,6 @@ import Link from "next/link"
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
-import rev_01 from "@/public/images/reviews/rizwan.webp"
-import rev_02 from "@/public/images/reviews/ajay.webp"
-import rev_03 from "@/public/images/reviews/mary.webp"
-import rev_04 from "@/public/images/reviews/osna.webp"
-import rev_05 from "@/public/images/reviews/osna.webp"
-import rev_06 from "@/public/images/reviews/doreen.webp"
-import rev_07 from "@/public/images/reviews/danie.webp"
-
 export default function GoogleReviewsBlock() {
     const reviews = [
         {
@@ -22,7 +14,7 @@ export default function GoogleReviewsBlock() {
             "name": "Rizwan Afr",
             "rating": 5,
             "date": "3 days ago",
-            "avatar": rev_01,
+            "avatar": "/images/reviews/rizwan.webp",
             "comment": `We had our AC Duct checked and cleaned by Envirolclean and he’s been far better since. Omg we had no idea about the state of our AC.They came in, very professional, covered everything, cut hatches in the ceiling where needed and made very good after.Took away all their mess and gave everything a thorough clean.I’ve included some before and after pics.Great price, would thoroughly recommend these red team guys 100% 👏🏻👏🏻👏🏻`
         },
         {
@@ -30,7 +22,7 @@ export default function GoogleReviewsBlock() {
             "name": "Ajay Arora",
             "rating": 5,
             "date": "a month ago",
-            "avatar": rev_02,
+            "avatar": "/images/reviews/ajay.webp",
             "comment": `Very happy with the services of Patrick and his team members Ricardo, Arjee and Jonathan.
             Very professional and perfect in their work.
             Also kept our house neat and clean after the service.
@@ -42,7 +34,7 @@ export default function GoogleReviewsBlock() {
             "name": "Mary Ann Afable",
             "rating": 5,
             "date": "a month ago",
-            "avatar": rev_03,
+            "avatar": "/images/reviews/mary.webp",
             "comment": `The team was great service and excellent highly recommend the company’s staff ,Jonathan, Ricardo and Arjhel`
         },
         {
@@ -50,7 +42,7 @@ export default function GoogleReviewsBlock() {
             "name": "oana picincu",
             "rating": 5,
             "date": "2 month ago",
-            "avatar": rev_04,
+            "avatar": "/images/reviews/osna.webp",
             "comment": `We needed their services after moving in a new place, recent development, so everything was full of dust. We regularly use their service now, twice a year. Since we have a baby and we want the airficts to be extra clean. Great team of professionals! They cleaned the aircon ducts really well in just few hours. They show before and after pictures ñ.`
         },
         {
@@ -58,7 +50,7 @@ export default function GoogleReviewsBlock() {
             "name": "Adam Banks",
             "rating": 5,
             "date": "2 months ago",
-            "avatar": rev_05,
+            "avatar": "",
             "comment": `The team (Rick, Kiowa and Joe) did a fantastic job with a full service of our home AC. Turned up exactly on time and worked very cleanly with no fuss. Great job all round.`
         },
         {
@@ -66,7 +58,7 @@ export default function GoogleReviewsBlock() {
             "name": "Doreen Khayongo",
             "rating": 5,
             "date": "2 months ago",
-            "avatar": rev_06,
+            "avatar": "/images/reviews/doreen.webp",
             "comment": `Romulo Jonathan Patrick
             They clean good
             They are the best
@@ -77,7 +69,7 @@ export default function GoogleReviewsBlock() {
             "name": "Danie Botha",
             "rating": 5,
             "date": "2 months ago",
-            "avatar": rev_07,
+            "avatar": "/images/reviews/danie.webp",
             "comment": `Patrick, Johnathan, Romulo came to te apartment and did a great shop. The vents were cleaned professionally and they made sure all areas are covered and protected. They finished the work in a timely manner and made sure everything was in order before they left. I can recommend this company for sure! Thank you Enviro Clean ⭐️`
         }
     ]

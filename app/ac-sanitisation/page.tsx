@@ -7,29 +7,20 @@ import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import ServicesSection from "../components/home/ServicesSection";
 import CoilCleaningFAQ from "./CoilCleaningFAQ";
 import { Metadata } from "next";
-
-// Image Imports
-import sanitisationImg from "@/public/images/Sanitisation.webp";
-import coilCleaning2Img from "@/public/images/coil-cleaning-2.webp";
-import aboutUsBannerImg from "@/public/images/about-us-banner.webp";
-import airFilterIcon from "@/public/images/air-filter.webp";
-import cleaningIcon from "@/public/images/cleaning.webp";
-import coilsIcon from "@/public/images/coils.webp";
-
 const slides = [
     {
         id: 1,
         title: "<h1>AC Sanitation Service For A Clean Home</h1>",
         desc: `Market leaders in Dubai & Abu Dhabi for duct cleaning. British managed and British trained technicians.`,
-        image: sanitisationImg,
+        image: "/images/Sanitisation.webp",
         actionTitle: 'Call Now',
         actionUrl: 'tel:+971800368476'
     },
 ];
 
-const title = 'AC Sanitation Service Dubai - Enviro Clean UAE';
-const description = "AC sanitation service in Dubai by Enviro Clean UAE. Improve air quality, remove bacteria, and ensure a healthier indoor environment.";
-const canonical = 'https://envirocleanuae.com/ac-sanitisation';
+const title = 'AC Sanitation Service Dubai - Enviro Clean UAE'
+const description = "AC sanitation service in Dubai by Enviro Clean UAE. Improve air quality, remove bacteria, and ensure a healthier indoor environment."
+const canonical = 'https://envirocleanuae.com/ac-sanitisation'
 
 export const metadata: Metadata = {
     title: title,
@@ -59,7 +50,7 @@ export const metadata: Metadata = {
         siteName: 'EnviroClean UAE',
         images: [
             {
-                url: 'https://envirocleanuae.com/images/og-main-banner.webp',
+                url: 'https://envirocleanuae.com/images/og-main-banner.webp', // Is path par main meta banner image render karein
                 width: 1200,
                 height: 630,
                 alt: 'EnviroClean AC Cleaning Services Dubai',
@@ -76,7 +67,7 @@ export const metadata: Metadata = {
         description: 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency.',
         images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
     },
-};
+}
 
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -95,7 +86,7 @@ const breadcrumbJsonLd = {
             'item': 'https://envirocleanuae.com/ac-sanitisation',
         },
     ],
-};
+}
 
 export default function AccleaningServicing() {
     return (
@@ -111,7 +102,7 @@ export default function AccleaningServicing() {
                 content={`<p> Enjoy a higher level of indoor comfort that our AC sanitation can do for you. Our trained staff uses cleaning technologies that eliminate dust and allergens that detract from the cooling performance of your HVAC.</p>
                     <br/>
                <p>With sanitation, energy efficiency and long HVAC life are not compromised by cleaning. We have cleaned and disinfected all components so that your home is fresher and more comfortable. Choose EnviroClean and have a fresh place. You can trust us to take care of your cooling system.</p>`}
-                imageSrc={coilCleaning2Img.src}
+                imageSrc={'/images/coil-cleaning-2.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
             />
@@ -125,7 +116,7 @@ export default function AccleaningServicing() {
                     <br/>
                 <h3 class='font-bold'>Next-Generation Deep-Cleaning Technology</h3>
                 <p>We use industrial strength tools that target unwanted contaminates. They provide comfort inside your home and reduce airborne irritants. We offer peace of mind to your family.</p>`}
-                imageSrc={aboutUsBannerImg.src}
+                imageSrc={'/images/about-us-banner.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'left'}
             />
@@ -135,28 +126,28 @@ export default function AccleaningServicing() {
                 title={`<h2>Benefits of our <span class='text-primary'> AC Sanitsation</span></h2>`}
                 bottomLine={'Duct cleaning removes dust, debri and mould from your AC system, helping you and your family breathe cleaner air.'}
                 benefitsData={
+
                     [
                         {
                             id: 1,
                             title: "Healthier Living Environment",
                             content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
-                            icon: airFilterIcon
+                            icon: "/images/air-filter.webp"
                         },
                         {
                             id: 2,
                             title: "Reduced Exposure To Allergens",
                             content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
-                            icon: cleaningIcon
+                            icon: "/images/cleaning.webp"
                         },
                         {
                             id: 3,
                             title: "ENERGY BILLS",
                             content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
-                            icon: coilsIcon
+                            icon: "/images/coils.webp"
                         }
                     ]
-                }
-            />
+                } />
 
             <ContentFlexSection
                 subHeading={''}
@@ -172,7 +163,7 @@ export default function AccleaningServicing() {
                     <br/>
                     <h3 class='font-bold text-2xl'>Longer Life For Your AC</h3>
                `}
-                imageSrc={sanitisationImg.src}
+                imageSrc={'/images/Sanitisation.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
                 imagePosition={'right'}
             />

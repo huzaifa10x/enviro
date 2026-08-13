@@ -1,8 +1,5 @@
 import { Phone } from "lucide-react";
 import Image from "next/image";
-import whatsaap from "@/public/images/whatsapp-white-icon-1.webp";
-import Logo from '@/public/images/logo.webp'
-
 import Link from "next/link";
 
 export default function Footer() {
@@ -18,7 +15,7 @@ export default function Footer() {
             <Link className="fixed right-0 bg-primary grid rounded-full md:p-4 md:m-8 md:bottom-0 bottom-0 p-2 m-2 z-20" href={'https://wa.me/+971528389414'}>
                 <span className="sr-only">Whatsaap us at +971800368476</span>
                 <button className="btn rounded btn-warning border-warning rounded-5 shadow">
-                    <Image src={whatsaap} width={25} height={25} alt="WPICon" />
+                    <Image src={'/images/whatsapp-white-icon-1.webp'} width={25} height={25} alt="WPICon" />
                     <span className="sr-only">Whatsapp Button</span>
                 </button>
             </Link>
@@ -27,7 +24,7 @@ export default function Footer() {
                 <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-5 py-20">
                     <div className="space-y-4">
                         <Image
-                            src={Logo}
+                            src={'/images/logo.webp'}
                             width={200}
                             height={300}
                             alt='logo'

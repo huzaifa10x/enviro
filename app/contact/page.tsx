@@ -2,8 +2,7 @@ import NavbarCarousel from "../components/NavbarCarousel";
 import ContactCta from "../components/ContactCta";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import ContactForm from "../components/home/ContactForm";
-import image1 from "@/public/images/our-story.webp";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { LocationEditIcon, Mail, MapPin, Phone } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 const slides = [
@@ -12,7 +11,7 @@ const slides = [
         subTitle: "",
         title: "<h1>Contact Us</h1>",
         desc: `Get in touch with our UK bookings team today.`,
-        image: image1,
+        image: "/images/our-story.webp",
         actionTitle: 'Call Us',
         actionUrl: 'tel:+971800368476'
     },

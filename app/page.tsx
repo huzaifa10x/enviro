@@ -12,22 +12,12 @@ import { Metadata } from "next";
 import VideosSection from "./components/videosSection";
 import RegularACDuctCleaningDubai from "./components/home/RegularACDuctCleaningDubai";
 import AboutOurServices from "./components/home/AboutOurServices";
-import DesktopBanner1 from "@/public/images/home-banner/banner1.webp";
-import MBanner1 from "@/public/images/home-banner/mbanner1.webp";
-import DesktopBanner2 from "@/public/images/home-banner/banner2.webp";
-import MBanner2 from "@/public/images/home-banner/mbanner1.webp";
-import DesktopBanner3 from "@/public/images/home-banner/banner1.webp";
-import MBanner3 from "@/public/images/home-banner/mbanner1.webp";
-import DesktopBanner4 from "@/public/images/home-banner/banner4.webp";
-import MBanner4 from "@/public/images/home-banner/mbanner4.webp";
-import CountonEnviroclean from "@/public/images/Count-on-Enviroclean.webp"
-
 const slides = [
   {
     id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
     desc: `<p>As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best.</p>`,
-    image: DesktopBanner1,
-    mobileImage: MBanner1,
+    image: "/images/home-banner/banner1.webp",
+    mobileImage: "/images/home-banner/mbanner1.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -35,8 +25,8 @@ const slides = [
     id: 2,
     title: `<h6>Cleaner Indoor Air </h6>`,
     desc: `<p>Expert cleaning and caring for the indoor air conditioning system to improve air quality and enhance comfort.</p>`,
-    image: DesktopBanner2,
-    mobileImage: MBanner2,
+    image: "/images/home-banner/banner2.webp",
+    mobileImage: "/images/home-banner/mbanner2.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -44,8 +34,8 @@ const slides = [
     id: 3,
     title: `<h6>Complete System Cleaning</h6>`,
     desc: `<p>Every part of your HVAC system receives a thorough cleaning and complete attention.</p>`,
-    image: DesktopBanner3,
-    mobileImage: MBanner3,
+    image: "/images/home-banner/banner3.webp",
+    mobileImage: "/images/home-banner/mbanner3.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -53,8 +43,8 @@ const slides = [
     id: 4,
     title: `<h6>Total Comfort</h6>`,
     desc: `<p>Professional care will offer a consistently clean indoor air and a reliable cooling system that will function correctly all year.</p>`,
-    image: DesktopBanner4,
-    mobileImage: MBanner4,
+    image: "/images/home-banner/banner4.webp",
+    mobileImage: "/images/home-banner/mbanner4.webp",
     actionTitle: 'Get a Quote',
     actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
   },
@@ -169,7 +159,7 @@ export default function Home() {
       <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div className="">
-            <Image src={CountonEnviroclean} width={500} height={500}
+            <Image src="/images/Count-on-Enviroclean.webp" width={500} height={500}
               alt="Enviroclean Team"
               className="rounded-2xl shadow-xl w-full max-h-[500px] object-cover"
             />

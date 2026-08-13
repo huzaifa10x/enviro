@@ -1,7 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import teamImage from "@/public/images/about-us-banner.webp";
-import nadca from "@/public/images/nadca.webp";
+import Link from "next/link";
 
 export default function AboutUs() {
     return (
@@ -29,7 +28,7 @@ export default function AboutUs() {
                     {/* Accreditation Box */}
                     <div className="pt-6 border-t border-gray-200">
                         <div className="flex items-center gap-4">
-                            <Image src={nadca} width={500} height={500} alt="NADCA" className="w-24 h-auto" />
+                            <Image src="/images/nadca.webp" width={500} height={500} alt="NADCA" className="w-24 h-auto" />
                             <div>
                                 <div className="font-bold text-gray-900">A Trusted Partner</div>
                                 <p className="text-sm text-gray-500">We Are NADCA Accredited</p>
@@ -40,7 +39,7 @@ export default function AboutUs() {
 
                 {/* Right Side: Image */}
                 <div className="lg:w-1/2 w-full">
-                    <Image src={teamImage} width={500} height={500}
+                    <Image src="/images/about-us-banner.webp" width={500} height={500}
                         alt="Enviroclean Team"
                         className="rounded-2xl shadow-xl w-full max-h-[600px] object-cover"
                     />
