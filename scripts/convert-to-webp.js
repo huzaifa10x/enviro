@@ -6,7 +6,7 @@ const sharp = require('sharp');
 const TARGET_DIR = path.join(__dirname, '../public/images');
 
 // Jo extensions convert karni hain
-const SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.png'];
+const SUPPORTED_EXTENSIONS = ['.webp', '.webp', '.webp'];
 
 function walkAndConvert(dir) {
     if (!fs.existsSync(dir)) {
@@ -25,7 +25,7 @@ function walkAndConvert(dir) {
             walkAndConvert(fullPath);
         } else {
             const ext = path.extname(file).toLowerCase();
-            
+
             if (SUPPORTED_EXTENSIONS.includes(ext)) {
                 const webpPath = fullPath.replace(ext, '.webp');
 

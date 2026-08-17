@@ -2,7 +2,7 @@
 "use client";
 import Link from 'next/link';
 
-export default function HomeBanner({ }: any) {
+export default function HomeBanner() {
     return (
         <div className="flex flex-col">
             <div className='lg:p-4 overflow-hidden relative'>

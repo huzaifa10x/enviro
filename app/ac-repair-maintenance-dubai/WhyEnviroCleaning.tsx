@@ -9,7 +9,7 @@ export default function WhyEnviroCleaning() {
 
                 <div className="w-full h-full relative aspect-square rounded-2xl overflow-hidden shadow-md">
                     <Image
-                        src="/images/355321.jpg"
+                        src="/images/355321.webp"
                         alt="EnviroClean technician working on AC unit"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

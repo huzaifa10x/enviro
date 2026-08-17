@@ -12,7 +12,7 @@ import BenefitsSection from "../components/BenefitsSection";
 import { Metadata } from "next";
 
 // Image Imports
-import acRepairSlideImg from "@/public/images/423142134123.jpg";
+import acRepairSlideImg from "@/public/images/423142134123.webp";
 import airFilterIcon from "@/public/images/air-filter.webp";
 import cleaningIcon from "@/public/images/cleaning.webp";
 import coilsIcon from "@/public/images/coils.webp";
@@ -131,31 +131,31 @@ export default function CoilCleaning() {
                             id: 1,
                             title: "BOOK AN INSPECTION",
                             content: "Contact Enviroclean and explain the AC problem you’re experiencing to schedule an evaluation.",
-                            icon: '/images/icons/BOOK-AN-INSPECTION.png'
+                            icon: '/images/icons/BOOK-AN-INSPECTION.webp'
                         },
                         {
                             id: 2,
                             title: "TECHNICIAN DIAGNOSIS",
                             content: "An HVAC technician attends the property and carries out a systematic inspection of the AC system.",
-                            icon: '/images/icons/TECHNICIAN-DIAGNOSIS.png'
+                            icon: '/images/icons/TECHNICIAN-DIAGNOSIS.webp'
                         },
                         {
                             id: 3,
                             title: "DIAGNOSIS & RECOMMENDATION",
                             content: "We identify the likely fault and explain whether the system requires repair, component replacement, or further investigation.",
-                            icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.png'
+                            icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.webp'
                         },
                         {
                             id: 4,
                             title: "RECEIVE YOUR QUOTATION",
                             content: "Where repair work is required, Enviroclean provides a clear quotation before proceeding with chargeable repair works.",
-                            icon: '/images/icons/RECEIVE-YOUR-QUOTATION.png'
+                            icon: '/images/icons/RECEIVE-YOUR-QUOTATION.webp'
                         },
                         {
                             id: 5,
                             title: "REPAIR & RECOMMISSION",
                             content: "Once approved, our technicians complete the repair or replacement and test the AC system to confirm correct operation.",
-                            icon: '/images/icons/REPAIR-RECOMMISSION.png'
+                            icon: '/images/icons/REPAIR-RECOMMISSION.webp'
                         }
                     ]
                 }

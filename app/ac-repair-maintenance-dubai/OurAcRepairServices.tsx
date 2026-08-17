@@ -21,7 +21,7 @@ export default function OurAcRepairServices() {
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
-                                    src={'/images/icons/FCU-Repair.png'}
+                                    src={'/images/icons/FCU-Repair.webp'}
                                     alt={'FCU Repair'}
                                     className="w-full h-full object-contain"
                                 />
@@ -37,7 +37,7 @@ export default function OurAcRepairServices() {
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
-                                    src={'/images/icons/Thermostat-Controls.png'}
+                                    src={'/images/icons/Thermostat-Controls.webp'}
                                     alt={'FCU Repair'}
                                     className="w-full h-full object-contain"
                                 />
@@ -52,7 +52,7 @@ export default function OurAcRepairServices() {
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
-                                    src={'/images/icons/AC-Water-Leaks.png'}
+                                    src={'/images/icons/AC-Water-Leaks.webp'}
                                     alt={'FCU Repair'}
                                     className="w-full h-full object-contain"
                                 />
@@ -66,7 +66,7 @@ export default function OurAcRepairServices() {
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
-                                    src={'/images/icons/FCU-Replacement.png'}
+                                    src={'/images/icons/FCU-Replacement.webp'}
                                     alt={'FCU Repair'}
                                     className="w-full h-full object-contain"
                                 />
@@ -82,7 +82,7 @@ export default function OurAcRepairServices() {
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
-                                    src={'/images/icons/AC-Component-Replacement.png'}
+                                    src={'/images/icons/AC-Component-Replacement.webp'}
                                     alt={'FCU Repair'}
                                     className="w-full h-full object-contain"
                                 />

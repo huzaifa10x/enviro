@@ -1,8 +1,8 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Image1 from "@/public/images/Duct-Cleaning-Service-Dubai.webp";
+import Image1 from "@/public/images/Duct-Cleaning.webp";
 import Image2 from "@/public/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp";
-import Image3 from "@/public/images/Coil-Cleaning.webp";
+import Image3 from "@/public/images/253523.webp";
 import Image4 from "@/public/images/Sanitisation.webp";
 import Link from "next/link"; // Link component import kiya
 

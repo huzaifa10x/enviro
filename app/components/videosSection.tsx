@@ -7,19 +7,19 @@ export default function VideosSection() {
         {
             id: 1,
             title: 'Full AC Cleaning & Servicing by Envi...',
-            thumbnail: 'https://img.youtube.com/vi/mNoDYXic4Wk/hqdefault.jpg',
+            thumbnail: 'https://img.youtube.com/vi/mNoDYXic4Wk/hqdefault.webp',
             link: 'https://www.youtube.com/watch?v=mNoDYXic4Wk',
         },
         {
             id: 2,
             title: 'AC cleaning by Enviroclean',
-            thumbnail: 'https://img.youtube.com/vi/GtUV31OiCf4/hqdefault.jpg',
+            thumbnail: 'https://img.youtube.com/vi/GtUV31OiCf4/hqdefault.webp',
             link: 'https://www.youtube.com/watch?v=GtUV31OiCf4',
         },
         {
             id: 3,
             title: 'Enviroclean UAE- AC Duct Cleaning',
-            thumbnail: 'https://img.youtube.com/vi/F8dhYsoI2wk/hqdefault.jpg',
+            thumbnail: 'https://img.youtube.com/vi/F8dhYsoI2wk/hqdefault.webp',
             link: 'https://www.youtube.com/watch?v=F8dhYsoI2wk',
         },
     ];
