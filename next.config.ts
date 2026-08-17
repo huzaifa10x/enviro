@@ -23,6 +23,20 @@ const nextConfig: NextConfig = {
     ],
     qualities: [25, 50, 80],
   },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/blog-1',
+  //       destination: 'http://127.0.0.1/blog-1',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/blog-1/:path*',
+  //       destination: 'http://127.0.0.1/blog-1/:path*',
+  //       permanent: true,
+  //     }
+  //   ];
+  // },
   typescript: {
     ignoreBuildErrors: true,
   },
