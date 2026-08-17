@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 
-export default function HomeBanner({ slides, contentBottom = false }: any) {
+export default function HomeBanner({ }: any) {
     return (
         <div className="flex flex-col">
             <div className='lg:p-4 overflow-hidden relative'>
@@ -16,6 +14,7 @@ export default function HomeBanner({ slides, contentBottom = false }: any) {
                             src="https://www.youtube.com/embed/GtUV31OiCf4?autoplay=1&mute=1&controls=0&loop=1&playlist=GtUV31OiCf4&si=dipA1RH3jPdhMY1S"
                             title="YouTube video player"
                             allow="autoplay; encrypted-media; gyroscope; web-share"
+                            className='md:scale-150 scale-y-[2.8] scale-x-150'
                             allowFullScreen
                         ></iframe>
 

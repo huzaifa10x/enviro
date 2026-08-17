@@ -131,31 +131,31 @@ export default function CoilCleaning() {
                             id: 1,
                             title: "BOOK AN INSPECTION",
                             content: "Contact Enviroclean and explain the AC problem you’re experiencing to schedule an evaluation.",
-                            icon: airFilterIcon
+                            icon: '/images/icons/BOOK-AN-INSPECTION.png'
                         },
                         {
                             id: 2,
                             title: "TECHNICIAN DIAGNOSIS",
                             content: "An HVAC technician attends the property and carries out a systematic inspection of the AC system.",
-                            icon: cleaningIcon
+                            icon: '/images/icons/TECHNICIAN-DIAGNOSIS.png'
                         },
                         {
                             id: 3,
                             title: "DIAGNOSIS & RECOMMENDATION",
                             content: "We identify the likely fault and explain whether the system requires repair, component replacement, or further investigation.",
-                            icon: coilsIcon
+                            icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.png'
                         },
                         {
                             id: 4,
                             title: "RECEIVE YOUR QUOTATION",
                             content: "Where repair work is required, Enviroclean provides a clear quotation before proceeding with chargeable repair works.",
-                            icon: coilsIcon // Update with your specific icon variable
+                            icon: '/images/icons/RECEIVE-YOUR-QUOTATION.png'
                         },
                         {
                             id: 5,
                             title: "REPAIR & RECOMMISSION",
                             content: "Once approved, our technicians complete the repair or replacement and test the AC system to confirm correct operation.",
-                            icon: coilsIcon // Update with your specific icon variable
+                            icon: '/images/icons/REPAIR-RECOMMISSION.png'
                         }
                     ]
                 }

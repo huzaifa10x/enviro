@@ -18,32 +18,79 @@ export default function OurAcRepairServices() {
                     </div>
 
                     <div className="text-gray-700 space-y-4 leading-relaxed text-sm md:text-base leading-5">
-                        <h3 className="text-xl font-bold text-gray-900 font-urbanist">
-                            FCU Repair
-                        </h3>
+                        <div className='flex items-center gap-4'>
+                            <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
+                                <img
+                                    src={'/images/icons/FCU-Repair.png'}
+                                    alt={'FCU Repair'}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-urbanist">
+                                FCU Repair
+                            </h3>
+                        </div>
 
                         <p>Diagnosis and repair of residential fan coil units, including motors, blowers, valves, actuators, controls, drainage components and other replaceable parts.
                         </p>
-                        <h3 className="text-xl font-bold text-gray-900 font-urbanist">
-                            Thermostat & Controls
-                        </h3>
+
+                        <div className='flex items-center gap-4'>
+                            <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
+                                <img
+                                    src={'/images/icons/Thermostat-Controls.png'}
+                                    alt={'FCU Repair'}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-urbanist">
+                                Thermostat & Controls
+                            </h3>
+                        </div>
 
                         <p>Diagnosis of thermostat, actuator, valve and control-related problems affecting cooling or FCU operation.</p>
-                        <h3 className="text-xl font-bold text-gray-900 font-urbanist">
-                            AC Water Leaks
-                        </h3>
+
+                        <div className='flex items-center gap-4'>
+                            <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
+                                <img
+                                    src={'/images/icons/AC-Water-Leaks.png'}
+                                    alt={'FCU Repair'}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-urbanist">
+                                AC Water Leaks
+                            </h3>
+                        </div>
                         <p>Diagnosis of AC water leaks including drain lines, drain trays, insulation, condensation and other FCU-related causes.</p>
 
-                        <h3 className="text-xl font-bold text-gray-900 font-urbanist">
-                            FCU Replacement
-                        </h3>
+                        <div className='flex items-center gap-4'>
+                            <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
+                                <img
+                                    src={'/images/icons/FCU-Replacement.png'}
+                                    alt={'FCU Repair'}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-urbanist">
+                                FCU Replacement
+                            </h3>
+                        </div>
 
                         <p>Where an FCU is beyond economical repair, Enviroclean can provide a quotation for supply and replacement of the complete fan coil unit.</p>
                         <p>Replacement works can include removal of the existing FCU, installation of the replacement unit, required connections and full testing and recommissioning.</p>
 
-                        <h3 className="text-xl font-bold text-gray-900 font-urbanist">
-                            AC Component Replacement
-                        </h3>
+                        <div className='flex items-center gap-4'>
+                            <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
+                                <img
+                                    src={'/images/icons/AC-Component-Replacement.png'}
+                                    alt={'FCU Repair'}
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-urbanist">
+                                AC Component Replacement
+                            </h3>
+                        </div>
                         <p>Supply and replacement of faulty AC components following diagnosis.</p>
                     </div>
 
