@@ -11,19 +11,62 @@ export default function PartnersSection() {
         { name: "CRS", src: "/images/crs.webp" },
     ];
 
+    // Two copies only — the animation travels exactly one copy's width.
+    const track = [...partners, ...partners];
+
     return (
         <section className="py-20 bg-[#F8FFF9] overflow-hidden">
-            {/* Inline CSS Animation Style */}
             <style jsx>{`
+                .marquee-viewport {
+                    display: flex;
+                    overflow: hidden;
+                    width: 100%;
+                    /* Fade the edges instead of a hard cut */
+                    mask-image: linear-gradient(
+                        to right,
+                        transparent,
+                        black 8%,
+                        black 92%,
+                        transparent
+                    );
+                    -webkit-mask-image: linear-gradient(
+                        to right,
+                        transparent,
+                        black 8%,
+                        black 92%,
+                        transparent
+                    );
+                }
+
                 .marquee {
                     display: flex;
-                    animation: scroll 20s linear infinite;
+                    align-items: center;
+                    gap: 4rem;            /* must match the calc below */
+                    width: max-content;   /* size to content, not to parent */
+                    flex-shrink: 0;       /* never get squeezed by the flex parent */
+                    animation: marquee-scroll 25s linear infinite;
+                    will-change: transform;
                 }
-                @keyframes scroll {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-50%); }
+
+                .marquee:hover {
+                    animation-play-state: paused;
                 }
-                .marquee:hover { animation-play-state: paused; }
+
+                @keyframes marquee-scroll {
+                    from {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    to {
+                        /* one full copy = half the track, minus half a gap */
+                        transform: translate3d(calc(-50% - 2rem), 0, 0);
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .marquee {
+                        animation: none;
+                    }
+                }
             `}</style>
 
             <div className="max-w-7xl mx-auto px-6 mb-16">
@@ -33,20 +76,25 @@ export default function PartnersSection() {
                 </div>
             </div>
 
-            {/* Marquee Container */}
-            <div className="max-w-7xl mx-auto flex w-full overflow-hidden">
-                <div className="marquee gap-16 items-center">
-                    {/* Logos list double krdi taake gap na aaye */}
-                    {[...partners, ...partners, ...partners].map((partner, index) => (
-                        <Image
-                            key={index}
-                            src={partner.src}
-                            height={500}
-                            width={190}
-                            alt={partner.name}
-                            className="h-14 object-contain transition-all duration-300 flex-shrink-0"
-                        />
-                    ))}
+            <div className="max-w-7xl mx-auto">
+                <div className="marquee-viewport">
+                    <div className="marquee">
+                        {track.map((partner, index) => (
+                            <div
+                                key={`${partner.name}-${index}`}
+                                className="relative h-14 w-[150px] flex-shrink-0"
+                            >
+                                <Image
+                                    src={partner.src}
+                                    alt={partner.name}
+                                    fill
+                                    sizes="150px"
+                                    className="object-contain"
+                                    aria-hidden={index >= partners.length}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
