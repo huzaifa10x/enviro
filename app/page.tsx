@@ -1,59 +1,26 @@
 import Image from "next/image";
-import NavbarCarousel from "./components/NavbarCarousel";
+import { Metadata } from "next";
+
+// Core Above-The-Fold Components
+import HomeBanner from "./components/home/HomeBanner";
 import AboutUs from "./components/home/AboutUs";
 import ServicesSection from "./components/home/ServicesSection";
-import FAQ from "./components/home/FAQ";
-import ContactForm from "./components/home/ContactForm";
-import PartnerSlider from "./components/home/PartnerSlider";
-import RecentWork from "./components/home/RecentWork";
 import Process from "./components/Process";
-import GoogleReviewsBlock from "./GoogleReviewsBlock";
-import { Metadata } from "next";
-import VideosSection from "./components/videosSection";
-import RegularACDuctCleaningDubai from "./components/home/RegularACDuctCleaningDubai";
-import AboutOurServices from "./components/home/AboutOurServices";
-import HomeBanner from "./components/home/HomeBanner";
-const slides = [
-  {
-    id: 1, title: `<h1>Dubai AC Duct Cleaning</h1>`,
-    desc: `<p>As a British company, we bring expertise and excellence to ensure your<br>indoor air quality is at its best.</p>`,
-    image: "/images/home-banner/banner1.webp",
-    mobileImage: "/images/home-banner/mbanner1.webp",
-    actionTitle: 'Get a Quote',
-    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
-  },
-  {
-    id: 2,
-    title: `<h6>Cleaner Indoor Air </h6>`,
-    desc: `<p>Expert cleaning and caring for the indoor air conditioning system to improve air quality and enhance comfort.</p>`,
-    image: "/images/home-banner/banner2.webp",
-    mobileImage: "/images/home-banner/mbanner2.webp",
-    actionTitle: 'Get a Quote',
-    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
-  },
-  {
-    id: 3,
-    title: `<h6>Complete System Cleaning</h6>`,
-    desc: `<p>Every part of your HVAC system receives a thorough cleaning and complete attention.</p>`,
-    image: "/images/home-banner/banner3.webp",
-    mobileImage: "/images/home-banner/mbanner3.webp",
-    actionTitle: 'Get a Quote',
-    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
-  },
-  {
-    id: 4,
-    title: `<h6>Total Comfort</h6>`,
-    desc: `<p>Professional care will offer a consistently clean indoor air and a reliable cooling system that will function correctly all year.</p>`,
-    image: "/images/home-banner/banner4.webp",
-    mobileImage: "/images/home-banner/mbanner4.webp",
-    actionTitle: 'Get a Quote',
-    actionUrl: 'https://web.whatsapp.com/send?phone=971528389414&text=Hello!'
-  },
-];
+import dynamic from "next/dynamic";
 
-const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai'
-const description = 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!'
-const canonical = 'https://envirocleanuae.com/'
+// Dynamic Imports for Below-The-Fold Heavy Components
+const RegularACDuctCleaningDubai = dynamic(() => import("./components/home/RegularACDuctCleaningDubai"));
+const GoogleReviewsBlock = dynamic(() => import("./GoogleReviewsBlock"));
+const RecentWork = dynamic(() => import("./components/home/RecentWork"));
+const VideosSection = dynamic(() => import("./components/videosSection"));
+const AboutOurServices = dynamic(() => import("./components/home/AboutOurServices"));
+const FAQ = dynamic(() => import("./components/home/FAQ"));
+const ContactForm = dynamic(() => import("./components/home/ContactForm"));
+const PartnerSlider = dynamic(() => import("./components/home/PartnerSlider"));
+
+const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai';
+const description = 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!';
+const canonical = 'https://envirocleanuae.com/';
 
 export const metadata: Metadata = {
   title: title,
@@ -95,7 +62,7 @@ export const metadata: Metadata = {
     description: description,
     images: ['https://envirocleanuae.com/images/og-main-banner.webp'],
   },
-}
+};
 
 const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
@@ -108,7 +75,7 @@ const breadcrumbJsonLd = {
       'item': 'https://envirocleanuae.com',
     },
   ],
-}
+};
 
 export default function Home() {
   return (
@@ -121,10 +88,13 @@ export default function Home() {
       <HomeBanner />
       <AboutUs />
       <ServicesSection />
+      
       <div className="bg-secondary">
         <Process />
       </div>
+
       <RegularACDuctCleaningDubai />
+
       <section className="py-16 px-6 md:px-20 bg-secondary">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-6">
@@ -157,11 +127,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
-          <div className="">
-            <Image src="/images/Count-on-Enviroclean.webp" width={500} height={500}
+          <div>
+            <Image 
+              src="/images/Count-on-Enviroclean.webp" 
+              width={500} 
+              height={500}
               alt="Enviroclean Team"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="rounded-2xl shadow-xl w-full max-h-[500px] object-cover"
             />
           </div>
@@ -178,12 +154,14 @@ export default function Home() {
               <p>
                 EnviroClean is the best AC cleaning company Dubai dedicated to ensuring the optimal performance and efficiency of your AC units.
               </p>
-              <p>In the hot and arid climate of Dubai, air conditioning systems are essential for maintaining a comfortable indoor environment. As such, regular cleaning is crucial for keeping your AC system running smoothly and efficiently.
+              <p>
+                In the hot and arid climate of Dubai, air conditioning systems are essential for maintaining a comfortable indoor environment. As such, regular cleaning is crucial for keeping your AC system running smoothly and efficiently.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       <GoogleReviewsBlock />
       <RecentWork />
       <VideosSection />
