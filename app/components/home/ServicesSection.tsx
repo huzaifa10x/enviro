@@ -19,7 +19,7 @@ export default function ServicesSection() {
         <section className="py-20 bg-secondary">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <p className="text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</p>
+                    <p className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 font-urbanist">Explore Our Services</p>
                     <div className="h-px w-full bg-green-500 mx-auto" />
                 </div>
 
@@ -33,7 +33,7 @@ export default function ServicesSection() {
                                 alt={service.title}
                                 className="w-full h-80 object-cover object-top rounded-xl"
                             />
-                            <h3 className="text-3xl font-medium font-urbanist">{service.title}</h3>
+                            <h3 className="text-2xl md:text-4xl font-medium font-urbanist">{service.title}</h3>
 
                             <Link href={service.url} className="inline-block">
                                 <button className="group duration-300 hover:scale-105 flex items-center justify-center bg-black px-4 py-2 w-fit rounded-lg text-white font-semibold hover:bg-green-700 transition cursor-pointer">

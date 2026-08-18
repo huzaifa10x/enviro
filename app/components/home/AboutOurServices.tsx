@@ -12,7 +12,7 @@ export default function AboutOurServices() {
                     {/* Left Side: Content Block */}
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <div className="text-3xl font-bold text-gray-900 font-urbanist leading-tight">
+                            <div className="text-2xl md:text-4xl font-bold text-gray-900 font-urbanist leading-tight">
                                 About Our Services:
                             </div>
                             <div className="border-b-2 border-cyan-100 w-full pt-1"></div>
@@ -20,10 +20,10 @@ export default function AboutOurServices() {
 
                         {/* Initial & Expandable Content Box */}
                         <div className={`text-gray-700 space-y-4 text-sm md:text-base duration-300 leading-relaxed ${isExpanded === true ? 'h-[300px] overflow-y-scroll' : ''} `}>
-                            <h3 className='font-bold text-2xl'>AC Cleaning UAE</h3>
-                            <p>Air conditioning units are essential for maintaining comfortable indoor temperatures, especially in Dubai’s hot climate. However, over time, dirt, dust, and other contaminants can accumulate within the units, reducing their efficiency and negatively impacting air quality.
+                            <h3 className='font-bold text-lg md:text-2xl'>AC Cleaning UAE</h3>
+                            <p className='text-xs sm:text-sm md:text-base'>Air conditioning units are essential for maintaining comfortable indoor temperatures, especially in Dubai’s hot climate. However, over time, dirt, dust, and other contaminants can accumulate within the units, reducing their efficiency and negatively impacting air quality.
                             </p>
-                            <p>
+                            <p className='text-xs sm:text-sm md:text-base'>
                                 EnviroClean’s Duct cleaning in Dubai involves:
                             </p>
                             <ul className='list-disc pl-6'>
@@ -34,7 +34,7 @@ export default function AboutOurServices() {
                             <div className="">
                                 {/* Agar expanded nahi hai toh incomplete line dikhegi jaisa mockup "image_df53b6.webp" mein hai */}
                                 {!isExpanded ? (
-                                    <p></p>
+                                    <p className='text-xs sm:text-sm md:text-base'></p>
                                 ) : (
                                     <div className="space-y-6 transition-all duration-500 ease-in-out">
                                         <ul className='list-disc pl-6'>
@@ -43,7 +43,7 @@ export default function AboutOurServices() {
                                             <li>Ensuring the proper functioning of electrical components</li>
                                         </ul>
                                         <h3 className='font-bold text-2xl'>Duct Cleaning</h3>
-                                        <p>Ductwork plays a crucial role in the distribution of conditioned air throughout your home or office. However, dust, allergens, mold, and other contaminants can accumulate within the ducts over time, impacting air quality and HVAC system efficiency. Our AC duct cleaning services Dubai includes:</p>
+                                        <p className='text-xs sm:text-sm md:text-base'>Ductwork plays a crucial role in the distribution of conditioned air throughout your home or office. However, dust, allergens, mold, and other contaminants can accumulate within the ducts over time, impacting air quality and HVAC system efficiency. Our AC duct cleaning services Dubai includes:</p>
                                         <ul className='list-disc pl-6'>
                                             <li>A thorough inspection of your air duct system</li>
                                             <li>Utilization of state-of-the-art equipment and techniques to remove accumulated debris, allergens, and  contaminants</li>
@@ -51,9 +51,9 @@ export default function AboutOurServices() {
                                             <li>Application of eco-friendly sanitizing solutions to eliminate bacteria and mold growth</li>
                                             <li>Ensuring proper airflow and system efficiency</li>
                                         </ul>
-                                        <p>As a trusted Dubai duct cleaning company, EnviroClean helps maintain clean air, improves system efficiency, and prolongs the lifespan of your HVAC system.</p>
-                                        <p>Additional Services</p>
-                                        <p>In addition to AC and duct cleaning, EnviroClean offers other services to ensure the optimal functioning of your HVAC system, such as:</p>
+                                        <p className='text-xs sm:text-sm md:text-base'>As a trusted Dubai duct cleaning company, EnviroClean helps maintain clean air, improves system efficiency, and prolongs the lifespan of your HVAC system.</p>
+                                        <p className='text-xs sm:text-sm md:text-base'>Additional Services</p>
+                                        <p className='text-xs sm:text-sm md:text-base'>In addition to AC and duct cleaning, EnviroClean offers other services to ensure the optimal functioning of your HVAC system, such as:</p>
                                         <ul className='list-disc pl-6'>
                                             <li>AC servicing and tune-ups</li>
                                             <li>Indoor air quality assessments</li>
@@ -61,7 +61,7 @@ export default function AboutOurServices() {
                                             <li>Preventative service plans for ongoing system care</li>
                                         </ul>
 
-                                        <p>EnviroClean’s comprehensive range of services, including AC cleaning and duct cleaning, make them a reliable choice for maintaining a clean, healthy, and efficient indoor environment in Dubai. Their team of skilled technicians, advanced equipment, eco-friendly approach, and commitment to customer satisfaction ensure that your HVAC system receives the care and attention it needs to perform optimally. By choosing our air duct cleaning Dubai, you can trust that you are investing in the long-term health, comfort, and efficiency of your home or office space.</p>
+                                        <p className='text-xs sm:text-sm md:text-base'>EnviroClean’s comprehensive range of services, including AC cleaning and duct cleaning, make them a reliable choice for maintaining a clean, healthy, and efficient indoor environment in Dubai. Their team of skilled technicians, advanced equipment, eco-friendly approach, and commitment to customer satisfaction ensure that your HVAC system receives the care and attention it needs to perform optimally. By choosing our air duct cleaning Dubai, you can trust that you are investing in the long-term health, comfort, and efficiency of your home or office space.</p>
                                     </div>
                                 )}
                             </div>

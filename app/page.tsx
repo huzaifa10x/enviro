@@ -99,27 +99,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="space-y-6">
             <div className="text-gray-600 leading-relaxed space-y-4">
-              <h2 className="text-2xl font-bold text-gray-900 font-urbanist">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-urbanist">
                 To perform regular AC cleaning and maintenance, consider the following steps:
                 <div className="border-b-4 border-primary w-full my-4"></div>
               </h2>
               <div className="space-y-5 text-lg">
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   Clean or replace filters: Check and clean the filters at least once a month during peak usage seasons. Replace them if they’re damaged or worn out.
                 </p>
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   Clean the outdoor unit: Remove debris from around the outdoor unit and clean the condenser coils to ensure proper airflow and heat exchange.
                 </p>
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   Check refrigerant levels: An HVAC professional can check your system’s refrigerant levels and adjust them if necessary to ensure optimal cooling efficiency.
                 </p>
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   Inspect the electrical components: Regularly inspect the electrical connections, fuses, and breakers for any signs of wear or damage.
                 </p>
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   Schedule professional Service: In addition to performing basic cleaning tasks, it’s essential to schedule a professional check at least once a year. A trained technician can perform a thorough inspection, identify potential issues, and make necessary repairs or adjustments to keep your system running smoothly.
                 </p>
-                <p>
+                <p className="text-xs sm:text-sm md:text-base">
                   By prioritizing regular air duct cleaning Dubai, you can ensure that your air conditioning system remains efficient, effective, and reliable, providing you with comfort and peace of mind throughout the year.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-6 md:px-20 bg-white">
+      <section className="py-6 md:py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div>
             <Image 
@@ -142,19 +142,19 @@ export default function Home() {
             />
           </div>
           <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900 font-urbanist">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-urbanist">
               When you need AC cleaning in Dubai, Count on Enviroclean
               <div className="border-b-4 border-primary w-full my-4"></div>
             </h2>
 
             <div className="text-gray-600 leading-relaxed space-y-4">
-              <p>
+              <p className="text-xs sm:text-sm md:text-base">
                 In today’s fast-paced world, maintaining a comfortable and healthy indoor environment is essential for our well-being. One crucial component of that environment is an efficient and clean air conditioning system. EnviroClean AC Cleaning is a leading AC cleaning company Dubai that ensures your AC units function at their best, offering you optimal cooling, energy efficiency, and improved indoor air quality. In this article, we will explore the advantages of choosing EnviroClean AC Cleaning for your air conditioning service needs.
               </p>
-              <p>
+              <p className="text-xs sm:text-sm md:text-base">
                 EnviroClean is the best AC cleaning company Dubai dedicated to ensuring the optimal performance and efficiency of your AC units.
               </p>
-              <p>
+              <p className="text-xs sm:text-sm md:text-base">
                 In the hot and arid climate of Dubai, air conditioning systems are essential for maintaining a comfortable indoor environment. As such, regular cleaning is crucial for keeping your AC system running smoothly and efficiently.
               </p>
             </div>

@@ -50,7 +50,7 @@ export default function ContactForm({ onlyForms = false }) {
     };
 
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto">
+        <section className="pt-20 px-6 max-w-7xl mx-auto">
             <div className={`bg-secondary rounded-3xl overflow-hidden shadow-lg ${onlyForms ? '' : 'grid grid-cols-1 lg:grid-cols-5'}`}>
                 {onlyForms ?
                     "" : <div className="relative min-h-[350px] lg:min-h-full col-span-2">
@@ -65,8 +65,8 @@ export default function ContactForm({ onlyForms = false }) {
                     </div>
                 }
 
-                <div className={`p-8 md:p-12 bg-[#DBF9F0] ${onlyForms ? '' : 'col-span-3'}`}>
-                    <p className="text-3xl font-bold text-gray-900 mb-8">We Love To Hear From You</p>
+                <div className={`p-4 md:p-8 md:p-12 bg-[#DBF9F0] ${onlyForms ? '' : 'col-span-3'}`}>
+                    <p className="text-2xl md:text-4xl font-bold text-gray-900 mb-8">We Love To Hear From You</p>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input

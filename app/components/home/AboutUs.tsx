@@ -4,20 +4,19 @@ import Link from "next/link";
 
 export default function AboutUs() {
     return (
-        <section className="py-16 px-6 md:px-20 bg-white">
+        <section className="py-6 md:py-16 px-6 md:px-20 bg-white">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
                 {/* Left Side: Text Content */}
                 <div className="lg:w-1/2 space-y-6">
-                    <div className="text-4xl font-bold text-gray-900 font-urbanist">
+                    <div className="text-2xl md:text-4xl font-bold text-gray-900 font-urbanist">
                         About Us
                         <div className="border-b-4 border-primary max-w-1/3 my-4"></div>
                     </div>
 
                     <div className="text-gray-600 leading-relaxed space-y-4">
-                        <p>In the bustling metropolis of Dubai, where temperatures can soar to extreme heights, air conditioning systems play a crucial role in providing comfort and relief from the scorching heat. Given the importance of AC units in maintaining a comfortable indoor environment, regular AC duct cleaning Dubai is essential to ensure optimal performance, energy efficiency, and a healthy atmosphere.</p>
-
-                        <p>Air conditioning systems are an indispensable part of modern life, providing comfort and a pleasant indoor environment, especially during the hot summer months. Despite their importance, these systems can sometimes malfunction or become less efficient, necessitating prompt and professional Dubai AC duct cleaning.</p>
+                        <p className="text-xs sm:text-sm md:text-base">In the bustling metropolis of Dubai, where temperatures can soar to extreme heights, air conditioning systems play a crucial role in providing comfort and relief from the scorching heat. Given the importance of AC units in maintaining a comfortable indoor environment, regular AC duct cleaning Dubai is essential to ensure optimal performance, energy efficiency, and a healthy atmosphere.</p>
+                        <p className="text-xs sm:text-sm md:text-base">Air conditioning systems are an indispensable part of modern life, providing comfort and a pleasant indoor environment, especially during the hot summer months. Despite their importance, these systems can sometimes malfunction or become less efficient, necessitating prompt and professional Dubai AC duct cleaning.</p>
                     </div>
 
                     <button className="group duration-300 hover:scale-105 flex justify-center bg-black px-4 py-1 w-fit rounded-lg text-white font-medium transition">

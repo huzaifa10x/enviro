@@ -16,9 +16,9 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState(0);
 
     return (
-        <section className="py-20 px-6 flex flex-col lg:flex-row gap-12 items-center">
+        <section className="pt-20 px-6 flex flex-col lg:flex-row gap-12 items-center">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl text-center font-bold text-gray-900 font-urbanist">
+                <h2 className="text-2xl md:text-4xl text-center font-bold text-gray-900 font-urbanist">
                     Why Choose Our Dubai Duct Cleaning Company?
                     <div className="border-b-4 border-primary w-full my-4"></div>
                 </h2>
@@ -30,13 +30,13 @@ export default function FAQ() {
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                     className="w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition"
                                 >
-                                    <h5> {item.title}:</h5>
+                                    <h5 className='text-sm md:text-lg'>{item.title}:</h5>
                                     <span className={`transform transition-transform ${openIndex === index ? 'rotate-180' : ''}`}>▼</span>
                                 </button>
 
                                 <div className={`grid transition-all duration-300 ease-in-out ${openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                     <div className="overflow-hidden">
-                                        <p className="p-5 pt-0 text-gray-600 border-t">{item.content}</p>
+                                        <p className="p-5 text-xs sm:text-sm md:text-base text-gray-600 border-t">{item.content}</p>
                                     </div>
                                 </div>
                             </div>

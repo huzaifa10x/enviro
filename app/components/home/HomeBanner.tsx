@@ -2,39 +2,65 @@
 "use client";
 import { Send } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomeBanner() {
+    const whatsappUrl = "https://wa.me/971528389414?text=Hello!";
+
     return (
         <div className="flex flex-col">
-            <div className='lg:p-4 overflow-hidden relative'>
-                <div className="relative group flex-grow w-full lg:rounded-lg max-h-[100%] h-[90vh] overflow-hidden text-white">
-                    <div className={`absolute inset-0 transition-opacity duration-1000`}>
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/GtUV31OiCf4?autoplay=1&mute=1&controls=0&loop=1&playlist=GtUV31OiCf4&si=dipA1RH3jPdhMY1S"
-                            title="YouTube video player"
-                            allow="autoplay; encrypted-media; gyroscope; web-share"
-                            className='md:scale-150 scale-y-[2.8] scale-x-150'
-                            allowFullScreen
-                        ></iframe>
+            <div className="lg:p-4 overflow-hidden relative">
+                <div className="relative group flex-grow w-full lg:rounded-lg md:pt-[300px] md:pb-[250px] pt-[150px] pb-[100px] overflow-hidden text-white">
+                    
+                    {/* HTML5 Video Layer - Instant Load & Fast LCP */}
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster="/images/hero-poster.webp" // Fast LCP trigger ke liye poster image zarur add karein
+                        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+                    >
+                        <source src="/banner-video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                        <div className={`absolute flex inset-0 bg-black/60 md:px-10 px-10 transition-all duration-500 z-10 justify-end pb-16 md:pb-10 flex-col`}>
-                            <div className={`max-w-7xl w-full`}>
-                                <div className="md:text-[50px] text-3xl font-semibold mb-4 font-urbanist delay-300">Dubai AC Duct Cleaning</div>
-                                <div className="max-w-4xl mb-6 md:text-base text-sm">As a British company, we bring expertise and excellence to ensure your indoor air quality is at its best.</div>
+                    {/* Content Overlay */}
+                    <div className="absolute flex inset-0 bg-black/60 px-6 sm:px-10 transition-all duration-500 z-10 justify-end pb-10 md:pb-16 flex-col">
+                        <div className="max-w-7xl w-full">
+                            <h1 className="text-2xl sm:text-3xl md:text-[50px] leading-tight font-semibold mb-2 sm:mb-4 font-urbanist">
+                                Dubai AC Duct Cleaning
+                            </h1>
+                            <p className="max-w-4xl mb-4 sm:mb-6 text-xs sm:text-sm md:text-base text-gray-200">
+                                As a British company, we bring expertise and excellence to ensure your indoor air quality is at its best.
+                            </p>
 
-                                <div className='flex items-center gap-4'>
-                                    <Link href={"https://web.whatsapp.com/send?phone=971528389414&text=Hello!"} className="border px-6 py-2 w-fit rounded-md text-white font-medium hover:border-primary hover:bg-green-700 transition flex items-center gap-3 duration-300">
-                                        Book Free Inspection
-                                        <Send size={17} />
-                                    </Link>
+                            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                                <Link 
+                                    href={whatsappUrl} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="border border-white/80 px-4 sm:px-6 py-2 w-fit rounded-md text-white text-xs sm:text-sm font-medium hover:border-primary hover:bg-green-700 transition flex items-center gap-2 sm:gap-3 duration-300"
+                                >
+                                    Book Free Inspection
+                                    <Send size={15} />
+                                </Link>
 
-                                    <Link href={"https://web.whatsapp.com/send?phone=971528389414&text=Hello!"} className="bg-primary flex items-center gap-3 px-6 py-2 w-fit rounded-md text-white font-medium hover:bg-green-700 transition">
-                                        Get a Quote
-                                        <img className='w-4' src="/images/whatsapp-white-icon-1.webp" alt="" />
-                                    </Link>
-                                </div>
+                                <Link 
+                                    href={whatsappUrl} 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-primary flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 w-fit rounded-md text-white text-xs sm:text-sm font-medium hover:bg-green-700 transition"
+                                >
+                                    Get a Quote
+                                    <Image 
+                                        width={16} 
+                                        height={16} 
+                                        className="w-4 h-4 object-contain" 
+                                        src="/images/whatsapp-white-icon-1.webp" 
+                                        alt="WhatsApp Icon" 
+                                    />
+                                </Link>
                             </div>
                         </div>
                     </div>

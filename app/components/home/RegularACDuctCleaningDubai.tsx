@@ -20,28 +20,28 @@ export default function RegularACDuctCleaningDubai() {
 
                     {/* Initial & Expandable Content Box */}
                     <div className={`text-gray-700 space-y-4 text-sm md:text-base duration-300 leading-relaxed ${isExpanded === true ? 'h-[300px] overflow-y-scroll' : ''} `}>
-                        <p>
+                        <p className="text-xs sm:text-sm md:text-base">
                             Regular duct cleaning in Dubai is essential for ensuring the optimal performance, energy efficiency, and longevity of your air conditioning system. Neglecting these routine tasks can lead to reduced efficiency, increased energy costs, and a shortened lifespan for your AC unit. Here are some key reasons why regular AC cleaning should be a priority:
                         </p>
-                        <p>
+                        <p className="text-xs sm:text-sm md:text-base">
                             Improved performance: Over time, dust, dirt, and debris can accumulate on the filters, coils, and other components of your AC system. Regular cleaning helps remove these build-ups, ensuring that your system can operate at its full capacity and effectively cool your space.
                         </p>
 
                         <div className="pt-2">
                             {/* Agar expanded nahi hai toh incomplete line dikhegi jaisa mockup "image_df53b6.webp" mein hai */}
                             {!isExpanded ? (
-                                <p></p>
+                                <p className="text-xs sm:text-sm md:text-base"></p>
                             ) : (
                                 <div className="space-y-6 transition-all duration-500 ease-in-out">
-                                    <p> Enhanced energy efficiency: A dirty or poorly maintained AC unit has to work harder to maintain the desired temperature, which can lead to increased energy consumption. By keeping your system clean and well-maintained, you can improve its energy efficiency, thereby reducing your energy bills.
+                                    <p className="text-xs sm:text-sm md:text-base"> Enhanced energy efficiency: A dirty or poorly maintained AC unit has to work harder to maintain the desired temperature, which can lead to increased energy consumption. By keeping your system clean and well-maintained, you can improve its energy efficiency, thereby reducing your energy bills.
                                     </p>
-                                    <p>Extended system lifespan: Regular cleaning helps identify potential issues before they become major problems, which can prevent costly repairs or even system breakdowns. By addressing minor issues early, you can extend the life of your AC unit and protect your investment.
+                                    <p className="text-xs sm:text-sm md:text-base">Extended system lifespan: Regular cleaning helps identify potential issues before they become major problems, which can prevent costly repairs or even system breakdowns. By addressing minor issues early, you can extend the life of your AC unit and protect your investment.
                                     </p>
-                                    <p>Better indoor air quality: A clean AC system ensures that the air circulating throughout your Dubai home or office is free of dust, allergens, and other contaminants. This can contribute to a healthier indoor environment and help prevent respiratory issues or other health problems caused by poor air quality.
+                                    <p className="text-xs sm:text-sm md:text-base">Better indoor air quality: A clean AC system ensures that the air circulating throughout your Dubai home or office is free of dust, allergens, and other contaminants. This can contribute to a healthier indoor environment and help prevent respiratory issues or other health problems caused by poor air quality.
                                     </p>
-                                    <p>Reduced repair costs: Regular AC cleaning helps identify and fix small issues before they escalate into more significant, costly problems. By proactively addressing these concerns, you can minimize the need for expensive repairs or system replacements.
+                                    <p className="text-xs sm:text-sm md:text-base">Reduced repair costs: Regular AC cleaning helps identify and fix small issues before they escalate into more significant, costly problems. By proactively addressing these concerns, you can minimize the need for expensive repairs or system replacements.
                                     </p>
-                                    <p>Maintaining manufacturer warranties: Many AC manufacturers require cleaning to keep their warranties valid. By adhering to the recommended schedule, you can ensure that your system remains covered by its warranty in case of any issues.
+                                    <p className="text-xs sm:text-sm md:text-base">Maintaining manufacturer warranties: Many AC manufacturers require cleaning to keep their warranties valid. By adhering to the recommended schedule, you can ensure that your system remains covered by its warranty in case of any issues.
                                     </p>
                                 </div>
                             )}
