@@ -3,7 +3,6 @@ import React from 'react';
 export default function BenefitsSection({ subTitle, title, bottomLine, benefitsData }) {
     return (
         <section className="w-full bg-[#f0fff7] my-16 py-16 px-6 md:px-0 relative">
-            <div className="bg-[url('/images/footer-bg.webp')] w-full h-full absolute bg-contain opacity-25 bg-bottom bg-no-repeat "></div>
             <div className="max-w-7xl mx-auto flex flex-col items-center relative">
                 {/* Heading Block */}
                 <div className="text-center mb-12">

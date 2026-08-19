@@ -23,7 +23,7 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
     return (
         <div className="flex flex-col">
             <div className='lg:p-4 overflow-hidden relative'>
-                <div className="relative group flex-grow w-full lg:rounded-lg max-h-[90vh] md:h-[70vh] h-[50vh] overflow-hidden text-white">
+                <div className="relative group flex-grow w-full lg:rounded-lg min-h-[70vh] md:h-[70vh] h-[100%] overflow-hidden text-white">
                     {
                         slides?.map((slide: any, index: number) => {
                             const isActive = index === current;
@@ -63,10 +63,10 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
                                         <div className={`${contentBottom ? 'max-w-7xl' : 'max-w-5xl'} w-full mx-auto`}>
                                             {slide?.subTitle ? <p className='text-[#1CAE59] mb-2'>{slide?.subTitle}</p> : ""}
 
-                                            <div className="md:text-5xl text-3xl font-bold mb-4 font-urbanist delay-300" dangerouslySetInnerHTML={{ __html: slide.title }} />
+                                            <div className="text-2xl sm:text-3xl md:text-[50px] leading-tight font-semibold mb-2 sm:mb-4 font-urbanist delay-300" dangerouslySetInnerHTML={{ __html: slide.title }} />
 
                                             <div
-                                                className="max-w-4xl mb-6 md:text-base text-sm"
+                                                className="max-w-4xl mb-6 text-xs sm:text-sm md:text-base"
                                                 dangerouslySetInnerHTML={{ __html: slide.desc }}
                                             />
                                             {slide.actionTitle &&
