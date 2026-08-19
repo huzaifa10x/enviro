@@ -87,13 +87,13 @@ export default function Navbar() {
                                                 href={item.url}
                                                 className="flex items-center gap-4 group transition-all duration-200"
                                             >
-                                                <div className={`w-17 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${isActive ? 'ring-1 ring-primary' : ''
+                                                <div className={`w-16 h-16 relative rounded-full flex items-center justify-center bg-white shrink-0 overflow-hidden ${isActive ? 'ring-1 ring-primary' : ''
                                                     }`}>
                                                     <Image
                                                         src={item.icon}
                                                         alt={item.title}
                                                         fill
-                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                        sizes="64px"
                                                         className="object-cover"
                                                     />
                                                 </div>
