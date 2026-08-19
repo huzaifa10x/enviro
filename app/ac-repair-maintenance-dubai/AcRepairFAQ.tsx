@@ -65,7 +65,7 @@ export default function AcRepairFAQ() {
 
                 <div className="lg:col-span-7 space-y-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-urbanist tracking-tight mb-8">
-                        FAQs - EnviroClean Ac Repair & Maintenance Dubai Explained
+                        FAQs - EnviroClean AC Repair & Maintenance Dubai Explained
                     </h2>
 
                     <div className="space-y-4">

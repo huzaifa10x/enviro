@@ -41,7 +41,7 @@ export default function Navbar() {
         { id: 2, title: 'Coil Cleaning', icon: serviceIcon2, url: '/coil-cleaning/' },
         { id: 3, title: 'Duct Cleaning', icon: serviceIcon3, url: '/duct-cleaning-service-dubai/' },
         { id: 4, title: 'AC Sanitisation', icon: serviceIcon4, url: '/ac-sanitisation/' },
-        { id: 5, title: 'Ac Repair', icon: serviceIcon4, url: '/ac-repair-maintenance-dubai/' },
+        { id: 5, title: 'AC Repair & Maintenance', icon: serviceIcon4, url: '/ac-repair-maintenance-dubai/' },
     ]
 
     const navLinks = [
@@ -123,7 +123,7 @@ export default function Navbar() {
                     })}
                 </div>
 
-                <Link href={"tel:0585815833"}>
+                <Link href={"tel:800368476"}>
                     <button className="lg:block hidden cursor-pointer px-6 py-2 rounded font-urbanist bg-secondary font-semibold transition-colors">
                         Get In Touch
                     </button>
@@ -191,7 +191,7 @@ export default function Navbar() {
                         })}
                     </div>
 
-                    <Link href={"tel:0585815833"} className="mt-8">
+                    <Link href={"tel:800368476"} className="mt-8">
                         <button className="w-full py-4 rounded-xl font-urbanist font-bold text-xl bg-primary text-white hover:bg-primary/10 transition-colors">
                             Get In Touch
                         </button>

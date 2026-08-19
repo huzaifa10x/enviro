@@ -23,7 +23,7 @@ export default function NavbarCarousel({ slides, contentBottom = false }: any) {
     return (
         <div className="flex flex-col">
             <div className='lg:p-4 overflow-hidden relative'>
-                <div className="relative group flex-grow w-full lg:rounded-lg pb-50 md:pt-90 py-65 overflow-hidden text-white">
+                <div className="relative group flex-grow w-full lg:rounded-lg max-h-[90vh] md:h-[70vh] h-[50vh] overflow-hidden text-white">
                     {
                         slides?.map((slide: any, index: number) => {
                             const isActive = index === current;

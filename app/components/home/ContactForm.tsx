@@ -50,7 +50,7 @@ export default function ContactForm({ onlyForms = false }) {
     };
 
     return (
-        <section className="pt-20 px-6 max-w-7xl mx-auto">
+        <section className="py-20 px-6 max-w-7xl mx-auto">
             <div className={`bg-secondary rounded-3xl overflow-hidden shadow-lg ${onlyForms ? '' : 'grid grid-cols-1 lg:grid-cols-5'}`}>
                 {onlyForms ?
                     "" : <div className="relative min-h-[350px] lg:min-h-full col-span-2">

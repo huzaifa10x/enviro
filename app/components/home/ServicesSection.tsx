@@ -4,7 +4,8 @@ import Image1 from "@/public/images/Duct-Cleaning.webp";
 import Image2 from "@/public/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp";
 import Image3 from "@/public/images/253523.webp";
 import Image4 from "@/public/images/Sanitisation.webp";
-import Link from "next/link"; // Link component import kiya
+import Image5 from "@/public/images/AC-Repair-Maintenance.webp";
+import Link from "next/link";
 
 export default function ServicesSection() {
     const services = [
@@ -12,7 +13,7 @@ export default function ServicesSection() {
         { title: "Full AC Service", img: Image2, url: "/accleaning-servicing/" },
         { title: "Coil Cleaning", img: Image3, url: "/coil-cleaning/" },
         { title: "Sanitisation", img: Image4, url: "/ac-sanitisation/" },
-        { title: "Ac Repair", img: Image4, url: "/ac-repair-maintenance-dubai/" },
+        { title: "AC Repair & Maintenance", img: Image5, url: "/ac-repair-maintenance-dubai/" },
     ];
 
     return (

@@ -90,12 +90,12 @@ export default function Story() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <NavbarCarousel slides={slides} contentBottom={true} />
-            <section className="bg-[#f0fff7] py-6 w-full">
+            <section className="bg-[#f0fff7] py-20 w-full">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-urbanist font-bold text-center">Enviroclean – HVAC Services</h2>
-                    <div className="grid md:grid-cols-2 md:mt-12 gap-12">
+                    <h2 className="md:text-4xl text-2xl font-urbanist font-bold text-center">Enviroclean – HVAC Services</h2>
+                    <div className="grid md:grid-cols-2 md:mt-12 gap-12 px-6">
                         <div className="">
-                            <h2 className="text-4xl font-urbanist font-bold mb-6">Enviroclean Top Rated Air Duct Cleaning Service provider</h2>
+                            <h2 className="md:text-4xl text-3xl font-urbanist md:text-start text-center font-bold my-6">Enviroclean Top Rated Air Duct Cleaning Service provider</h2>
                             <p className="font-extralight leading-6 text-[#333333]">Welcome to Enviroclean, a distinguished premier Air Duct Cleaning Service in Dubai and home maintenance service provider. Established in 2012, we have swiftly earned an exceptional reputation, earning high recommendations from our valued clientele.</p>
                             <br />
                             <p className="font-extralight leading-6 text-[#333333]">In 2015, recognizing the demand for our top-notch services, we expanded our operations to the vibrant cities of Dubai. Managed by a team of seasoned British expats, Enviroclean is dedicated to delivering unparalleled quality service marked by professionalism and reliability you can depend on.</p>
@@ -115,7 +115,7 @@ export default function Story() {
                             <Image alt="our-story-hvac-service" className="rounded-2xl object-cover" fill src="/images/image00421-min.webp" />
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-2 gap-6 mt-12">
+                    <div className="grid md:grid-cols-2 gap-6 md:mt-12 px-6">
                         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100/50 flex flex-col justify-between">
                             <div>
                                 <Image src={'/images/wipes.webp'} alt='wipes' width={50} height={50} />
@@ -134,11 +134,10 @@ export default function Story() {
                 </div>
             </section>
 
-            <section className=" py-6 w-full">
-                <div className="max-w-7xl mx-auto">
+            <section className="py-10 w-full">
+                <div className="max-w-7xl mx-auto space-y-10">
                     <h2 className="text-4xl font-urbanist font-bold text-center">Our Team</h2>
-
-                    <div className="grid grid-cols-3 gap-15">
+                    <div className="grid md:grid-cols-3 gap-10">
                         <div className="bg-[#f0fff7] p-5 space-y-4 text-center">
                             <div className="relative w-full h-[400px]">
                                 <Image

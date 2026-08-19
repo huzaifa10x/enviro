@@ -108,7 +108,7 @@ export default function AccleaningServicing() {
             />
             <ContentFlexSection
                 subHeading={'Full AC Cleaning & Servicing Package'}
-                heading={'Ac Cleaning & Ac Servicing'}
+                heading={'AC Cleaning & AC Servicing'}
                 content={`Our full ac cleaning package ensures your whole system from front to back is cleaned and disinfected. After we have cleaned your AC we carry out a full service to ensure the unit is running at full capacity.`}
                 imageSrc={'/images/AC-Cleaning-Dubai-Professional-Duct-Cleaning-in-Dubai.webp'}
                 imageAlt={'AC-Cleaning-Dubai-&-Abu-Dhabi'}
@@ -116,7 +116,7 @@ export default function AccleaningServicing() {
             />
             <PackageIncludes />
             <BenefitsSection
-                subTitle={'Learn About Ac Cleaning Benefits'}
+                subTitle={'Learn About AC Cleaning Benefits'}
                 title={`<h2>Benefits of AC Cleaning</h2>`}
                 bottomLine={''}
                 benefitsData={
@@ -124,7 +124,7 @@ export default function AccleaningServicing() {
                         {
                             id: 1,
                             title: "Healthier Living Environment",
-                            content: "Ac cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Ac cleaning services in Dubai & Abu Dhabi",
+                            content: "AC cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Ac cleaning services in Dubai & Abu Dhabi",
                             icon: "/images/air-filter.webp"
                         },
                         {
