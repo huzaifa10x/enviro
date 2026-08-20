@@ -161,7 +161,7 @@ export default function CoilCleaning() {
                 }
             />
             <WhyEnviroCleaning />
-            <EcoFriendlyServices />
+            {/* <EcoFriendlyServices /> */}
             <GoogleReviewsBlock />
             <ServicesSection />
             <AcRepairFAQ />
