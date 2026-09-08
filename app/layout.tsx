@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Script from "next/script";
+import Chatbot from "./components/Chatbot";
 
 export const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -134,6 +135,13 @@ export default function RootLayout({
           }}
         />
         <Navbar />
+        {/* <Chatbot
+          apiUrl="http://localhost:8080"
+          // apiUrl="https://chatbot-node-js-ten.vercel.app"
+          tenant="pk_o6ywyjuwkzvcavmncr1z5cygqqqi4fcx"
+          primaryColor="#0A66A8"
+          accentColor="#17A673"
+        /> */}
         {children}
         <Footer />
 
