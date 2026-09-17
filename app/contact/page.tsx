@@ -5,6 +5,7 @@ import ContactForm from "../components/home/ContactForm";
 import { LocationEditIcon, Mail, MapPin, Phone } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 const slides = [
     {
         id: 1,
@@ -98,22 +99,88 @@ export default function contact() {
             <section className="bg-secondary py-10">
                 <div className="mx-auto max-w-7xl px-6">
                     <div className="grid md:grid-cols-5 gap-8">
-                        <div className="md:col-span-2 space-y-7 flex justify-center flex-col">
-                            <Link href={'mailto:info@envirocleanuae.com'} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
-                                <Mail className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Email Address</h4>
-                                <div>info@envirocleanuae.com</div>
-                            </Link>
-                            <Link href={"tel:971800368476"} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
-                                <Phone className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Phone nwwo</h4>
-                                <div>TOLL FREE- 800 368 476</div>
-                            </Link>
-                            <Link href={""} className="text-center bg-white shadow-2xl rounded-2xl p-7 space-y-3">
-                                <MapPin className="mx-auto" size={50} strokeWidth={1} />
-                                <h4 className="text-2xl">Address</h4>
-                                <div>Empire Heights A, 09/13 Business Bay Dubai</div>
-                            </Link>
+                        <div className="md:col-span-2 flex flex-col justify-center space-y-5">
+                            {/* Phone Card */}
+                            <a
+                                href="tel:971800368476"
+                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                            >
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
+                                    <Phone size={28} strokeWidth={2} />
+                                </div>
+                                <div className="ml-4">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                                        Call Us (Toll Free)
+                                    </p>
+                                    <p className="text-lg font-bold text-gray-900 group-hover:text-primary">
+                                        800 368 476
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* WhatsApp Card */}
+                            <a
+                                href="https://wa.me/+971528389414"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                            >
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl p-2.5 transition-colors">
+                                    <Image
+                                        src="/images/whatsaap-icon-black.webp"
+                                        alt="WhatsApp Icon"
+                                        width={32}
+                                        height={32}
+                                        className="h-full w-full object-contain transition-all"
+                                    />
+                                </div>
+                                <div className="ml-4">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                                        WhatsApp
+                                    </p>
+                                    <p className="text-lg font-bold text-gray-900 group-hover:text-emerald-600">
+                                        052 838 9414
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* Email Card */}
+                            <a
+                                href="mailto:info@envirocleanuae.com"
+                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                            >
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
+                                    <Mail size={28} strokeWidth={2} />
+                                </div>
+                                <div className="ml-4 min-w-0">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                                        Email Address
+                                    </p>
+                                    <p className="truncate text-lg font-bold text-gray-900 group-hover:text-primary">
+                                        info@envirocleanuae.com
+                                    </p>
+                                </div>
+                            </a>
+
+                            {/* Address Card */}
+                            <a
+                                href="https://maps.google.com/?q=Empire+Heights+A+Business+Bay+Dubai"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                            >
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
+                                    <MapPin size={28} strokeWidth={2} />
+                                </div>
+                                <div className="ml-4">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                                        Location
+                                    </p>
+                                    <p className="text-sm font-semibold text-gray-900 group-hover:text-primary">
+                                        Empire Heights A, 09/13 Business Bay, Dubai
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                         <div className="md:col-span-3">
                             <ContactForm onlyForms={true} />
