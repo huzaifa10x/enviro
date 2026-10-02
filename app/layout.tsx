@@ -22,7 +22,7 @@ export const poppins = Poppins({
 export const metadata: Metadata = {
   title: "AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai",
   description:
-    "EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC's performance and efficiency. Get a free quote today!",
+    "EnviroClean UAE pro0vides professional AC cleaning services in Dubai. We improve your AC's performance and efficiency. Get a free quote today!",
   verification: {
     google: "m7a4rstuX0H6KVUtR1OJe_HPs0NC3-7N8BQTiBxFDqo", // Sirf ek hi google verification rakha hai
   },

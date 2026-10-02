@@ -88,7 +88,7 @@ export default function Home() {
       <HomeBanner />
       <AboutUs />
       <ServicesSection />
-      
+
       <div className="bg-secondary">
         <Process />
       </div>
@@ -131,9 +131,9 @@ export default function Home() {
       <section className="py-6 md:py-16 px-6 md:px-20 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
           <div>
-            <Image 
-              src="/images/Count-on-Enviroclean.webp" 
-              width={500} 
+            <Image
+              src="/images/Count-on-Enviroclean.webp"
+              width={500}
               height={500}
               alt="Enviroclean Team"
               loading="lazy"

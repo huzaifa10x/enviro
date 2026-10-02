@@ -103,7 +103,7 @@ export default function contact() {
                             {/* Phone Card */}
                             <a
                                 href="tel:971800368476"
-                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                                className="group flex items-center rounded-2xl bg-[#DBF9F0] p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                             >
                                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
                                     <Phone size={28} strokeWidth={2} />
@@ -123,7 +123,7 @@ export default function contact() {
                                 href="https://wa.me/+971528389414"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                                className="group flex items-center rounded-2xl bg-[#DBF9F0] p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                             >
                                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl p-2.5 transition-colors">
                                     <Image
@@ -147,7 +147,7 @@ export default function contact() {
                             {/* Email Card */}
                             <a
                                 href="mailto:info@envirocleanuae.com"
-                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                                className="group flex items-center rounded-2xl bg-[#DBF9F0] p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                             >
                                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
                                     <Mail size={28} strokeWidth={2} />
@@ -167,7 +167,7 @@ export default function contact() {
                                 href="https://maps.google.com/?q=Empire+Heights+A+Business+Bay+Dubai"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-center rounded-2xl bg-white p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                                className="group flex items-center rounded-2xl bg-[#DBF9F0] p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                             >
                                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:b">
                                     <MapPin size={28} strokeWidth={2} />
