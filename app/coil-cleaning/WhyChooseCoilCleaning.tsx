@@ -29,13 +29,14 @@ export default function WhyChooseCoilCleaning() {
                     {/* Descriptions */}
                     <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
                         <p>
-                            <span className="font-bold text-gray-900 block md:inline">Green Practices:</span> At EnviroClean, sustainability is at the core of our values. We employ environmentally friendly cleaning solutions, ensuring a thorough clean of your AC coil while prioritizing the health of your HVAC system and the planet.
+                            <span className="font-bold text-gray-900 block md:inline">Green Practices:</span> Environmental sustainability is embedded in everything EnviroClean stands for. We utilize eco-friendly cleaning methods which clean your AC coil completely without compromising the health of your HVAC and the environment.
                         </p>
                         <p>
-                            <span className="font-bold text-gray-900 block md:inline">Experienced Technicians:</span> Our team comprises skilled technicians with extensive knowledge in handling diverse HVAC systems. Rest assured that your coils will receive precise and effective cleaning tailored to your requirements.
+                            <span className="font-bold text-gray-900 block md:inline">Proficient Technicians:</span> Our technicians are trained and skilled in various HVAC systems. You can be certain that your coils will get the proper cleaning they need.
                         </p>
                         <p>
-                            <span className="font-bold text-gray-900 block md:inline">Cutting-Edge Technology:</span> We utilize the best cleaning equipment and technology, guaranteeing a thorough and efficient cleaning process for your home or commercial needs. Our advanced tools reach even the most challenging areas, leaving your coils spotless.
+                            <span className="font-bold text-gray-900 block md:inline">Advanced Equipment:</span> Advanced Equipment
+                            We keep the best cleaning equipment in the market, which allows us to perform effective cleaning both at home and in commercial premises. Our modern equipment allows reaching places otherwise unreachable, keeping the coils clean.
                         </p>
                     </div>
 

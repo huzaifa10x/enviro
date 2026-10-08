@@ -23,31 +23,27 @@ export default function EcoFriendlyServices() {
                 <div className="space-y-6">
                     {/* Heading matching image_de7d62.webp styling */}
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-950 font-urbanist leading-tight">
-                        Our <span className="text-[#3CB474]">Eco-Friendly Services</span> will Clean your Coils
+                        Reasons to Choose <span className="text-[#3CB474]">EnviroClean Coil Cleaning</span> in Dubai
                     </h2>
 
                     {/* Descriptions */}
                     <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
                         <p>
                             <span className="font-bold text-gray-900 block md:inline">
-                                Coil Cleaning for Energy Efficiency:
+                                Eco-conscious
                             </span>
-                            Our AC coil cleaning service removes dirt, debris, and contaminants from coils inside your AC unit, ensuring optimal HVAC system performance. This translates to improved energy efficiency, lower utility bills, and enhanced indoor air quality.
-                        </p>
+                            Our philosophy at EnviroClean is centred on sustainability. We use eco-friendly cleanings for a complete cleaning of your AC coils, with no harm to you or the environment.                        </p>
                         <p>
                             <span className="font-bold text-gray-900 block md:inline">
-                                Sustainable Maintenance Packages:
+                                Effective Specialists
                             </span>
-                            Choose from our sustainable maintenance packages, which encompass regular coil cleaning, filter replacement, and system inspections. Our packages are designed to prolong the lifespan of your HVAC system while minimizing the risk of breakdowns.
-                        </p>
+                            Our well-trained specialists have the expertise required to resolve different problems related to various types of HVAC systems efficiently. You can be assured that the coils will be cleaned according to your requirements.                        </p>
                         <p>
                             <span className="font-bold text-gray-900 block md:inline">
-                                Eco-Conscious Solutions:
+                                Modern Technologies:
                             </span>
-                            Our commitment to eco-friendly practices extends to every aspect of our services. From cleaning solutions to waste disposal, we prioritize sustainability, contributing to a healthier indoor environment, better air quality, and a greener planet.
-                        </p>
-                        <p>
-                            EnviroClean Coil Cleaning is a premier choice for individuals and businesses seeking optimal HVAC performance through eco-friendly and efficient coil cleaning. Here’s why customers should choose us:
+                            Modern Technologies:
+                            Modern cleaning technology is what we always employ. It enables us to provide businesses and homeowners with prompt, high-quality results.
                         </p>
                     </div>
 

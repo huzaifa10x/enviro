@@ -23,8 +23,8 @@ import WhyEnviroCleaning from "./WhyEnviroCleaning";
 const slides = [
     {
         id: 1,
-        title: "<h1>AC Repair & Fault Diagnosis in Dubai</h1>",
-        desc: `Professional diagnosis, repair and replacement of residential AC systems. If your AC isn’t cooling properly, is leaking, making unusual noises or has stopped working, Enviroclean can diagnose the problem and provide the correct repair solution.`,
+        title: "<h1>AC Diagnostic Inspection</h1>",
+        desc: `The inspection fee is deducted from the final invoice when approved repair works are completed by Enviroclean.`,
         image: acRepairSlideImg,
         actionTitle: 'Book AC Inspection',
         actionUrl: 'tel:+971800368476'
@@ -123,7 +123,7 @@ export default function CoilCleaning() {
             <CoilCleaningService />
             <BenefitsSection
                 subTitle={''}
-                title={`<h2>HOW IT WORKS</span></h2>`}
+                title={`<h2>HOW IT WORKS</h2>`}
                 bottomLine={''}
                 benefitsData={
                     [
@@ -141,20 +141,20 @@ export default function CoilCleaning() {
                         },
                         {
                             id: 3,
-                            title: "DIAGNOSIS & RECOMMENDATION",
-                            content: "We identify the likely fault and explain whether the system requires repair, component replacement, or further investigation.",
-                            icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.webp'
+                            title: "IDENTIFICATION AND SUGGESTION",
+                            content: "We recognize the possible problem in the system and describe if we need to fix the system, change some parts of it or explore further.",
+                            icon: '/images/icons/DIAGNOSIS-RECOMMENDATION.webp'
                         },
                         {
                             id: 4,
-                            title: "RECEIVE YOUR QUOTATION",
-                            content: "Where repair work is required, Enviroclean provides a clear quotation before proceeding with chargeable repair works.",
+                            title: "GET A QUOTE",
+                            content: "In order to perform repair work, Enviroclean gives its customers a complete quotation for the repair work.",
                             icon: '/images/icons/RECEIVE-YOUR-QUOTATION.webp'
                         },
                         {
                             id: 5,
-                            title: "REPAIR & RECOMMISSION",
-                            content: "Once approved, our technicians complete the repair or replacement and test the AC system to confirm correct operation.",
+                            title: "REPAIR AND TESTING",
+                            content: "If authorization was received, our engineers carry out the repairs or replace necessary part of the system and check to see if it works properly.",
                             icon: '/images/icons/REPAIR-RECOMMISSION.webp'
                         }
                     ]

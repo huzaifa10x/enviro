@@ -11,7 +11,7 @@ export default function AcRepairFAQ() {
     };
 
     const checkItems = [
-        "Redcuce Energy Bills",
+        "Reduce Energy Bills",
         "Improve Indoor Air Quality",
         "Keep Your Home Cooler",
         "Reduce Allergies",
@@ -36,8 +36,8 @@ export default function AcRepairFAQ() {
             answer: "Poor cooling can have several causes including airflow restrictions, dirty coils, valve or actuator problems, thermostat/control faults, blower issues or chilled-water-related problems. An inspection is required to identify the actual cause."
         },
         {
-            question: "Why is my AC leaking water?",
-            answer: "Common causes can include blocked drainage, drain tray issues, condensation, insulation problems and other FCU-related faults. Our technician will inspect the system to identify the cause."
+            question: "What are the reasons the AC unit is leaking water?",
+            answer: "Reasons may be blockage, drain tray malfunctioning, condensation, insulation, other bond problems. Our technician will inspect the problem and provide an accurate diagnosis."
         },
         {
             question: "Do you provide AC cleaning as well?",
@@ -97,6 +97,16 @@ export default function AcRepairFAQ() {
                                 </div>
                             );
                         })}
+                    </div>
+
+                    {/* Bottom Content Block */}
+                    <div className="mt-10 p-6 bg-white rounded-xl border border-gray-100 shadow-xs space-y-2">
+                        <h3 className="text-xl font-bold text-gray-800 font-urbanist">
+                            AC Not Working Properly?
+                        </h3>
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                            Don’t wait for a small AC problem to become a major repair. Book an Enviroclean AC diagnostic inspection and let our HVAC team identify the cause.
+                        </p>
                     </div>
                 </div>
             </div>

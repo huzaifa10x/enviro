@@ -31,14 +31,13 @@ export default function OurAcRepairServices() {
                             </h3>
                         </div>
 
-                        <p>Diagnosis and repair of residential fan coil units, including motors, blowers, valves, actuators, controls, drainage components and other replaceable parts.
-                        </p>
+                        <p>Diagnosis and repair of residential fan coil units, including motors, blowers, valves, actuators, controls, drainage components and other replaceable parts.</p>
 
                         <div className='flex items-center gap-4'>
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
                                     src={'/images/icons/Thermostat-Controls.webp'}
-                                    alt={'FCU Repair'}
+                                    alt={'Thermostat & Controls'}
                                     className="w-full h-full object-contain"
                                 />
                             </div>
@@ -53,7 +52,7 @@ export default function OurAcRepairServices() {
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
                                     src={'/images/icons/AC-Water-Leaks.webp'}
-                                    alt={'FCU Repair'}
+                                    alt={'AC Water Leaks'}
                                     className="w-full h-full object-contain"
                                 />
                             </div>
@@ -67,7 +66,7 @@ export default function OurAcRepairServices() {
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
                                     src={'/images/icons/FCU-Replacement.webp'}
-                                    alt={'FCU Repair'}
+                                    alt={'FCU Replacement'}
                                     className="w-full h-full object-contain"
                                 />
                             </div>
@@ -83,7 +82,7 @@ export default function OurAcRepairServices() {
                             <div className="p-2 w-10 h-10 text-primary flex items-center bg-primary justify-center rounded-full">
                                 <img
                                     src={'/images/icons/AC-Component-Replacement.webp'}
-                                    alt={'FCU Repair'}
+                                    alt={'AC Component Replacement'}
                                     className="w-full h-full object-contain"
                                 />
                             </div>

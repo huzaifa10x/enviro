@@ -33,7 +33,7 @@ export default function AcProblemsWeDiagnose() {
                         AC PROBLEMS WE DIAGNOSE
                     </h2>
                     <span className="text-primary text-sm md:text-base font-urbanist font-semibold tracking-wide my-2 block">
-                        Our HVAC technicians can investigate:
+                        Our HVAC technicians can investigate
                     </span>
                 </div>
                 <div className="grid md:grid-cols-2 gap-x-16 gap-y-5 w-full max-w-5xl px-4 md:px-8 mb-12">
