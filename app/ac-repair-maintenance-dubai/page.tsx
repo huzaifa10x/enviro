@@ -3,19 +3,11 @@ import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import CoilCleaningService from "./OurAcRepairServices";
-import WhyChooseCoilCleaning from "./WhyEnviroCleaning";
-import EcoFriendlyServices from "./ImportantPositioning";
 import ServicesSection from "../components/home/ServicesSection";
-import SustainabilityCommitment from "./SustainabilityCommitment";
-import CoilCleaningFAQ from "./AcRepairFAQ";
 import BenefitsSection from "../components/BenefitsSection";
 import { Metadata } from "next";
 
-// Image Imports
 import acRepairSlideImg from "@/public/images/423142134123.webp";
-import airFilterIcon from "@/public/images/air-filter.webp";
-import cleaningIcon from "@/public/images/cleaning.webp";
-import coilsIcon from "@/public/images/coils.webp";
 import AcProblemsWeDiagnose from "./AcProblemsWeDiagnose";
 import AcRepairFAQ from "./AcRepairFAQ";
 import WhyEnviroCleaning from "./WhyEnviroCleaning";
@@ -39,19 +31,17 @@ const slides = [
     },
 ];
 
-const title = 'AC Coil Cleaning Dubai | Ac Coil Cleaning Services';
-const description = 'Professional AC coil cleaning services in Dubai to improve cooling efficiency & air quality. Book expert AC maintenance today!';
-const canonical = 'https://envirocleanuae.com/coil-cleaning';
+const title = 'AC Repair Maintenance in Dubai - Enviro Clean UAE';
+const description = 'AC repair and maintenance in Dubai by Enviro Clean UAE. Get reliable AC servicing, cleaning, and maintenance to keep your cooling system running efficiently.';
+const canonical = 'https://envirocleanuae.com/ac-repair-maintenance-dubai/';
 
 export const metadata: Metadata = {
-    // Primary Meta Tags
     title: title,
     description: description,
     alternates: {
-        canonical: canonical, // Production domain url
+        canonical: canonical,
     },
 
-    // Robots Rules
     robots: {
         index: true,
         follow: true,
@@ -65,7 +55,6 @@ export const metadata: Metadata = {
         },
     },
 
-    // Open Graph / Facebook Meta Data
     openGraph: {
         title: title,
         description: description,
@@ -83,7 +72,6 @@ export const metadata: Metadata = {
         type: 'website',
     },
 
-    // Twitter Cards Meta Data
     twitter: {
         card: 'summary_large_image',
         title: 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai',
