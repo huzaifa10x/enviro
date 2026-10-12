@@ -11,7 +11,7 @@ export default function CoilCleaningFAQ() {
     };
 
     const checkItems = [
-        "Redcuce Energy Bills",
+        "Reduce Energy Bills",
         "Improve Indoor Air Quality",
         "Keep Your Home Cooler",
         "Reduce Allergies",

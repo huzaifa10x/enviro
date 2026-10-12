@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 export default function DisinfectionSection() {
     const featurePoints = [
-        'Eliminates Mould & Bacteria',
-        'Kills Odours at the Source',
-        'Environmentally Friendly',
-        'Designed for AC System',
-        'EPA Registered',
+        "Eliminates Mould & Bacteria",
+        "Kills Odours at the Source",
+        "Environmentally Friendly",
+        "Designed for AC System",
+        "EPA Registered"
     ];
 
     return (
@@ -35,7 +35,7 @@ export default function DisinfectionSection() {
                     </h2>
 
                     <p className="font-extralight text-sm md:text-base text-[#333333] leading-relaxed mb-6">
-                        Our disinfection is designed specifically for AC/HVAC systems only. EnviroCON is highly effective in eliminating odor-causing microorganisms as well as those associated with mold, mildew, and bacteria growth.
+                        Our disinfection is designed specifically for AC/HVAC systems only. EnviroCON is highly effective in eliminating odour causing microorganisms as well as those associated with mould, mildew, and bacteria growth.
                     </p>
 
                     <div className="flex flex-col gap-3.5 mb-8 w-full">

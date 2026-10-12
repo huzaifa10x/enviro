@@ -110,19 +110,19 @@ export default function CoilCleaning() {
                         {
                             id: 1,
                             title: "HEALTHIER LIVING ENVIRONMENT",
-                            content: "Cleaning the coils will improve the quality of the air inside the house, allowing to enjoy better and cleaner living conditions. Coils cleaning in Dubai & Abu Dhabi.",
+                            content: "Coil cleaning will significantly improve your indoor air quality, helping you to enjoy a cleaner, healthier living environment. Coil cleaning in Dubai & Abu Dhabi.",
                             icon: "/images/air-filter.webp"
                         },
                         {
                             id: 2,
-                            title: "LESS ALLERGENS",
-                            content: "Living with allergies is not easy but the exposure to them can be reduced. The cleaning of the coils will get rid of most allergens present in the coils, thus allowing the cold air inside to flow more freely.",
+                            title: "REDUCED EXPOSURE TO ALLERGENS",
+                            content: "Living with allergies can be difficult, but you can minimise your exposure to those allergens that cause you to suffer. Coil cleaning removes many of the most common allergens from the coil, allowing the cold air to pass through freely.",
                             icon: "/images/cleaning.webp"
                         },
                         {
                             id: 3,
-                            title: "REDUCED UTILITY BILLS",
-                            content: "The coil cleaning will lead to lower utility bills. When the coils get blocked, your AC units have to work twice as hard to keep the air inside cool.",
+                            title: "ENERGY BILLS",
+                            content: "Coil cleaning will significantly reduce the cost of your energy bills. If your coils are blocked then your AC system is working twice as hard to cool the property. Coil cleaning Dubai & Abu Dhabi.",
                             icon: "/images/coils.webp"
                         }
                     ]

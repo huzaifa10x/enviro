@@ -24,8 +24,9 @@ export default function WhyEnviroCleaning() {
                     </h2>
 
                     <div className="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed">
-                        <p>Rather than simply cleaning the AC system, our services can extend to diagnosing faults, repairing components and replacing equipment where necessary.</p>
-                        <p> Our objective is simple: clean, efficient and correctly operating air-conditioning.</p>
+                        <p>Enviroclean provides a more complete approach to residential air-conditioning.</p>
+                        <p> Rather than simply cleaning the AC system, our services can extend to diagnosing faults, repairing components and replacing equipment where necessary.</p>
+                        <p>Our objective is simple: clean, efficient and correctly operating air-conditioning.</p>
                     </div>
 
                     <ul className='list-disc pl-6'>
@@ -37,10 +38,6 @@ export default function WhyEnviroCleaning() {
                         <li> ⁠Residential AC specialists</li>
                         <li> ⁠FCU cleaning, servicing, repair and replacement</li>
                         <li> ⁠Dubai-wide service</li>
-                        <li> Reduce Energy Bills</li>
-                        <li> Improve Indoor Air Quality</li>
-                        <li> Keep Your Home Cooler</li>
-                        <li> Reduce Allergies</li>
                     </ul>
 
                     <div className="pt-2">

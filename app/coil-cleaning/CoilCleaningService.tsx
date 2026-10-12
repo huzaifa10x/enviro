@@ -12,26 +12,33 @@ export default function CoilCleaningService() {
                 <div className="space-y-6">
                     <div className="space-y-2">
                         <span className="text-emerald-500 font-semibold text-sm block tracking-wide">
-                            Importance of Coil Cleaning
+                            Why you need coil cleaning?
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-urbanist">
-                            Coil Cleaning Services for Air Conditioning
+                            AC Coil Cleaning Services
                         </h2>
                         <div className="border-b-2 border-cyan-100 w-full pt-2"></div>
                     </div>
 
                     <div className="text-gray-700 space-y-4 leading-relaxed text-sm md:text-base leading-5">
                         <p>
-                            Get access to EnviroClean Coil Cleaning for efficient and environment-friendly coil cleaning
+                            Welcome to EnviroClean Coil Cleaning, your reliable partner in optimizing your
+                            Air conditioning and HVAC performance through eco-friendly and efficient coil cleaning solutions.
                         </p>
                         <p>
-                            Regular coil cleaning is essential to preserving efficiency and longevity of your air conditioning systems. The coils in either AC become clogged with dirt, dust, and pollutants, reducing their heat transfer abilities. Reduced efficiency of the system leads to higher energy bills.
+                            Regular coil cleaning is critical to maintaining the efficiency and longevity of your
+                            Air Conditioner and HVAC (Heating, Ventilation, and Air Conditioning) systems. Over time,
+                            the coils in your HVAC unit accumulate dirt, dust, and contaminants, hindering their ability
+                            to transfer heat effectively. Reduced system efficiency can increase energy consumption,
+                            leading to higher utility bills.
                         </p>
 
                         <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'
                             }`}>
                             <p>
-                                Clean coils in turn are required for heat exchange in the HVAC system for its optimal working conditions. Efficiency improvement means lower energy expenses as well as extended lifetime of the unit with less need for eventual replacements.
+                                Clean coils are essential for optimal heat exchange, allowing your HVAC system to
+                                operate at peak performance. Improved efficiency not only lowers energy costs but
+                                also extends the lifespan of your equipment, reducing the need for premature replacements.
                             </p>
                         </div>
                     </div>

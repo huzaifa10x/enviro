@@ -3,11 +3,19 @@ import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import CoilCleaningService from "./OurAcRepairServices";
+import WhyChooseCoilCleaning from "./WhyEnviroCleaning";
+import EcoFriendlyServices from "./ImportantPositioning";
 import ServicesSection from "../components/home/ServicesSection";
+import SustainabilityCommitment from "./SustainabilityCommitment";
+import CoilCleaningFAQ from "./AcRepairFAQ";
 import BenefitsSection from "../components/BenefitsSection";
 import { Metadata } from "next";
 
+// Image Imports
 import acRepairSlideImg from "@/public/images/423142134123.webp";
+import airFilterIcon from "@/public/images/air-filter.webp";
+import cleaningIcon from "@/public/images/cleaning.webp";
+import coilsIcon from "@/public/images/coils.webp";
 import AcProblemsWeDiagnose from "./AcProblemsWeDiagnose";
 import AcRepairFAQ from "./AcRepairFAQ";
 import WhyEnviroCleaning from "./WhyEnviroCleaning";
@@ -15,8 +23,8 @@ import WhyEnviroCleaning from "./WhyEnviroCleaning";
 const slides = [
     {
         id: 1,
-        title: "<h1>AC Diagnostic Inspection</h1>",
-        desc: `The inspection fee is deducted from the final invoice when approved repair works are completed by Enviroclean.`,
+        title: "<h1>AC Repair & Fault Diagnosis in Dubai</h1>",
+        desc: `Professional diagnosis, repair and replacement of residential AC systems. If your AC isn’t cooling properly, is leaking, making unusual noises or has stopped working, Enviroclean can diagnose the problem and provide the correct repair solution.`,
         image: acRepairSlideImg,
         actionTitle: 'Book AC Inspection',
         actionUrl: 'tel:+971800368476'
@@ -80,6 +88,7 @@ export const metadata: Metadata = {
     },
 };
 
+
 const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -111,7 +120,7 @@ export default function CoilCleaning() {
             <CoilCleaningService />
             <BenefitsSection
                 subTitle={''}
-                title={`<h2>HOW IT WORKS</h2>`}
+                title={`<h2>HOW IT WORKS</span></h2>`}
                 bottomLine={''}
                 benefitsData={
                     [
@@ -129,20 +138,20 @@ export default function CoilCleaning() {
                         },
                         {
                             id: 3,
-                            title: "IDENTIFICATION AND SUGGESTION",
-                            content: "We recognize the possible problem in the system and describe if we need to fix the system, change some parts of it or explore further.",
-                            icon: '/images/icons/DIAGNOSIS-RECOMMENDATION.webp'
+                            title: "DIAGNOSIS & RECOMMENDATION",
+                            content: "We identify the likely fault and explain whether the system requires repair, component replacement, or further investigation.",
+                            icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.webp'
                         },
                         {
                             id: 4,
-                            title: "GET A QUOTE",
-                            content: "In order to perform repair work, Enviroclean gives its customers a complete quotation for the repair work.",
+                            title: "RECEIVE YOUR QUOTATION",
+                            content: "Where repair work is required, Enviroclean provides a clear quotation before proceeding with chargeable repair works.",
                             icon: '/images/icons/RECEIVE-YOUR-QUOTATION.webp'
                         },
                         {
                             id: 5,
-                            title: "REPAIR AND TESTING",
-                            content: "If authorization was received, our engineers carry out the repairs or replace necessary part of the system and check to see if it works properly.",
+                            title: "REPAIR & RECOMMISSION",
+                            content: "Once approved, our technicians complete the repair or replacement and test the AC system to confirm correct operation.",
                             icon: '/images/icons/REPAIR-RECOMMISSION.webp'
                         }
                     ]
