@@ -3,19 +3,12 @@ import ContactCta from "../components/ContactCta";
 import ContactForm from "../components/home/ContactForm";
 import GoogleReviewsBlock from "../GoogleReviewsBlock";
 import CoilCleaningService from "./OurAcRepairServices";
-import WhyChooseCoilCleaning from "./WhyEnviroCleaning";
-import EcoFriendlyServices from "./ImportantPositioning";
 import ServicesSection from "../components/home/ServicesSection";
-import SustainabilityCommitment from "./SustainabilityCommitment";
-import CoilCleaningFAQ from "./AcRepairFAQ";
 import BenefitsSection from "../components/BenefitsSection";
 import { Metadata } from "next";
 
 // Image Imports
 import acRepairSlideImg from "@/public/images/423142134123.webp";
-import airFilterIcon from "@/public/images/air-filter.webp";
-import cleaningIcon from "@/public/images/cleaning.webp";
-import coilsIcon from "@/public/images/coils.webp";
 import AcProblemsWeDiagnose from "./AcProblemsWeDiagnose";
 import AcRepairFAQ from "./AcRepairFAQ";
 import WhyEnviroCleaning from "./WhyEnviroCleaning";
@@ -133,27 +126,21 @@ export default function CoilCleaning() {
                         {
                             id: 2,
                             title: "TECHNICIAN DIAGNOSIS",
-                            content: "An HVAC technician attends the property and carries out a systematic inspection of the AC system.",
+                            content: "An HVAC technician attends the property and carries out a systematic inspection of the AC system.IDENTIFICATION AND SUGGESTION We recognize the possible problem in the system and describe if we need to fix the system, change some parts of it or explore further.",
                             icon: '/images/icons/TECHNICIAN-DIAGNOSIS.webp'
                         },
                         {
                             id: 3,
-                            title: "DIAGNOSIS & RECOMMENDATION",
-                            content: "We identify the likely fault and explain whether the system requires repair, component replacement, or further investigation.",
+                            title: "GET A QUOTE",
+                            content: "In order to perform repair work, Enviroclean gives its customers a complete quotation for the repair work.",
                             icon: ' /images/icons/DIAGNOSIS-RECOMMENDATION.webp'
                         },
                         {
                             id: 4,
-                            title: "RECEIVE YOUR QUOTATION",
-                            content: "Where repair work is required, Enviroclean provides a clear quotation before proceeding with chargeable repair works.",
+                            title: "REPAIR AND TESTING",
+                            content: "If authorization was received, our engineers carry out the repairs or replace necessary part of the system and check to see if it works properly.",
                             icon: '/images/icons/RECEIVE-YOUR-QUOTATION.webp'
                         },
-                        {
-                            id: 5,
-                            title: "REPAIR & RECOMMISSION",
-                            content: "Once approved, our technicians complete the repair or replacement and test the AC system to confirm correct operation.",
-                            icon: '/images/icons/REPAIR-RECOMMISSION.webp'
-                        }
                     ]
                 }
             />

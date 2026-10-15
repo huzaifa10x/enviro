@@ -25,23 +25,23 @@ export default function AcRepairFAQ() {
         },
         {
             question: "Can you repair FCUs?",
-            answer: "Yes. We diagnose FCU faults and can replace components including motors, blowers, valves, actuators, thermostats and other parts depending on the system and availability."
-        },
-        {
-            question: "Can you replace a complete FCU?",
-            answer: "Yes. Where an existing FCU is no longer economical to repair, we can assess the unit and provide a quotation for replacement."
+            answer: "Yes. We diagnose FCU faults and can replace components including motors, blowers, valves, actuators, thermostats and other parts depending on the system and availability. Can you replace a complete FCU? Yes.Where an existing FCU is no longer economical to repair, we can assess the unit and provide a quotation for replacement."
         },
         {
             question: "Why is my AC not cooling?",
             answer: "Poor cooling can have several causes including airflow restrictions, dirty coils, valve or actuator problems, thermostat/control faults, blower issues or chilled-water-related problems. An inspection is required to identify the actual cause."
         },
         {
-            question: "Why is my AC leaking water?",
-            answer: "Common causes can include blocked drainage, drain tray issues, condensation, insulation problems and other FCU-related faults. Our technician will inspect the system to identify the cause."
+            question: "What are the reasons the AC unit is leaking water?",
+            answer: "Reasons may be blockage, drain tray malfunctioning, condensation, insulation, other bond problems. Our technician will inspect the problem and provide an accurate diagnosis."
         },
         {
             question: "Do you provide AC cleaning as well?",
             answer: "Yes. Enviroclean provides professional AC cleaning alongside servicing, fault diagnosis, repairs and replacement."
+        },
+        {
+            question: "AC Not Working Properly?",
+            answer: "Don’t wait for a small AC problem to become a major repair. Book an Enviroclean AC diagnostic inspection and let our HVAC team identify the cause."
         }
     ];
 

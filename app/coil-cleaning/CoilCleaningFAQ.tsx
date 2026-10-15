@@ -20,22 +20,20 @@ export default function CoilCleaningFAQ() {
 
     const faqData = [
         {
-            question: "Why is coil cleaning important?",
-            answer: "Maintenance coil cleaning is vital to maintaining HVAC system efficiency, ensuring optimal functioning, lower energy consumption while cooling, and improved air quality in your home."
+            question: "Is the cleaning of coils essential?",
+            answer: "Coil cleaning is important to maintain HVAC equipment at peak efficiency. This process keeps the HVAC system operating efficiently. It also helps to save energy for household cooling. It also provides the best possible air quality in your home."
         },
         {
-            question: "How often is it recommended to get my coils checked and cleaned?",
-            answer: "Regularly cleaning your coils depends on certain things, such as usage and the HVAC system. Generally, it is recommended to have coils cleaned annually."
+            question: "How frequently must coils be cleaned?",
+            answer: "How often coils must be cleaned depends upon the functioning of the HVAC unit and the frequency of its operation. Most people recommend cleaning coils at least once a year."
         },
         {
-            question: "Can I maintain the coils?",
-            answer: "It’s best to leave it to the professionals. Our experienced team at EnviroClean Coil Cleaning possesses the expertise and equipment required for a thorough and safe cleaning process."
+            question: "Can I manage coil cleaning myself?",
+            answer: "Coil cleaning should be performed by qualified personnel. The company has highly professional staff having all necessary tools for providing safety of coil cleaning procedure."
         },
         {
-            question: "What are the benefits of regular coil cleaning?",
-            answer: `Regular coil cleaning improves energy efficiency, reduces utility bills, enhances air quality, and extends the lifespan of your system. It is a sustainable and cost-effective way to ensure optimal system operation.
-
-            EnviroClean Carpet Cleaning is your premier destination for a revolutionary approach to carpet care in Dubai.At EnviroClean, we provide comprehensive and sustainable carpet cleaning services that surpass traditional methods.Our mission is to transform your carpets into a source of renewed freshness and vitality while prioritizing environmental responsibility.`
+            question: "What are the benefits of coil cleaning regularly?",
+            answer: "The benefits of coil cleaning are high efficiency of operation, low energy bill, good quality of air, and long lifespan of the equipment."
         }
     ];
 

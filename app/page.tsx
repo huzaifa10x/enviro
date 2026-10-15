@@ -18,7 +18,7 @@ const FAQ = dynamic(() => import("./components/home/FAQ"));
 const ContactForm = dynamic(() => import("./components/home/ContactForm"));
 const PartnerSlider = dynamic(() => import("./components/home/PartnerSlider"));
 
-const title = 'AC Cleaning Dubai | Professional AC, Duct, Vent Cleaning in Dubai';
+const title = 'AC Cleaning Dubai | AC Duct Cleaning Services — Enviroclean';
 const description = 'EnviroClean UAE provides professional AC cleaning services in Dubai. We improve your AC\'s performance and efficiency. Get a free quote today!';
 const canonical = 'https://envirocleanuae.com/';
 

@@ -29,7 +29,7 @@ export default function HomeBanner() {
                     <div className="absolute flex inset-0 bg-black/60 px-6 sm:px-10 transition-all duration-500 z-10 justify-end pb-10 md:pb-16 flex-col">
                         <div className="max-w-7xl w-full">
                             <h1 className="text-2xl sm:text-3xl md:text-[50px] leading-tight font-semibold mb-2 sm:mb-4 font-urbanist">
-                                Dubai AC Duct Cleaning
+                                AC Cleaning in Dubai
                             </h1>
                             <p className="max-w-4xl mb-4 sm:mb-6 text-xs sm:text-sm md:text-base text-gray-200">
                                 As a British company, we bring expertise and excellence to ensure your indoor air quality is at its best.
